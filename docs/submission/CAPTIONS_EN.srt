@@ -1,0 +1,124 @@
+1
+00:00:00,000 --> 00:00:06,000
+Mining electrification is a production decision as
+well as an energy decision. A fleet
+
+2
+00:00:06,000 --> 00:00:12,000
+can have enough daily energy and still miss its
+target because chargers, grid capacity
+
+3
+00:00:12,000 --> 00:00:18,000
+and shift timing do not line up.
+
+4
+00:00:18,000 --> 00:00:23,500
+This is the English reviewer view. The synthetic
+case has four underground loaders, a
+
+5
+00:00:23,500 --> 00:00:29,000
+twelve-hour shift and a seventeen-hundred-tonne
+target. We include degraded batteries, charging
+losses, critical site
+
+6
+00:00:29,000 --> 00:00:34,500
+load and a charger outage. These are declared
+assumptions, not measurements from a real
+
+7
+00:00:34,500 --> 00:00:40,000
+mine.
+
+8
+00:00:40,000 --> 00:00:47,000
+One charger delivers eleven hundred eighty-eight
+tonnes. Two chargers on the same supply improve
+
+9
+00:00:47,000 --> 00:00:54,000
+output but still miss the target. Adding three
+hundred fifty kilowatts reaches seventeen hundred
+
+10
+00:00:54,000 --> 00:01:01,000
+eighty-two tonnes. Unmanaged charging reaches
+similar output while overloading the supply.
+
+11
+00:01:01,000 --> 00:01:08,333
+Now inspect the upgrade and the next shift. Each
+vehicle keeps its actual battery
+
+12
+00:01:08,333 --> 00:01:15,667
+energy. A sixty-minute break restores the declared
+initial charge in this case. The complete
+
+13
+00:01:15,667 --> 00:01:23,000
+observation is twenty-five hours, so we do not
+present it as a daily-production improvement.
+
+14
+00:01:23,000 --> 00:01:30,000
+The second workflow asks what evidence is missing.
+Choose the technology, project stage and
+
+15
+00:01:30,000 --> 00:01:37,000
+jurisdiction. Battery swapping needs a pack-stock
+review. Trolley needs a route and line review.
+
+16
+00:01:37,000 --> 00:01:44,000
+Declaring a document available changes the dossier,
+but never certifies a permit.
+
+17
+00:01:44,000 --> 00:01:51,000
+Here is a real NVIDIA Nemotron request through
+Nebius Token Factory. Inspect the executed
+
+18
+00:01:51,000 --> 00:01:58,000
+tools. The model retrieves the dossier and sources,
+then selects evidence identifiers. The application
+
+19
+00:01:58,000 --> 00:02:05,000
+validates that selection and fills the report with
+catalog text and computed counts. The
+
+20
+00:02:05,000 --> 00:02:12,000
+provider key stays on the server.
+
+21
+00:02:12,000 --> 00:02:17,333
+Reports can be exported for inspection. The code,
+tests and integration records make results
+
+22
+00:02:17,333 --> 00:02:22,667
+reproducible. The operation is synthetic, and the
+prototype does not control equipment, validate
+industrial
+
+23
+00:02:22,667 --> 00:02:28,000
+savings or replace electrical and safety
+engineering.
+
+24
+00:02:28,000 --> 00:02:34,000
+ElectroDecision helps planners compare charging
+choices and organize the next engineering review.
+The next
+
+25
+00:02:34,000 --> 00:02:40,000
+step is validation with site data and users. Thank
+you.

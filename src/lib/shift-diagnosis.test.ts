@@ -1,0 +1,3 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {prepareShiftDiagnosis} from './shift-diagnosis.ts';import {shiftDefaults,compareShiftAlternatives} from './shift-lab.ts';
+test('diagnosis uses recalculated facts and does not invent provider use or feasible overloads',()=>{const d=prepareShiftDiagnosis(shiftDefaults),raw=compareShiftAlternatives(shiftDefaults);assert.equal(d.alternatives.length,4);assert.equal(d.alternatives[0].deliveredT,raw[0].result.deliveredT);assert.ok(d.message.includes('no se ha llamado a Nebius'));assert.ok(d.message.includes('No se garantiza reposición'));assert.ok(d.alternatives[3].overloadMinutes>0)});

@@ -1,0 +1,272 @@
+{
+  "notice": "Escenarios sintéticos. Resultado reproducible del modelo, sin inferencia Nebius ni validación minera.",
+  "scenarios": [
+    {
+      "scenarioId": "normal",
+      "status": "feasible",
+      "verification": {
+        "valid": true,
+        "issues": []
+      },
+      "metrics": {
+        "initialEnergyWh": 450000,
+        "taskEnergyWh": 430000,
+        "requiredFinalWh": 450000,
+        "minimumChargeWh": 430000,
+        "availableChargeWh": 864000,
+        "chargedEnergyWh": 430000,
+        "gridEnergyWh": 477777.77777777775,
+        "chargingLossWh": 47777.77777777775,
+        "peakChargingPowerW": 120000,
+        "totalChargingMinutes": 238.88888888888889,
+        "energyCostUsd": 57.33333333333333,
+        "chargingCo2Kg": null
+      },
+      "infrastructure": {
+        "sizing": {
+          "status": "found",
+          "minimumGridPowerW": 60000,
+          "lowerCandidateW": 59000,
+          "lowerCandidateStatus": "infeasible",
+          "stepW": 1000,
+          "chargerLimitW": 120000,
+          "trials": [
+            {
+              "gridPowerW": 120000,
+              "status": "feasible",
+              "verified": true,
+              "gridEnergyWh": 477777.77777777775,
+              "batteryEnergyWh": 430000
+            },
+            {
+              "gridPowerW": 60000,
+              "status": "feasible",
+              "verified": true,
+              "gridEnergyWh": 477777.77777777775,
+              "batteryEnergyWh": 430000
+            },
+            {
+              "gridPowerW": 30000,
+              "status": "infeasible",
+              "verified": false,
+              "gridEnergyWh": null,
+              "batteryEnergyWh": null
+            },
+            {
+              "gridPowerW": 45000,
+              "status": "infeasible",
+              "verified": false,
+              "gridEnergyWh": null,
+              "batteryEnergyWh": null
+            },
+            {
+              "gridPowerW": 53000,
+              "status": "infeasible",
+              "verified": false,
+              "gridEnergyWh": null,
+              "batteryEnergyWh": null
+            },
+            {
+              "gridPowerW": 57000,
+              "status": "infeasible",
+              "verified": false,
+              "gridEnergyWh": null,
+              "batteryEnergyWh": null
+            },
+            {
+              "gridPowerW": 59000,
+              "status": "infeasible",
+              "verified": false,
+              "gridEnergyWh": null,
+              "batteryEnergyWh": null
+            }
+          ],
+          "diagnostics": [
+            "El candidato 60 kW es factible y 59 kW no lo es. La factibilidad es monótona bajo estos supuestos."
+          ],
+          "assumptions": [
+            "Se sustituye el perfil de red por una potencia uniforme durante TODO el turno, incluso si el original tenía cortes.",
+            "Se conservan cargador, tareas, baterías, eficiencia, reservas y objetivos. Un solo cargador compartido.",
+            "Mínimo de los candidatos evaluados: 0 W, múltiplos del paso y límite exacto del cargador. No es un óptimo continuo.",
+            "No dimensiona transformadores, alimentadores ni protecciones; faltan demanda existente, traslados y curvas de carga."
+          ]
+        },
+        "sensitivity": [
+          {
+            "consumptionPct": 100,
+            "taskEnergyWh": 430000,
+            "currentPowerStatus": "feasible",
+            "minimumGridPowerW": 60000,
+            "searchStatus": "found"
+          },
+          {
+            "consumptionPct": 110,
+            "taskEnergyWh": 473000,
+            "currentPowerStatus": "feasible",
+            "minimumGridPowerW": 66000,
+            "searchStatus": "found"
+          },
+          {
+            "consumptionPct": 120,
+            "taskEnergyWh": 516000,
+            "currentPowerStatus": "feasible",
+            "minimumGridPowerW": 72000,
+            "searchStatus": "found"
+          }
+        ]
+      },
+      "diagnostics": [
+        "Calendario factible bajo los supuestos declarados; verificación independiente aprobada.",
+        "La carga se reparte secuencialmente dentro de cada intervalo: nunca hay dos equipos conectados a la vez.",
+        "Se prueba factibilidad, sin afirmar mínimo costo, mínimo pico ni mejor productividad."
+      ]
+    },
+    {
+      "scenarioId": "restricted",
+      "status": "infeasible",
+      "verification": null,
+      "metrics": {
+        "initialEnergyWh": 450000,
+        "taskEnergyWh": 430000,
+        "requiredFinalWh": 450000,
+        "minimumChargeWh": 430000,
+        "availableChargeWh": 216000,
+        "chargedEnergyWh": null,
+        "gridEnergyWh": null,
+        "chargingLossWh": null,
+        "peakChargingPowerW": null,
+        "totalChargingMinutes": null,
+        "energyCostUsd": null,
+        "chargingCo2Kg": null
+      },
+      "infrastructure": {
+        "sizing": {
+          "status": "found",
+          "minimumGridPowerW": 60000,
+          "lowerCandidateW": 59000,
+          "lowerCandidateStatus": "infeasible",
+          "stepW": 1000,
+          "chargerLimitW": 120000,
+          "trials": [
+            {
+              "gridPowerW": 120000,
+              "status": "feasible",
+              "verified": true,
+              "gridEnergyWh": 477777.77777777775,
+              "batteryEnergyWh": 430000
+            },
+            {
+              "gridPowerW": 60000,
+              "status": "feasible",
+              "verified": true,
+              "gridEnergyWh": 477777.77777777775,
+              "batteryEnergyWh": 430000
+            },
+            {
+              "gridPowerW": 30000,
+              "status": "infeasible",
+              "verified": false,
+              "gridEnergyWh": null,
+              "batteryEnergyWh": null
+            },
+            {
+              "gridPowerW": 45000,
+              "status": "infeasible",
+              "verified": false,
+              "gridEnergyWh": null,
+              "batteryEnergyWh": null
+            },
+            {
+              "gridPowerW": 53000,
+              "status": "infeasible",
+              "verified": false,
+              "gridEnergyWh": null,
+              "batteryEnergyWh": null
+            },
+            {
+              "gridPowerW": 57000,
+              "status": "infeasible",
+              "verified": false,
+              "gridEnergyWh": null,
+              "batteryEnergyWh": null
+            },
+            {
+              "gridPowerW": 59000,
+              "status": "infeasible",
+              "verified": false,
+              "gridEnergyWh": null,
+              "batteryEnergyWh": null
+            }
+          ],
+          "diagnostics": [
+            "El candidato 60 kW es factible y 59 kW no lo es. La factibilidad es monótona bajo estos supuestos."
+          ],
+          "assumptions": [
+            "Se sustituye el perfil de red por una potencia uniforme durante TODO el turno, incluso si el original tenía cortes.",
+            "Se conservan cargador, tareas, baterías, eficiencia, reservas y objetivos. Un solo cargador compartido.",
+            "Mínimo de los candidatos evaluados: 0 W, múltiplos del paso y límite exacto del cargador. No es un óptimo continuo.",
+            "No dimensiona transformadores, alimentadores ni protecciones; faltan demanda existente, traslados y curvas de carga."
+          ]
+        },
+        "sensitivity": [
+          {
+            "consumptionPct": 100,
+            "taskEnergyWh": 430000,
+            "currentPowerStatus": "infeasible",
+            "minimumGridPowerW": 60000,
+            "searchStatus": "found"
+          },
+          {
+            "consumptionPct": 110,
+            "taskEnergyWh": 473000,
+            "currentPowerStatus": "infeasible",
+            "minimumGridPowerW": 66000,
+            "searchStatus": "found"
+          },
+          {
+            "consumptionPct": 120,
+            "taskEnergyWh": 516000,
+            "currentPowerStatus": "infeasible",
+            "minimumGridPowerW": 72000,
+            "searchStatus": "found"
+          }
+        ]
+      },
+      "diagnostics": [
+        "La batería de la flota necesita al menos 430.0 kWh; con esta potencia y eficiencia, el cargador sólo podría entregar hasta 216.0 kWh en todo el turno, incluso antes de considerar las ventanas de cada equipo.",
+        "No existe un calendario que cumpla simultáneamente todas las restricciones de este modelo.",
+        "Balance del modelo: faltan 214 kWh de flujo para satisfacer las restricciones. Este certificado no equivale directamente a energía adicional de red ni a una causa raíz."
+      ]
+    },
+    {
+      "scenarioId": "invalid",
+      "status": "invalid",
+      "verification": null,
+      "metrics": null,
+      "infrastructure": {
+        "sizing": {
+          "status": "invalid",
+          "minimumGridPowerW": null,
+          "lowerCandidateW": null,
+          "lowerCandidateStatus": null,
+          "stepW": 1000,
+          "chargerLimitW": 120000,
+          "trials": [],
+          "diagnostics": [
+            "La energía no puede superar la capacidad utilizable."
+          ],
+          "assumptions": [
+            "Se sustituye el perfil de red por una potencia uniforme durante TODO el turno, incluso si el original tenía cortes.",
+            "Se conservan cargador, tareas, baterías, eficiencia, reservas y objetivos. Un solo cargador compartido.",
+            "Mínimo de los candidatos evaluados: 0 W, múltiplos del paso y límite exacto del cargador. No es un óptimo continuo.",
+            "No dimensiona transformadores, alimentadores ni protecciones; faltan demanda existente, traslados y curvas de carga."
+          ]
+        },
+        "sensitivity": []
+      },
+      "diagnostics": [
+        "La energía no puede superar la capacidad utilizable."
+      ]
+    }
+  ]
+}

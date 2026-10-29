@@ -1,0 +1,820 @@
+export type TechnologyId='fixed'|'cable'|'light'|'underground_bev'|'surface_bev'|'swap'|'trolley'|'supply';
+export type ProjectPhase='integration'|'operation';
+export type Source={id:string;title:string;url:string;scope:string;date:string};
+export type Technology={id:TechnologyId;name:string;maturity:string;description:string;why:string;context:string;sourceIds:string[]};
+export type ProjectCase={id:string;name:string;country:string;date:string;status:string;technology:TechnologyId;summary:string;why:string;limit:string;sourceIds:string[]};
+export type Requirement={id:string;name:string;category:string;critical:boolean;technologies:TechnologyId[];phases:ProjectPhase[];jurisdictions:('CL'|'other')[];integration:string;operation:string;sourceIds:string[]};
+export type Bottleneck={id:string;name:string;phase:ProjectPhase;technologies:TechnologyId[];cause:string;measure:string;sourceIds:string[]};
+export type ProjectKnowledge={reviewedAt:string;scope:string;sources:Record<string,Source>;technologies:Technology[];cases:ProjectCase[];requirements:Requirement[];bottlenecks:Bottleneck[]};
+
+export const projectKnowledge:ProjectKnowledge={
+  "reviewedAt": "2026-10-29",
+  "scope": "Referencias internacionales; normativa orientativa para Chile. Sin censo mundial ni ranking estadístico de frecuencia.",
+  "sources": {
+    "cochilco": {
+      "id": "cochilco",
+      "title": "Cochilco · consumo de energía del cobre 2025",
+      "url": "https://www.cochilco.cl/web/mineria-del-cobre-aumento-su-consumo-de-energia-un-273-en-una-decada/",
+      "scope": "Datos sectoriales de Chile; no ranking de cantidad de proyectos.",
+      "date": "2025; publicado en 2026"
+    },
+    "gmg": {
+      "id": "gmg",
+      "title": "GMG · prácticas BEV subterráneas, versión 3",
+      "url": "https://gmggroup.org/wp-content/uploads/2023/12/2022-06-23_Recommended-Practices-for-Battery-Electric-Vehicles-in-Underground-Mining.pdf",
+      "scope": "Guía técnica voluntaria, no permiso ni calibración del modelo.",
+      "date": "2022"
+    },
+    "abb": {
+      "id": "abb",
+      "title": "ABB · gestión de energía",
+      "url": "https://e-mobility.abb.com/en/site-operations/energy-management",
+      "scope": "Descripción del proveedor sobre reparto de potencia y almacenamiento.",
+      "date": "Sin fecha de publicación visible"
+    },
+    "jimblebar": {
+      "id": "jimblebar",
+      "title": "Rio Tinto · prueba conjunta BHP/Caterpillar en Pilbara",
+      "url": "https://www.riotinto.com/en/news/releases/2026/battery-electric-haul-truck-trial-in-the-pilbara",
+      "scope": "Comunicado de operador: ensayo, no despliegue comercial completo.",
+      "date": "2026-06-23"
+    },
+    "oyu": {
+      "id": "oyu",
+      "title": "Rio Tinto · intercambio de baterías en Oyu Tolgoi",
+      "url": "https://www.riotinto.com/en/news/releases/2025/rio-tinto-and-chinas-state-power-investment-corporation-launch-battery-swap-truck-trial-fleet-at-oyu-tolgoi-mine",
+      "scope": "Estado de ensayo según comunicado; se anunció evaluación hasta fines de 2026.",
+      "date": "2025-10-27"
+    },
+    "anto25": {
+      "id": "anto25",
+      "title": "Antofagasta · reporte de sostenibilidad 2025",
+      "url": "https://www.antofagasta.co.uk/media/4903/antofagasta-sustainability-report-2025.pdf",
+      "scope": "Resultados de 2025 y avances declarados por el operador.",
+      "date": "2025; publicado en 2026"
+    },
+    "anto26": {
+      "id": "anto26",
+      "title": "Antofagasta · resultados FY2025",
+      "url": "https://www.antofagasta.co.uk/media/4892/20260217-anto-fy25-results-press-release.pdf",
+      "scope": "Programación de pruebas; no demuestra puesta en servicio posterior.",
+      "date": "2026-02-17"
+    },
+    "escondida": {
+      "id": "escondida",
+      "title": "BHP · presentación ambiental trolley Escondida Norte",
+      "url": "https://www.bhp.com/news/media-centre/releases/2024/07/escondida-starts-environmental-processing-to-have-transportation-system-based-on-an-electric-trolley",
+      "scope": "Presentación de DIA anunciada; no prueba RCA favorable ni operación actual.",
+      "date": "2024-07-04"
+    },
+    "epiroc25": {
+      "id": "epiroc25",
+      "title": "Epiroc · electrificación, informe anual 2025",
+      "url": "https://reports.epirocgroup.com/annual-and-sustainability-report-2025/the-business/value-creating-strategy/accelerate-the-productivity-and-sustainability-transformation-in-our-industry/electrification/",
+      "scope": "Portafolio y avances declarados por fabricante; no censo mundial.",
+      "date": "2025; publicado en 2026"
+    },
+    "fortescue": {
+      "id": "fortescue",
+      "title": "Epiroc · contrato de perforación eléctrica con Fortescue",
+      "url": "https://www.epirocgroup.com/en/media/corporate-press-releases/2025/20250416-epiroc-wins-its-largest-contract-ever--for-autonomous-and-electric-powered-mining-equipment",
+      "scope": "Contrato anunciado; no equivale a toda la flota entregada.",
+      "date": "2025-04-16"
+    },
+    "sec": {
+      "id": "sec",
+      "title": "SEC · normas técnicas eléctricas",
+      "url": "https://www.sec.cl/normas-tecnicas-electricas/",
+      "scope": "D.S. 8/2019 y pliegos RIC según alcance de cada instalación.",
+      "date": "Página vigente consultada"
+    },
+    "ric15": {
+      "id": "ric15",
+      "title": "SEC · electromovilidad y RIC 15 versión 2024",
+      "url": "https://www.sec.cl/electromovilidad/",
+      "scope": "Diseño, productos y puesta en servicio; confirmar alcance para maquinaria y tecnología concretas.",
+      "date": "RIC 15 versión 2024"
+    },
+    "mining": {
+      "id": "mining",
+      "title": "BCN · D.S. 132/2002, Seguridad Minera",
+      "url": "https://www.bcn.cl/leychile/navegar?idNorma=221064",
+      "scope": "Revisar modificaciones mayores y seguridad con Sernageomin; no toda sustitución exige idéntico trámite.",
+      "date": "Texto oficial consultado"
+    },
+    "sea26": {
+      "id": "sea26",
+      "title": "SEA · instructivos, actualización de pertinencia 2026",
+      "url": "https://www.sea.gob.cl/instructivos-para-la-evaluacion-del-impacto-ambiental",
+      "scope": "Of. Ord. 20269910259 de 20/01/2026 reemplaza instructivo de 2024.",
+      "date": "2026-01-20"
+    },
+    "environmentLaw": {
+      "id": "environmentLaw",
+      "title": "BCN · Ley 19.300, bases del medio ambiente",
+      "url": "https://www.bcn.cl/leychile/navegar?idNorma=30667",
+      "scope": "Tipologías y efectos ambientales; revisar versión vigente y situación de la RCA.",
+      "date": "Texto oficial consultado"
+    },
+    "seia": {
+      "id": "seia",
+      "title": "BCN · D.S. 40/2012, Reglamento del SEIA",
+      "url": "https://www.bcn.cl/leychile/navegar?idNorma=1053563",
+      "scope": "Evaluar tipologías y modificaciones según texto vigente.",
+      "date": "Texto oficial consultado"
+    },
+    "waste": {
+      "id": "waste",
+      "title": "BCN · D.S. 148/2003, residuos peligrosos",
+      "url": "https://www.bcn.cl/leychile/navegar?idNorma=226458",
+      "scope": "Clasificación y manejo de residuos; determinar obligaciones según características y manejo de baterías usadas.",
+      "date": "Texto oficial consultado"
+    },
+    "energyLaw": {
+      "id": "energyLaw",
+      "title": "Ministerio de Energía · Ley 21.305 y gestión energética",
+      "url": "https://energia.gob.cl/ley-y-plan-de-eficiencia-energetica",
+      "scope": "Revisar obligaciones de reporte, calificación CCGE y SGE según consumo y actos aplicables.",
+      "date": "Página oficial consultada"
+    },
+    "ds44": {
+      "id": "ds44",
+      "title": "BCN · D.S. 44, gestión preventiva",
+      "url": "https://www.bcn.cl/leychile/navegar?idNorma=1205298",
+      "scope": "Matriz de riesgos, programa preventivo y responsabilidades del empleador.",
+      "date": "D.S. 44/2023"
+    },
+    "ds594": {
+      "id": "ds594",
+      "title": "BCN · D.S. 594, condiciones de trabajo",
+      "url": "https://www.bcn.cl/leychile/navegar?idNorma=167766",
+      "scope": "Ventilación y exposición deben evaluarse; electrificar no autoriza reducir caudal automáticamente.",
+      "date": "D.S. 594/1999"
+    },
+    "fraunhofer": {
+      "id": "fraunhofer",
+      "title": "Fraunhofer IVI · diagnóstico remoto de baterías",
+      "url": "https://www.ivi.fraunhofer.de/en/research-fields/electromobility/remote-battery-diagnosis.html",
+      "scope": "Diagnóstico basado en datos de viajes, carga y batería; no valida una predicción sin históricos.",
+      "date": "Página institucional consultada"
+    }
+  },
+  "technologies": [
+    {
+      "id": "fixed",
+      "name": "Plantas, bombeo y servicios eléctricos",
+      "maturity": "Base consolidada",
+      "description": "Molienda, chancado, correas, ventilación y agua. Ampliaciones, motores y variadores.",
+      "why": "Asegurar capacidad, eficiencia y continuidad de procesos.",
+      "context": "Producción continua y cargas grandes; revisar punta simultánea y arranque.",
+      "sourceIds": [
+        "cochilco",
+        "sec"
+      ]
+    },
+    {
+      "id": "cable",
+      "name": "Palas y perforación por cable",
+      "maturity": "Tecnología consolidada",
+      "description": "Equipos de alta potencia con alimentación por cable y distribución móvil.",
+      "why": "Sustituir combustible o ampliar capacidad con suministro eléctrico.",
+      "context": "Frentes relativamente previsibles; movimiento de cables y traslados condicionan flexibilidad.",
+      "sourceIds": [
+        "epiroc25",
+        "fortescue"
+      ]
+    },
+    {
+      "id": "light",
+      "name": "Buses, camionetas y logística eléctrica",
+      "maturity": "Adopción comercial documentada",
+      "description": "Transporte de personas, vehículos livianos y logística de apoyo.",
+      "why": "Reducir combustible y emisiones en recorridos planificables.",
+      "context": "Retorno a base, ventanas de estacionamiento y capacidad de patio conocidas.",
+      "sourceIds": [
+        "anto25"
+      ]
+    },
+    {
+      "id": "underground_bev",
+      "name": "LHD y camiones BEV subterráneos",
+      "maturity": "Despliegues comerciales y expansión",
+      "description": "Equipos móviles con batería y recarga estacionaria genérica.",
+      "why": "Reducir emisiones locales, calor y uso de diésel; estudiar efectos en ventilación y productividad.",
+      "context": "Pendiente, distancia, autonomía, infraestructura y temperatura determinan desempeño.",
+      "sourceIds": [
+        "epiroc25",
+        "gmg"
+      ]
+    },
+    {
+      "id": "surface_bev",
+      "name": "CAEX a batería y carga rápida",
+      "maturity": "Ensayos recientes en gran tonelaje",
+      "description": "Vehículos de rajo con carga estática; carga dinámica requiere su propio modelo.",
+      "why": "Descarbonizar acarreo de alta demanda de combustible manteniendo producción.",
+      "context": "Ciclos intensivos, grandes potencias, polvo y calor; la madurez depende del equipo y faena.",
+      "sourceIds": [
+        "jimblebar"
+      ]
+    },
+    {
+      "id": "swap",
+      "name": "Flota con intercambio de baterías",
+      "maturity": "Ensayos y adopción por segmento",
+      "description": "Vehículos, estación de intercambio y stock de packs fuera del camión.",
+      "why": "Acortar inmovilización por recarga del vehículo.",
+      "context": "La carga pasa al inventario de packs; exige compatibilidad, stock y disponibilidad de la estación.",
+      "sourceIds": [
+        "oyu"
+      ]
+    },
+    {
+      "id": "trolley",
+      "name": "Trolley assist y trolley con batería",
+      "maturity": "Tecnología conocida con nuevas aplicaciones",
+      "description": "Líneas aéreas, subestaciones y equipos compatibles en tramos seleccionados.",
+      "why": "Reducir uso de diésel o sostener movimiento/carga en rampas.",
+      "context": "Trolley assist puede conservar motor diésel. Rentabilidad depende de tráfico, trazado estable y vida de mina.",
+      "sourceIds": [
+        "escondida",
+        "anto26",
+        "epiroc25"
+      ]
+    },
+    {
+      "id": "supply",
+      "name": "Red, subestaciones y almacenamiento",
+      "maturity": "Infraestructura habilitante",
+      "description": "Conexión, alimentadores, protecciones, almacenamiento y gestión de demanda.",
+      "why": "Sostener nuevas cargas y reducir restricciones del suministro.",
+      "context": "Electricidad renovable contratada y batería estacionaria requieren evaluar capacidad y balance por separado.",
+      "sourceIds": [
+        "abb",
+        "cochilco",
+        "sec"
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "id": "jimblebar",
+      "name": "Jimblebar · Pilbara",
+      "country": "Australia",
+      "date": "2026-06-23",
+      "status": "Ensayo en faena anunciado",
+      "technology": "surface_bev",
+      "summary": "Dos Cat 793 XE Early Learner en prueba conjunta BHP/Rio Tinto/Caterpillar.",
+      "why": "Aprender sobre seguridad, infraestructura de carga, mantenimiento y viabilidad comercial.",
+      "limit": "El comunicado anuncia una siguiente fase de carga dinámica; no acredita flota comercial completa.",
+      "sourceIds": [
+        "jimblebar"
+      ]
+    },
+    {
+      "id": "pelambres",
+      "name": "Los Pelambres",
+      "country": "Chile",
+      "date": "2026-02-17",
+      "status": "Piloto y pruebas programadas",
+      "technology": "trolley",
+      "summary": "Sistema trolley assist para camiones en rampas.",
+      "why": "Reducir uso de diésel y obtener evidencia para futuras decisiones.",
+      "limit": "La fuente informa programación de pruebas; no se confirmó aquí una puesta en servicio posterior.",
+      "sourceIds": [
+        "anto26",
+        "anto25"
+      ]
+    },
+    {
+      "id": "oyu",
+      "name": "Oyu Tolgoi",
+      "country": "Mongolia",
+      "date": "2025-10-27",
+      "status": "Flota de ensayo lanzada",
+      "technology": "swap",
+      "summary": "Ocho camiones de 91 t, trece baterías de 800 kWh y estación de intercambio.",
+      "why": "Evaluar operación y mantenimiento de un sistema completo en transporte de apoyo.",
+      "limit": "Ensayo anunciado hasta fines de 2026; cifras de packs son específicas de este caso.",
+      "sourceIds": [
+        "oyu"
+      ]
+    },
+    {
+      "id": "kristineberg",
+      "name": "Kristineberg / Rävliden",
+      "country": "Suecia",
+      "date": "2025",
+      "status": "Avances e integración reportados",
+      "technology": "trolley",
+      "summary": "Epiroc reporta avances de trolley con batería junto a Boliden y ABB.",
+      "why": "Apoyar acarreo subterráneo electrificado en rampa.",
+      "limit": "El reporte anual no prueba aquí la disponibilidad continua de todo el sistema ni inventario actual.",
+      "sourceIds": [
+        "epiroc25"
+      ]
+    },
+    {
+      "id": "fortescue",
+      "name": "Fortescue · perforación",
+      "country": "Australia",
+      "date": "2025-04-16",
+      "status": "Contrato anunciado",
+      "technology": "cable",
+      "summary": "Pedido de perforación eléctrica por cable y batería.",
+      "why": "Electrificar y automatizar perforación superficial.",
+      "limit": "Un contrato no equivale a todos los equipos entregados u operando.",
+      "sourceIds": [
+        "fortescue"
+      ]
+    },
+    {
+      "id": "centinela",
+      "name": "Centinela · equipos y logística",
+      "country": "Chile",
+      "date": "2025",
+      "status": "Incorporaciones reportadas",
+      "technology": "light",
+      "summary": "Reporte de transporte eléctrico y ampliación de flota; incluye palas eléctricas.",
+      "why": "Reducir combustible en carguío y transporte de apoyo.",
+      "limit": "No se atribuye al caso un ahorro universal ni se considera toda la mina libre de diésel.",
+      "sourceIds": [
+        "anto25"
+      ]
+    },
+    {
+      "id": "escondida",
+      "name": "Escondida Norte",
+      "country": "Chile",
+      "date": "2024-07-04",
+      "status": "Presentación ambiental anunciada",
+      "technology": "trolley",
+      "summary": "BHP anunció DIA para trolley, subestación y líneas.",
+      "why": "Asistir a camiones cargados en zonas de elevado consumo de combustible.",
+      "limit": "Caso de integración y permisos. Esta fuente de 2024 no confirma aprobación ni estado operativo en 2026.",
+      "sourceIds": [
+        "escondida"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "id": "grid",
+      "name": "Suministro y capacidad eléctrica",
+      "category": "electricidad",
+      "critical": true,
+      "technologies": [],
+      "phases": [],
+      "jurisdictions": [],
+      "integration": "Perfil de demanda, límite firme, unifilar, calidad de energía, protecciones y estudio de conexión.",
+      "operation": "Medición de punta, indisponibilidades, protecciones y capacidad residual bajo la operación real.",
+      "sourceIds": [
+        "sec",
+        "abb"
+      ]
+    },
+    {
+      "id": "duty",
+      "name": "Tarea productiva y ciclo",
+      "category": "operación",
+      "critical": true,
+      "technologies": [],
+      "phases": [],
+      "jurisdictions": [],
+      "integration": "Producción objetivo, ruta, pendiente, carga, tiempos, turnos y energía por ciclo.",
+      "operation": "Producción y tiempos reales por estado; distinguir espera por carga, camino, carguío y falla.",
+      "sourceIds": [
+        "cochilco",
+        "gmg"
+      ]
+    },
+    {
+      "id": "compatibility",
+      "name": "Compatibilidad de equipos e interfaces",
+      "category": "equipos",
+      "critical": true,
+      "technologies": [
+        "cable",
+        "light",
+        "underground_bev",
+        "surface_bev",
+        "swap",
+        "trolley"
+      ],
+      "phases": [],
+      "jurisdictions": [],
+      "integration": "Fichas OEM, potencia, tensión, conectores, comunicación y límites de uso.",
+      "operation": "Pruebas de interoperabilidad, versiones de control, fallas de conexión y repuestos.",
+      "sourceIds": [
+        "epiroc25",
+        "gmg"
+      ]
+    },
+    {
+      "id": "layout",
+      "name": "Ubicación y obras",
+      "category": "infraestructura",
+      "critical": false,
+      "technologies": [],
+      "phases": [],
+      "jurisdictions": [],
+      "integration": "Ubicación, distancias, espacio, geotecnia, drenaje, accesos y plan de obras sin interrumpir producción.",
+      "operation": "Traslados, colas, zonas dañadas y cambios del plan minero; revisar reubicación de instalaciones.",
+      "sourceIds": [
+        "escondida",
+        "gmg"
+      ]
+    },
+    {
+      "id": "sec",
+      "name": "Revisión eléctrica y puesta en servicio Chile",
+      "category": "regulación",
+      "critical": true,
+      "technologies": [],
+      "phases": [],
+      "jurisdictions": [
+        "CL"
+      ],
+      "integration": "Identificar D.S. 8/RIC y trámites aplicables; revisar RIC 15 para la infraestructura concreta con especialista.",
+      "operation": "Documentación conforme a obra, mantenimiento y revisiones eléctricas; verificar cambios posteriores.",
+      "sourceIds": [
+        "sec",
+        "ric15"
+      ]
+    },
+    {
+      "id": "mining",
+      "name": "Revisión de proyecto y seguridad minera Chile",
+      "category": "regulación",
+      "critical": true,
+      "technologies": [],
+      "phases": [],
+      "jurisdictions": [
+        "CL"
+      ],
+      "integration": "Determinar con Sernageomin si hay modificación mayor y qué antecedentes o aprobaciones corresponden.",
+      "operation": "Mantener procedimiento, inspecciones y revisión de modificaciones de instalaciones u operación.",
+      "sourceIds": [
+        "mining"
+      ]
+    },
+    {
+      "id": "environment",
+      "name": "Revisión ambiental Chile",
+      "category": "regulación",
+      "critical": true,
+      "technologies": [],
+      "phases": [],
+      "jurisdictions": [
+        "CL"
+      ],
+      "integration": "Comparar obras y operación con RCA; evaluar tipologías y cambios de consideración bajo normativa vigente.",
+      "operation": "Cumplir condiciones de RCA aplicables y revisar cambios; una pertinencia no reemplaza una RCA.",
+      "sourceIds": [
+        "environmentLaw",
+        "seia",
+        "sea26"
+      ]
+    },
+    {
+      "id": "waste",
+      "name": "Baterías usadas y residuos Chile",
+      "category": "regulación",
+      "critical": true,
+      "technologies": [
+        "light",
+        "underground_bev",
+        "surface_bev",
+        "swap"
+      ],
+      "phases": [],
+      "jurisdictions": [
+        "CL"
+      ],
+      "integration": "Caracterizar baterías usadas, peligrosidad, almacenamiento, transporte y gestión autorizada según corresponda.",
+      "operation": "Trazabilidad, estado de packs retirados, gestores y contingencias de almacenamiento; revisar obligaciones aplicables.",
+      "sourceIds": [
+        "waste"
+      ]
+    },
+    {
+      "id": "localLaw",
+      "name": "Marco de la jurisdicción seleccionada",
+      "category": "regulación",
+      "critical": true,
+      "technologies": [],
+      "phases": [],
+      "jurisdictions": [
+        "other"
+      ],
+      "integration": "Identificar autoridades y requisitos mineros, eléctricos, ambientales y laborales del país y región.",
+      "operation": "Verificar vigencia y seguimiento de autorizaciones locales. No trasladar normativa chilena automáticamente.",
+      "sourceIds": [
+        "gmg"
+      ]
+    },
+    {
+      "id": "safety",
+      "name": "Riesgos, emergencia y formación",
+      "category": "seguridad",
+      "critical": true,
+      "technologies": [],
+      "phases": [],
+      "jurisdictions": [],
+      "integration": "Análisis de riesgos, aislamiento de alta tensión, respuesta a incidentes, capacitación y rescate.",
+      "operation": "Permisos de trabajo, incidentes, simulacros y competencias vigentes de operación y mantenimiento.",
+      "sourceIds": [
+        "ds44",
+        "ds594",
+        "gmg"
+      ]
+    },
+    {
+      "id": "thermal",
+      "name": "Batería y respuesta térmica",
+      "category": "baterías",
+      "critical": true,
+      "technologies": [
+        "light",
+        "underground_bev",
+        "surface_bev",
+        "swap"
+      ],
+      "phases": [],
+      "jurisdictions": [],
+      "integration": "Curvas OEM de potencia–SOC–temperatura, refrigeración, SOH, emergencia y almacenamiento.",
+      "operation": "Temperatura, derating, SOC/SOH, consumo auxiliar y alarmas BMS; registros por equipo.",
+      "sourceIds": [
+        "epiroc25",
+        "fraunhofer"
+      ]
+    },
+    {
+      "id": "swapStock",
+      "name": "Inventario y estación de intercambio",
+      "category": "baterías",
+      "critical": true,
+      "technologies": [
+        "swap"
+      ],
+      "phases": [],
+      "jurisdictions": [],
+      "integration": "Cantidad de packs, compatibilidad, potencia de carga, tiempo de intercambio y redundancia.",
+      "operation": "Packs cargados disponibles, mantenimiento, colas y tiempo de retorno al stock.",
+      "sourceIds": [
+        "oyu"
+      ]
+    },
+    {
+      "id": "trolleyRoad",
+      "name": "Tramo trolley y plan de mina",
+      "category": "infraestructura",
+      "critical": true,
+      "technologies": [
+        "trolley"
+      ],
+      "phases": [],
+      "jurisdictions": [],
+      "integration": "Tráfico, pendiente, vida del tramo, interfaces, gálibo, pantógrafo y mantenimiento de línea.",
+      "operation": "Disponibilidad de línea, contactos, velocidad, estado del camino y reubicaciones necesarias.",
+      "sourceIds": [
+        "escondida",
+        "anto26"
+      ]
+    },
+    {
+      "id": "economics",
+      "name": "Evaluación económica completa",
+      "category": "economía",
+      "critical": false,
+      "technologies": [],
+      "phases": [],
+      "jurisdictions": [],
+      "integration": "Cotizaciones de vehículos, obras, conexión, energía, mantenimiento, recambios y vida de mina.",
+      "operation": "Comparación a igual producción, facturas, demanda máxima, recambios y disponibilidad real.",
+      "sourceIds": [
+        "jimblebar",
+        "abb"
+      ]
+    },
+    {
+      "id": "procurement",
+      "name": "Suministros y puesta en marcha",
+      "category": "implementación",
+      "critical": false,
+      "technologies": [],
+      "phases": [
+        "integration"
+      ],
+      "jurisdictions": [],
+      "integration": "Plazos de transformadores/equipos, responsables, ventanas de intervención y pruebas de aceptación.",
+      "operation": "",
+      "sourceIds": [
+        "escondida",
+        "fortescue"
+      ]
+    },
+    {
+      "id": "maintenance",
+      "name": "Mantenimiento y repuestos",
+      "category": "mantenimiento",
+      "critical": true,
+      "technologies": [],
+      "phases": [
+        "operation"
+      ],
+      "jurisdictions": [],
+      "integration": "",
+      "operation": "MTBF/MTTR, repuestos críticos, soporte OEM y procedimientos de alta tensión.",
+      "sourceIds": [
+        "epiroc25",
+        "fraunhofer"
+      ]
+    },
+    {
+      "id": "metering",
+      "name": "Datos y seguimiento energético",
+      "category": "datos",
+      "critical": false,
+      "technologies": [],
+      "phases": [],
+      "jurisdictions": [],
+      "integration": "Definir medidores, fronteras, calidad y frecuencia de datos; revisar obligaciones SGE en Chile.",
+      "operation": "Balance energético, calibración, huecos de datos e indicadores por producción; seguimiento SGE cuando corresponda.",
+      "sourceIds": [
+        "energyLaw",
+        "cochilco"
+      ]
+    }
+  ],
+  "bottlenecks": [
+    {
+      "id": "supply",
+      "name": "Potencia y conexión insuficientes",
+      "phase": "integration",
+      "technologies": [],
+      "cause": "La flota se dimensiona antes de comprobar margen de red y cargas simultáneas.",
+      "measure": "Perfil medido, conexión, protecciones y alternativas de gestión antes de comprar.",
+      "sourceIds": [
+        "sec",
+        "abb"
+      ]
+    },
+    {
+      "id": "cycle",
+      "name": "Caso de negocio sin ciclo representativo",
+      "phase": "integration",
+      "technologies": [],
+      "cause": "Promedios de consumo no capturan pendientes, traslados ni detenciones de carga.",
+      "measure": "Ciclos y distribución de tiempos, igual producción y sensibilidad de precios.",
+      "sourceIds": [
+        "gmg",
+        "jimblebar"
+      ]
+    },
+    {
+      "id": "permits",
+      "name": "Obras y permisos fuera del cronograma",
+      "phase": "integration",
+      "technologies": [],
+      "cause": "Líneas, subestaciones, espacio y cambios ambientales/mineros deben evaluarse en conjunto.",
+      "measure": "Expediente de cambios, responsables y ruta de revisión por autoridad.",
+      "sourceIds": [
+        "escondida",
+        "sea26",
+        "mining"
+      ]
+    },
+    {
+      "id": "interface",
+      "name": "Interfaces y soporte de proveedores",
+      "phase": "integration",
+      "technologies": [
+        "light",
+        "underground_bev",
+        "surface_bev",
+        "swap",
+        "trolley"
+      ],
+      "cause": "La compatibilidad técnica o de packs se descubre tarde.",
+      "measure": "Ensayos OEM, contratos de servicio y lista de componentes compatibles.",
+      "sourceIds": [
+        "epiroc25",
+        "oyu"
+      ]
+    },
+    {
+      "id": "construction",
+      "name": "Intervenir una mina en marcha",
+      "phase": "integration",
+      "technologies": [],
+      "cause": "Obras, equipos de largo plazo y formación compiten con continuidad productiva.",
+      "measure": "Secuencia de obras y aceptación, contingencia y ventanas operacionales.",
+      "sourceIds": [
+        "fortescue",
+        "escondida"
+      ]
+    },
+    {
+      "id": "queues",
+      "name": "Colas y carga en punta",
+      "phase": "operation",
+      "technologies": [
+        "light",
+        "underground_bev",
+        "surface_bev",
+        "swap"
+      ],
+      "cause": "La recarga coincide con cambios de turno u otras cargas y falta potencia residual.",
+      "measure": "Separar espera por conexión, recarga, ruta y falla; revisar inventario al siguiente turno.",
+      "sourceIds": [
+        "abb",
+        "gmg"
+      ]
+    },
+    {
+      "id": "temperature",
+      "name": "Menor energía o potencia de batería",
+      "phase": "operation",
+      "technologies": [
+        "light",
+        "underground_bev",
+        "surface_bev",
+        "swap"
+      ],
+      "cause": "SOC, SOH y temperatura limitan autonomía y carga frente al caso nominal.",
+      "measure": "BMS, curvas OEM, refrigeración y energía real por ciclo.",
+      "sourceIds": [
+        "fraunhofer",
+        "epiroc25"
+      ]
+    },
+    {
+      "id": "availability",
+      "name": "Fallas e indisponibilidad eléctrica",
+      "phase": "operation",
+      "technologies": [],
+      "cause": "Un cargador, alimentador o componente crítico reduce producción.",
+      "measure": "Alarmas, tiempos de reparación, redundancia, repuestos y causa raíz.",
+      "sourceIds": [
+        "sec",
+        "epiroc25"
+      ]
+    },
+    {
+      "id": "changingMine",
+      "name": "Cambios de ruta y frente",
+      "phase": "operation",
+      "technologies": [
+        "cable",
+        "underground_bev",
+        "surface_bev",
+        "trolley"
+      ],
+      "cause": "La infraestructura pierde conveniencia al desplazarse frentes o rampas.",
+      "measure": "Actualizar rutas, distancias, tráfico y plan de reubicación.",
+      "sourceIds": [
+        "escondida",
+        "anto26"
+      ]
+    },
+    {
+      "id": "packs",
+      "name": "Falta de packs listos",
+      "phase": "operation",
+      "technologies": [
+        "swap"
+      ],
+      "cause": "Cambiar una batería rápido no asegura disponer de otra cargada.",
+      "measure": "Stock por estado, energía por pack y capacidad efectiva de carga/reparación.",
+      "sourceIds": [
+        "oyu"
+      ]
+    },
+    {
+      "id": "data",
+      "name": "Diagnóstico con datos incompletos",
+      "phase": "operation",
+      "technologies": [],
+      "cause": "No se distingue consumo de red, batería, pérdidas ni energía por producción.",
+      "measure": "Medición sincronizada y balance; revisar registros faltantes e indicadores.",
+      "sourceIds": [
+        "cochilco",
+        "energyLaw",
+        "fraunhofer"
+      ]
+    },
+    {
+      "id": "safety",
+      "name": "Competencias y riesgos de la operación",
+      "phase": "operation",
+      "technologies": [],
+      "cause": "Alta tensión, batería, rescate y exposición requieren procedimientos mantenidos.",
+      "measure": "Formación, incidentes y controles; ventilación basada en evaluación especializada.",
+      "sourceIds": [
+        "ds44",
+        "ds594"
+      ]
+    }
+  ]
+};

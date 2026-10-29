@@ -1,0 +1,134 @@
+{
+  "id": "restricted",
+  "name": "Red restringida",
+  "slotMinutes": 15,
+  "slotCount": 32,
+  "chargerPowerW": 120000,
+  "gridPowerWBySlot": [
+    30000,
+    30000,
+    30000,
+    30000,
+    30000,
+    30000,
+    30000,
+    30000,
+    30000,
+    30000,
+    30000,
+    30000,
+    30000,
+    30000,
+    30000,
+    30000,
+    30000,
+    30000,
+    30000,
+    30000,
+    30000,
+    30000,
+    30000,
+    30000,
+    30000,
+    30000,
+    30000,
+    30000,
+    30000,
+    30000,
+    30000,
+    30000
+  ],
+  "assets": [
+    {
+      "id": "lhd-01",
+      "name": "LHD 01",
+      "capacityWh": 240000,
+      "initialWh": 150000,
+      "reserveWh": 30000,
+      "finalTargetWh": 150000
+    },
+    {
+      "id": "lhd-02",
+      "name": "LHD 02",
+      "capacityWh": 240000,
+      "initialWh": 140000,
+      "reserveWh": 30000,
+      "finalTargetWh": 150000
+    },
+    {
+      "id": "lhd-03",
+      "name": "LHD 03",
+      "capacityWh": 240000,
+      "initialWh": 160000,
+      "reserveWh": 30000,
+      "finalTargetWh": 150000
+    }
+  ],
+  "tasks": [
+    {
+      "id": "t-01",
+      "assetId": "lhd-01",
+      "slot": 3,
+      "consumptionWh": 45000,
+      "label": "Ciclo de producción"
+    },
+    {
+      "id": "t-02",
+      "assetId": "lhd-01",
+      "slot": 11,
+      "consumptionWh": 50000,
+      "label": "Ciclo de producción"
+    },
+    {
+      "id": "t-03",
+      "assetId": "lhd-01",
+      "slot": 19,
+      "consumptionWh": 45000,
+      "label": "Ciclo de producción"
+    },
+    {
+      "id": "t-04",
+      "assetId": "lhd-02",
+      "slot": 5,
+      "consumptionWh": 55000,
+      "label": "Ciclo de producción"
+    },
+    {
+      "id": "t-05",
+      "assetId": "lhd-02",
+      "slot": 13,
+      "consumptionWh": 45000,
+      "label": "Ciclo de producción"
+    },
+    {
+      "id": "t-06",
+      "assetId": "lhd-02",
+      "slot": 21,
+      "consumptionWh": 50000,
+      "label": "Ciclo de producción"
+    },
+    {
+      "id": "t-07",
+      "assetId": "lhd-03",
+      "slot": 7,
+      "consumptionWh": 50000,
+      "label": "Ciclo de producción"
+    },
+    {
+      "id": "t-08",
+      "assetId": "lhd-03",
+      "slot": 15,
+      "consumptionWh": 45000,
+      "label": "Ciclo de producción"
+    },
+    {
+      "id": "t-09",
+      "assetId": "lhd-03",
+      "slot": 23,
+      "consumptionWh": 45000,
+      "label": "Ciclo de producción"
+    }
+  ],
+  "priceUsdPerKwh": 0.12,
+  "chargingEfficiencyPct": 90
+}

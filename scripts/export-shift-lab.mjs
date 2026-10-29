@@ -1,0 +1,10 @@
+import {mkdirSync,writeFileSync} from 'node:fs';
+import {shiftDefaults,simulateShift,compareShiftAlternatives,replicateShift,labSources} from '../src/lib/shift-lab.ts';
+const root=new URL('../examples/shift-lab/',import.meta.url);mkdirSync(root,{recursive:true});
+const config={...shiftDefaults},result=simulateShift(config);
+writeFileSync(new URL('config.json',root),JSON.stringify(config,null,2));
+writeFileSync(new URL('diagnostico.json',root),JSON.stringify({schemaVersion:8,synthetic:true,config,result,alternatives:compareShiftAlternatives(config),replicates:replicateShift(config),sources:labSources},null,2));
+writeFileSync(new URL('traza.csv',root),'minute,base_kw,charge_kw,grid_kw,limit_kw,price_usd_kwh,delivered_t,queue,'+result.units.map(u=>u.id+'_soc_pct').join(',')+'\n'+result.samples.map(p=>[p.minute,p.baseKw,p.chargeKw,p.gridKw,p.limitKw,p.price,p.tonnes,p.queue,...p.soc].join(',')).join('\n')+'\n');
+writeFileSync(new URL('eventos.csv',root),'minute,asset,type,message\n'+result.events.map(e=>[e.minute,e.asset,e.type,'"'+e.message.replace(/"/g,'""')+'"'].join(',')).join('\n')+'\n');
+writeFileSync(new URL('comparacion.csv',root),'scenario,tonnes,queue_vehicle_min,overload_min,energy_equivalent_kwh,inventory_correction_kwh,usd_per_t,co2_kg_per_t,charger_capex_usd\n'+compareShiftAlternatives(config).map(a=>[a.id,a.result.deliveredT,a.result.totalQueueMinutes,a.result.overloadMinutes,a.result.equivalentGridKwh,a.result.inventoryCorrectionKwh,a.result.energyCostPerT,a.result.co2KgPerT,a.result.capexUsd].join(',')).join('\n')+'\n');
+console.log('Ejemplos sintéticos guardados en examples/shift-lab.');

@@ -1,0 +1,15 @@
+Mining electrification is a production decision as well as an energy decision. A fleet can have enough daily energy and still miss its target because chargers, grid capacity and shift timing do not line up.
+
+This is the English reviewer view. The synthetic case has four underground loaders, a twelve-hour shift and a seventeen-hundred-tonne target. We include degraded batteries, charging losses, critical site load and a charger outage. These are declared assumptions, not measurements from a real mine.
+
+One charger delivers eleven hundred eighty-eight tonnes. Two chargers on the same supply improve output but still miss the target. Adding three hundred fifty kilowatts reaches seventeen hundred eighty-two tonnes. Unmanaged charging reaches similar output while overloading the supply.
+
+Now inspect the upgrade and the next shift. Each vehicle keeps its actual battery energy. A sixty-minute break restores the declared initial charge in this case. The complete observation is twenty-five hours, so we do not present it as a daily-production improvement.
+
+The second workflow asks what evidence is missing. Choose the technology, project stage and jurisdiction. Battery swapping needs a pack-stock review. Trolley needs a route and line review. Declaring a document available changes the dossier, but never certifies a permit.
+
+Here is a real NVIDIA Nemotron request through Nebius Token Factory. Inspect the executed tools. The model retrieves the dossier and sources, then selects evidence identifiers. The application validates that selection and fills the report with catalog text and computed counts. The provider key stays on the server.
+
+Reports can be exported for inspection. The code, tests and integration records make results reproducible. The operation is synthetic, and the prototype does not control equipment, validate industrial savings or replace electrical and safety engineering.
+
+ElectroDecision helps planners compare charging choices and organize the next engineering review. The next step is validation with site data and users. Thank you.

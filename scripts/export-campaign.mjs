@@ -1,0 +1,10 @@
+import {writeFileSync,mkdirSync} from 'node:fs';
+import {shiftDefaults} from '../src/lib/shift-lab.ts';
+import {simulateCampaign,campaignSummary} from '../src/lib/shift-campaign.ts';
+const root=new URL('../examples/continuity/',import.meta.url);mkdirSync(root,{recursive:true});
+const cases=[{id:'actual',config:{...shiftDefaults}},{id:'dos-misma-red',config:{...shiftDefaults,chargers:2}},{id:'ampliacion',config:{...shiftDefaults,chargers:2,limitKw:1400}}];
+const summaries=cases.flatMap(c=>[0,30,60,120,240].map(minutes=>({id:c.id,config:c.config,...campaignSummary(c.config,minutes)})));
+writeFileSync(new URL('comparacion.json',root),JSON.stringify({schemaVersion:9,synthetic:true,summaries},null,2));
+writeFileSync(new URL('comparacion.csv',root),'case,break_min,elapsed_hours,shift_1_t,shift_2_t,target_per_shift_t,restored,deficit_battery_kwh,actual_grid_kwh,overload_min\n'+summaries.map(r=>[r.id,r.breakMinutes,r.elapsedHours,r.firstTonnes,r.secondTonnes,r.targetPerShift,r.ready,r.deficitBatteryKwh,r.actualGridKwh,r.overloadMinutes].join(',')).join('\n')+'\n');
+writeFileSync(new URL('caso-actual-60min.json',root),JSON.stringify({schemaVersion:9,config:shiftDefaults,result:simulateCampaign(shiftDefaults,60)},null,2));
+console.log('Continuidad: 15 comparaciones sintéticas y caso completo exportados.');

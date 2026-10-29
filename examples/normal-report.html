@@ -1,0 +1,959 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ElectroDecision · Informe</title><style>body{font:15px/1.65 system-ui;max-width:1000px;margin:36px auto;padding:0 24px;color:#193b48}h1{font-size:36px}h2{margin-top:32px}table{width:100%;border-collapse:collapse}td,th{text-align:left;padding:10px;border-bottom:1px solid #dde7e9}.note{background:#eef6f3;border-left:4px solid #087e7d;padding:16px}pre{white-space:pre-wrap;word-break:break-word;background:#f4f7f8;padding:18px}a{color:#087e7d}small{color:#55717b}@media print{body{margin:0}.note,table{break-inside:avoid}}</style></head><body>
+  <h1>ElectroDecision</h1><p>Turno de referencia · v0.2.0</p><p class="note">Escenario sintético. Evaluación preliminar bajo supuestos; no diseño de infraestructura aprobado ni ahorro real.</p>
+  <h2>Plan factible</h2><p>Verificación independiente del calendario: aprobada.</p>
+  <table><tr><th>Magnitud del plan</th><th>Resultado</th></tr><tr><td>Energía recibida por baterías</td><td>430 kWh</td></tr><tr><td>Energía desde la red</td><td>477,78 kWh</td></tr><tr><td>Pérdidas de carga</td><td>47,78 kWh</td></tr><tr><td>Eficiencia constante asumida</td><td>90%</td></tr><tr><td>Costo variable de energía desde la red</td><td>57,33 USD</td></tr></table>
+  <h2>Evaluación preliminar de potencia uniforme</h2><p>Menor candidato factible: 60 kW. Paso de búsqueda: 1 kW; cargador existente: 120 kW.</p><ul><li>El candidato 60 kW es factible y 59 kW no lo es. La factibilidad es monótona bajo estos supuestos.</li></ul><ul><li>Se sustituye el perfil de red por una potencia uniforme durante TODO el turno, incluso si el original tenía cortes.</li><li>Se conservan cargador, tareas, baterías, eficiencia, reservas y objetivos. Un solo cargador compartido.</li><li>Mínimo de los candidatos evaluados: 0 W, múltiplos del paso y límite exacto del cargador. No es un óptimo continuo.</li><li>No dimensiona transformadores, alimentadores ni protecciones; faltan demanda existente, traslados y curvas de carga.</li></ul>
+  <table><tr><th>Consumo de tareas</th><th>Perfil actual</th><th>Menor candidato uniforme</th></tr><tr><td>100% del caso base</td><td>Plan factible</td><td>60 kW</td></tr><tr><td>110% del caso base</td><td>Plan factible</td><td>66 kW</td></tr><tr><td>120% del caso base</td><td>Plan factible</td><td>72 kW</td></tr></table>
+  <h2>Diagnóstico del calendario</h2><ul><li>Calendario factible bajo los supuestos declarados; verificación independiente aprobada.</li><li>La carga se reparte secuencialmente dentro de cada intervalo: nunca hay dos equipos conectados a la vez.</li><li>Se prueba factibilidad, sin afirmar mínimo costo, mínimo pico ni mejor productividad.</li></ul>
+  <h2>Datos por validar para una operación real</h2><h3>Ciclo de trabajo y consumo</h3><p>Medir kWh por tarea, carga, pendiente, ruta y variación entre turnos. La sensibilidad +10%/+20% es una prueba de escenario; no una distribución estimada.</p><h3>Ventanas, traslados y conexión</h3><p>Validar ventanas, desvíos, tiempo de conexión, esperas y ubicación del cargador. La carga fraccionable sin tiempos de conexión es una simplificación favorable.</p><h3>Batería y cargador</h3><p>Confirmar curvas OEM, estado de salud, límites térmicos, compatibilidad y potencia aceptada por equipo. El 90% de la demo es un supuesto editable, no un dato medido ni una especificación de fabricante.</p><h3>Red e infraestructura</h3><p>Levantar demanda existente, suministro firme, transformadores, alimentadores, calidad de energía y contingencias. El mínimo uniforme del modelo no es la potencia de diseño de una subestación.</p><h3>Costo total y servicio equivalente</h3><p>Cotizaciones de obras y equipos, cargos de potencia, mantenimiento, baterías, horizonte y producción equivalente. Reducir kW no implica por sí mismo ahorro de costo total; no se calcula VAN ni retorno de inversión.</p><h3>Emisiones y referencia diésel</h3><p>Documentar factor, año, método y frontera; medir combustible para un mismo servicio antes de comparar. Emisiones de carga no equivalen a ciclo de vida ni a reducción frente a combustión.</p>
+  <h2>Evidencia documental</h2><p>Revisión: 2026-10-28. Las fuentes orientan el alcance y no calibran los parámetros sintéticos.</p><ul><li><a href="https://gmggroup.org/recommended-practices-for-battery-electric-vehicles-in-underground-mining-version-3/">Global Mining Guidelines Group · Planificar una flota BEV subterránea</a>. Es orientación general. Este prototipo no certifica cumplimiento ni reproduce toda la guía.</li><li><a href="https://new.abb.com/mining/thought-leadership-topics/how-best-to-integrate-battery-electric-vehicles-in-mines">ABB · Integrar red, cargadores y operación</a>. Las capacidades y beneficios de otros proyectos no se transfieren automáticamente a esta flota sintética.</li><li><a href="https://www.amtc.cl/noticia-general/amtc-impulsa-nuevas-tecnologias-para-acelerar-la-electrificacion-de-la-mineria-subterranea/">AMTC · Universidad de Chile · ELMOMine y BATMINE</a>. La noticia no publica datos suficientes para calibrar nuestras baterías ni una validación de ElectroDecision.</li><li><a href="https://ingenieria.uchile.cl/noticias/246258/u-de-chile-impulsa-la-electrificacion-y-descarbonizacion-de-la-mineria">FCFM · Universidad de Chile · Diseño, infraestructura, flota y energía</a>. El lanzamiento y sus objetivos no son resultados finales ni una herramienta disponible para integrar en este prototipo.</li></ul>
+  <h2>Supuestos y modo de asistencia</h2><p>Un cargador, equipos compatibles, tareas fijas, consumo al final de cada intervalo de 15 minutos y carga secuencial. Eficiencia constante; sin traslados, conexión, curva de carga, temperatura ni degradación. No se optimiza costo total ni producción.</p><p>Asistente: demo; conexión: demo. Configuración no equivale a inferencia real comprobada.</p>
+  <h2>Escenario y resultados reproducibles</h2><pre>{
+  &quot;application&quot;: &quot;ElectroDecision&quot;,
+  &quot;schemaVersion&quot;: 2,
+  &quot;algorithmVersion&quot;: &quot;0.2.0&quot;,
+  &quot;notice&quot;: &quot;Escenario sintético. Evaluación preliminar bajo supuestos; no diseño de infraestructura aprobado ni ahorro real.&quot;,
+  &quot;scenario&quot;: {
+    &quot;id&quot;: &quot;normal&quot;,
+    &quot;name&quot;: &quot;Turno de referencia&quot;,
+    &quot;slotMinutes&quot;: 15,
+    &quot;slotCount&quot;: 32,
+    &quot;chargerPowerW&quot;: 120000,
+    &quot;gridPowerWBySlot&quot;: [
+      120000,
+      120000,
+      120000,
+      120000,
+      120000,
+      120000,
+      120000,
+      120000,
+      120000,
+      120000,
+      120000,
+      120000,
+      120000,
+      120000,
+      120000,
+      120000,
+      120000,
+      120000,
+      120000,
+      120000,
+      120000,
+      120000,
+      120000,
+      120000,
+      120000,
+      120000,
+      120000,
+      120000,
+      120000,
+      120000,
+      120000,
+      120000
+    ],
+    &quot;assets&quot;: [
+      {
+        &quot;id&quot;: &quot;lhd-01&quot;,
+        &quot;name&quot;: &quot;LHD 01&quot;,
+        &quot;capacityWh&quot;: 240000,
+        &quot;initialWh&quot;: 150000,
+        &quot;reserveWh&quot;: 30000,
+        &quot;finalTargetWh&quot;: 150000
+      },
+      {
+        &quot;id&quot;: &quot;lhd-02&quot;,
+        &quot;name&quot;: &quot;LHD 02&quot;,
+        &quot;capacityWh&quot;: 240000,
+        &quot;initialWh&quot;: 140000,
+        &quot;reserveWh&quot;: 30000,
+        &quot;finalTargetWh&quot;: 150000
+      },
+      {
+        &quot;id&quot;: &quot;lhd-03&quot;,
+        &quot;name&quot;: &quot;LHD 03&quot;,
+        &quot;capacityWh&quot;: 240000,
+        &quot;initialWh&quot;: 160000,
+        &quot;reserveWh&quot;: 30000,
+        &quot;finalTargetWh&quot;: 150000
+      }
+    ],
+    &quot;tasks&quot;: [
+      {
+        &quot;id&quot;: &quot;t-01&quot;,
+        &quot;assetId&quot;: &quot;lhd-01&quot;,
+        &quot;slot&quot;: 3,
+        &quot;consumptionWh&quot;: 45000,
+        &quot;label&quot;: &quot;Ciclo de producción&quot;
+      },
+      {
+        &quot;id&quot;: &quot;t-02&quot;,
+        &quot;assetId&quot;: &quot;lhd-01&quot;,
+        &quot;slot&quot;: 11,
+        &quot;consumptionWh&quot;: 50000,
+        &quot;label&quot;: &quot;Ciclo de producción&quot;
+      },
+      {
+        &quot;id&quot;: &quot;t-03&quot;,
+        &quot;assetId&quot;: &quot;lhd-01&quot;,
+        &quot;slot&quot;: 19,
+        &quot;consumptionWh&quot;: 45000,
+        &quot;label&quot;: &quot;Ciclo de producción&quot;
+      },
+      {
+        &quot;id&quot;: &quot;t-04&quot;,
+        &quot;assetId&quot;: &quot;lhd-02&quot;,
+        &quot;slot&quot;: 5,
+        &quot;consumptionWh&quot;: 55000,
+        &quot;label&quot;: &quot;Ciclo de producción&quot;
+      },
+      {
+        &quot;id&quot;: &quot;t-05&quot;,
+        &quot;assetId&quot;: &quot;lhd-02&quot;,
+        &quot;slot&quot;: 13,
+        &quot;consumptionWh&quot;: 45000,
+        &quot;label&quot;: &quot;Ciclo de producción&quot;
+      },
+      {
+        &quot;id&quot;: &quot;t-06&quot;,
+        &quot;assetId&quot;: &quot;lhd-02&quot;,
+        &quot;slot&quot;: 21,
+        &quot;consumptionWh&quot;: 50000,
+        &quot;label&quot;: &quot;Ciclo de producción&quot;
+      },
+      {
+        &quot;id&quot;: &quot;t-07&quot;,
+        &quot;assetId&quot;: &quot;lhd-03&quot;,
+        &quot;slot&quot;: 7,
+        &quot;consumptionWh&quot;: 50000,
+        &quot;label&quot;: &quot;Ciclo de producción&quot;
+      },
+      {
+        &quot;id&quot;: &quot;t-08&quot;,
+        &quot;assetId&quot;: &quot;lhd-03&quot;,
+        &quot;slot&quot;: 15,
+        &quot;consumptionWh&quot;: 45000,
+        &quot;label&quot;: &quot;Ciclo de producción&quot;
+      },
+      {
+        &quot;id&quot;: &quot;t-09&quot;,
+        &quot;assetId&quot;: &quot;lhd-03&quot;,
+        &quot;slot&quot;: 23,
+        &quot;consumptionWh&quot;: 45000,
+        &quot;label&quot;: &quot;Ciclo de producción&quot;
+      }
+    ],
+    &quot;priceUsdPerKwh&quot;: 0.12,
+    &quot;chargingEfficiencyPct&quot;: 90
+  },
+  &quot;result&quot;: {
+    &quot;scenarioId&quot;: &quot;normal&quot;,
+    &quot;status&quot;: &quot;feasible&quot;,
+    &quot;segments&quot;: [
+      {
+        &quot;assetId&quot;: &quot;lhd-03&quot;,
+        &quot;slot&quot;: 16,
+        &quot;startMinute&quot;: 240,
+        &quot;endMinute&quot;: 253.88888888888889,
+        &quot;powerW&quot;: 120000,
+        &quot;energyWh&quot;: 25000,
+        &quot;gridEnergyWh&quot;: 27777.777777777777
+      },
+      {
+        &quot;assetId&quot;: &quot;lhd-03&quot;,
+        &quot;slot&quot;: 17,
+        &quot;startMinute&quot;: 255,
+        &quot;endMinute&quot;: 270,
+        &quot;powerW&quot;: 120000,
+        &quot;energyWh&quot;: 27000,
+        &quot;gridEnergyWh&quot;: 30000
+      },
+      {
+        &quot;assetId&quot;: &quot;lhd-01&quot;,
+        &quot;slot&quot;: 18,
+        &quot;startMinute&quot;: 270,
+        &quot;endMinute&quot;: 281.1111111111111,
+        &quot;powerW&quot;: 120000,
+        &quot;energyWh&quot;: 20000,
+        &quot;gridEnergyWh&quot;: 22222.222222222223
+      },
+      {
+        &quot;assetId&quot;: &quot;lhd-03&quot;,
+        &quot;slot&quot;: 18,
+        &quot;startMinute&quot;: 281.1111111111111,
+        &quot;endMinute&quot;: 285,
+        &quot;powerW&quot;: 120000,
+        &quot;energyWh&quot;: 7000,
+        &quot;gridEnergyWh&quot;: 7777.777777777777
+      },
+      {
+        &quot;assetId&quot;: &quot;lhd-02&quot;,
+        &quot;slot&quot;: 19,
+        &quot;startMinute&quot;: 285,
+        &quot;endMinute&quot;: 292.22222222222223,
+        &quot;powerW&quot;: 120000,
+        &quot;energyWh&quot;: 13000,
+        &quot;gridEnergyWh&quot;: 14444.444444444445
+      },
+      {
+        &quot;assetId&quot;: &quot;lhd-03&quot;,
+        &quot;slot&quot;: 19,
+        &quot;startMinute&quot;: 292.22222222222223,
+        &quot;endMinute&quot;: 300,
+        &quot;powerW&quot;: 120000,
+        &quot;energyWh&quot;: 14000,
+        &quot;gridEnergyWh&quot;: 15555.555555555555
+      },
+      {
+        &quot;assetId&quot;: &quot;lhd-02&quot;,
+        &quot;slot&quot;: 20,
+        &quot;startMinute&quot;: 300,
+        &quot;endMinute&quot;: 315,
+        &quot;powerW&quot;: 120000,
+        &quot;energyWh&quot;: 27000,
+        &quot;gridEnergyWh&quot;: 30000
+      },
+      {
+        &quot;assetId&quot;: &quot;lhd-03&quot;,
+        &quot;slot&quot;: 21,
+        &quot;startMinute&quot;: 315,
+        &quot;endMinute&quot;: 330,
+        &quot;powerW&quot;: 120000,
+        &quot;energyWh&quot;: 27000,
+        &quot;gridEnergyWh&quot;: 30000
+      },
+      {
+        &quot;assetId&quot;: &quot;lhd-03&quot;,
+        &quot;slot&quot;: 22,
+        &quot;startMinute&quot;: 330,
+        &quot;endMinute&quot;: 345,
+        &quot;powerW&quot;: 120000,
+        &quot;energyWh&quot;: 27000,
+        &quot;gridEnergyWh&quot;: 30000
+      },
+      {
+        &quot;assetId&quot;: &quot;lhd-01&quot;,
+        &quot;slot&quot;: 23,
+        &quot;startMinute&quot;: 345,
+        &quot;endMinute&quot;: 346.6666666666667,
+        &quot;powerW&quot;: 120000,
+        &quot;energyWh&quot;: 3000,
+        &quot;gridEnergyWh&quot;: 3333.3333333333335
+      },
+      {
+        &quot;assetId&quot;: &quot;lhd-02&quot;,
+        &quot;slot&quot;: 23,
+        &quot;startMinute&quot;: 346.6666666666667,
+        &quot;endMinute&quot;: 360,
+        &quot;powerW&quot;: 120000,
+        &quot;energyWh&quot;: 24000,
+        &quot;gridEnergyWh&quot;: 26666.666666666668
+      },
+      {
+        &quot;assetId&quot;: &quot;lhd-02&quot;,
+        &quot;slot&quot;: 24,
+        &quot;startMinute&quot;: 360,
+        &quot;endMinute&quot;: 375,
+        &quot;powerW&quot;: 120000,
+        &quot;energyWh&quot;: 27000,
+        &quot;gridEnergyWh&quot;: 30000
+      },
+      {
+        &quot;assetId&quot;: &quot;lhd-02&quot;,
+        &quot;slot&quot;: 25,
+        &quot;startMinute&quot;: 375,
+        &quot;endMinute&quot;: 390,
+        &quot;powerW&quot;: 120000,
+        &quot;energyWh&quot;: 27000,
+        &quot;gridEnergyWh&quot;: 30000
+      },
+      {
+        &quot;assetId&quot;: &quot;lhd-02&quot;,
+        &quot;slot&quot;: 26,
+        &quot;startMinute&quot;: 390,
+        &quot;endMinute&quot;: 405,
+        &quot;powerW&quot;: 120000,
+        &quot;energyWh&quot;: 27000,
+        &quot;gridEnergyWh&quot;: 30000
+      },
+      {
+        &quot;assetId&quot;: &quot;lhd-01&quot;,
+        &quot;slot&quot;: 27,
+        &quot;startMinute&quot;: 405,
+        &quot;endMinute&quot;: 410,
+        &quot;powerW&quot;: 120000,
+        &quot;energyWh&quot;: 9000,
+        &quot;gridEnergyWh&quot;: 10000
+      },
+      {
+        &quot;assetId&quot;: &quot;lhd-02&quot;,
+        &quot;slot&quot;: 27,
+        &quot;startMinute&quot;: 410,
+        &quot;endMinute&quot;: 418.3333333333333,
+        &quot;powerW&quot;: 120000,
+        &quot;energyWh&quot;: 15000,
+        &quot;gridEnergyWh&quot;: 16666.666666666668
+      },
+      {
+        &quot;assetId&quot;: &quot;lhd-03&quot;,
+        &quot;slot&quot;: 27,
+        &quot;startMinute&quot;: 418.3333333333333,
+        &quot;endMinute&quot;: 420,
+        &quot;powerW&quot;: 120000,
+        &quot;energyWh&quot;: 3000,
+        &quot;gridEnergyWh&quot;: 3333.3333333333335
+      },
+      {
+        &quot;assetId&quot;: &quot;lhd-01&quot;,
+        &quot;slot&quot;: 28,
+        &quot;startMinute&quot;: 420,
+        &quot;endMinute&quot;: 435,
+        &quot;powerW&quot;: 120000,
+        &quot;energyWh&quot;: 27000,
+        &quot;gridEnergyWh&quot;: 30000
+      },
+      {
+        &quot;assetId&quot;: &quot;lhd-01&quot;,
+        &quot;slot&quot;: 29,
+        &quot;startMinute&quot;: 435,
+        &quot;endMinute&quot;: 450,
+        &quot;powerW&quot;: 120000,
+        &quot;energyWh&quot;: 27000,
+        &quot;gridEnergyWh&quot;: 30000
+      },
+      {
+        &quot;assetId&quot;: &quot;lhd-01&quot;,
+        &quot;slot&quot;: 30,
+        &quot;startMinute&quot;: 450,
+        &quot;endMinute&quot;: 465,
+        &quot;powerW&quot;: 120000,
+        &quot;energyWh&quot;: 27000,
+        &quot;gridEnergyWh&quot;: 30000
+      },
+      {
+        &quot;assetId&quot;: &quot;lhd-01&quot;,
+        &quot;slot&quot;: 31,
+        &quot;startMinute&quot;: 465,
+        &quot;endMinute&quot;: 480,
+        &quot;powerW&quot;: 120000,
+        &quot;energyWh&quot;: 27000,
+        &quot;gridEnergyWh&quot;: 30000
+      }
+    ],
+    &quot;taskEvents&quot;: [
+      {
+        &quot;taskId&quot;: &quot;t-01&quot;,
+        &quot;assetId&quot;: &quot;lhd-01&quot;,
+        &quot;slot&quot;: 3,
+        &quot;minute&quot;: 60,
+        &quot;consumptionWh&quot;: 45000
+      },
+      {
+        &quot;taskId&quot;: &quot;t-02&quot;,
+        &quot;assetId&quot;: &quot;lhd-01&quot;,
+        &quot;slot&quot;: 11,
+        &quot;minute&quot;: 180,
+        &quot;consumptionWh&quot;: 50000
+      },
+      {
+        &quot;taskId&quot;: &quot;t-03&quot;,
+        &quot;assetId&quot;: &quot;lhd-01&quot;,
+        &quot;slot&quot;: 19,
+        &quot;minute&quot;: 300,
+        &quot;consumptionWh&quot;: 45000
+      },
+      {
+        &quot;taskId&quot;: &quot;t-04&quot;,
+        &quot;assetId&quot;: &quot;lhd-02&quot;,
+        &quot;slot&quot;: 5,
+        &quot;minute&quot;: 90,
+        &quot;consumptionWh&quot;: 55000
+      },
+      {
+        &quot;taskId&quot;: &quot;t-05&quot;,
+        &quot;assetId&quot;: &quot;lhd-02&quot;,
+        &quot;slot&quot;: 13,
+        &quot;minute&quot;: 210,
+        &quot;consumptionWh&quot;: 45000
+      },
+      {
+        &quot;taskId&quot;: &quot;t-06&quot;,
+        &quot;assetId&quot;: &quot;lhd-02&quot;,
+        &quot;slot&quot;: 21,
+        &quot;minute&quot;: 330,
+        &quot;consumptionWh&quot;: 50000
+      },
+      {
+        &quot;taskId&quot;: &quot;t-07&quot;,
+        &quot;assetId&quot;: &quot;lhd-03&quot;,
+        &quot;slot&quot;: 7,
+        &quot;minute&quot;: 120,
+        &quot;consumptionWh&quot;: 50000
+      },
+      {
+        &quot;taskId&quot;: &quot;t-08&quot;,
+        &quot;assetId&quot;: &quot;lhd-03&quot;,
+        &quot;slot&quot;: 15,
+        &quot;minute&quot;: 240,
+        &quot;consumptionWh&quot;: 45000
+      },
+      {
+        &quot;taskId&quot;: &quot;t-09&quot;,
+        &quot;assetId&quot;: &quot;lhd-03&quot;,
+        &quot;slot&quot;: 23,
+        &quot;minute&quot;: 360,
+        &quot;consumptionWh&quot;: 45000
+      }
+    ],
+    &quot;assetStates&quot;: [
+      {
+        &quot;assetId&quot;: &quot;lhd-01&quot;,
+        &quot;initialWh&quot;: 150000,
+        &quot;finalWh&quot;: 150000,
+        &quot;minimumWh&quot;: 29999.999999999956,
+        &quot;trajectory&quot;: [
+          {
+            &quot;minute&quot;: 0,
+            &quot;energyWh&quot;: 150000,
+            &quot;event&quot;: &quot;initial&quot;
+          },
+          {
+            &quot;minute&quot;: 60,
+            &quot;energyWh&quot;: 105000,
+            &quot;event&quot;: &quot;task&quot;,
+            &quot;refId&quot;: &quot;t-01&quot;
+          },
+          {
+            &quot;minute&quot;: 180,
+            &quot;energyWh&quot;: 55000,
+            &quot;event&quot;: &quot;task&quot;,
+            &quot;refId&quot;: &quot;t-02&quot;
+          },
+          {
+            &quot;minute&quot;: 270,
+            &quot;energyWh&quot;: 55000,
+            &quot;event&quot;: &quot;charge&quot;
+          },
+          {
+            &quot;minute&quot;: 281.1111111111111,
+            &quot;energyWh&quot;: 74999.99999999996,
+            &quot;event&quot;: &quot;charge&quot;
+          },
+          {
+            &quot;minute&quot;: 300,
+            &quot;energyWh&quot;: 29999.999999999956,
+            &quot;event&quot;: &quot;task&quot;,
+            &quot;refId&quot;: &quot;t-03&quot;
+          },
+          {
+            &quot;minute&quot;: 345,
+            &quot;energyWh&quot;: 29999.999999999956,
+            &quot;event&quot;: &quot;charge&quot;
+          },
+          {
+            &quot;minute&quot;: 346.6666666666667,
+            &quot;energyWh&quot;: 32999.99999999999,
+            &quot;event&quot;: &quot;charge&quot;
+          },
+          {
+            &quot;minute&quot;: 405,
+            &quot;energyWh&quot;: 32999.99999999999,
+            &quot;event&quot;: &quot;charge&quot;
+          },
+          {
+            &quot;minute&quot;: 410,
+            &quot;energyWh&quot;: 41999.99999999999,
+            &quot;event&quot;: &quot;charge&quot;
+          },
+          {
+            &quot;minute&quot;: 420,
+            &quot;energyWh&quot;: 41999.99999999999,
+            &quot;event&quot;: &quot;charge&quot;
+          },
+          {
+            &quot;minute&quot;: 435,
+            &quot;energyWh&quot;: 69000,
+            &quot;event&quot;: &quot;charge&quot;
+          },
+          {
+            &quot;minute&quot;: 435,
+            &quot;energyWh&quot;: 69000,
+            &quot;event&quot;: &quot;charge&quot;
+          },
+          {
+            &quot;minute&quot;: 450,
+            &quot;energyWh&quot;: 96000,
+            &quot;event&quot;: &quot;charge&quot;
+          },
+          {
+            &quot;minute&quot;: 450,
+            &quot;energyWh&quot;: 96000,
+            &quot;event&quot;: &quot;charge&quot;
+          },
+          {
+            &quot;minute&quot;: 465,
+            &quot;energyWh&quot;: 123000,
+            &quot;event&quot;: &quot;charge&quot;
+          },
+          {
+            &quot;minute&quot;: 465,
+            &quot;energyWh&quot;: 123000,
+            &quot;event&quot;: &quot;charge&quot;
+          },
+          {
+            &quot;minute&quot;: 480,
+            &quot;energyWh&quot;: 150000,
+            &quot;event&quot;: &quot;charge&quot;
+          },
+          {
+            &quot;minute&quot;: 480,
+            &quot;energyWh&quot;: 150000,
+            &quot;event&quot;: &quot;final&quot;
+          }
+        ]
+      },
+      {
+        &quot;assetId&quot;: &quot;lhd-02&quot;,
+        &quot;initialWh&quot;: 140000,
+        &quot;finalWh&quot;: 149999.99999999994,
+        &quot;minimumWh&quot;: 30000.000000000015,
+        &quot;trajectory&quot;: [
+          {
+            &quot;minute&quot;: 0,
+            &quot;energyWh&quot;: 140000,
+            &quot;event&quot;: &quot;initial&quot;
+          },
+          {
+            &quot;minute&quot;: 90,
+            &quot;energyWh&quot;: 85000,
+            &quot;event&quot;: &quot;task&quot;,
+            &quot;refId&quot;: &quot;t-04&quot;
+          },
+          {
+            &quot;minute&quot;: 210,
+            &quot;energyWh&quot;: 40000,
+            &quot;event&quot;: &quot;task&quot;,
+            &quot;refId&quot;: &quot;t-05&quot;
+          },
+          {
+            &quot;minute&quot;: 285,
+            &quot;energyWh&quot;: 40000,
+            &quot;event&quot;: &quot;charge&quot;
+          },
+          {
+            &quot;minute&quot;: 292.22222222222223,
+            &quot;energyWh&quot;: 53000.000000000015,
+            &quot;event&quot;: &quot;charge&quot;
+          },
+          {
+            &quot;minute&quot;: 300,
+            &quot;energyWh&quot;: 53000.000000000015,
+            &quot;event&quot;: &quot;charge&quot;
+          },
+          {
+            &quot;minute&quot;: 315,
+            &quot;energyWh&quot;: 80000.00000000001,
+            &quot;event&quot;: &quot;charge&quot;
+          },
+          {
+            &quot;minute&quot;: 330,
+            &quot;energyWh&quot;: 30000.000000000015,
+            &quot;event&quot;: &quot;task&quot;,
+            &quot;refId&quot;: &quot;t-06&quot;
+          },
+          {
+            &quot;minute&quot;: 346.6666666666667,
+            &quot;energyWh&quot;: 30000.000000000015,
+            &quot;event&quot;: &quot;charge&quot;
+          },
+          {
+            &quot;minute&quot;: 360,
+            &quot;energyWh&quot;: 53999.99999999998,
+            &quot;event&quot;: &quot;charge&quot;
+          },
+          {
+            &quot;minute&quot;: 360,
+            &quot;energyWh&quot;: 53999.99999999998,
+            &quot;event&quot;: &quot;charge&quot;
+          },
+          {
+            &quot;minute&quot;: 375,
+            &quot;energyWh&quot;: 80999.99999999997,
+            &quot;event&quot;: &quot;charge&quot;
+          },
+          {
+            &quot;minute&quot;: 375,
+            &quot;energyWh&quot;: 80999.99999999997,
+            &quot;event&quot;: &quot;charge&quot;
+          },
+          {
+            &quot;minute&quot;: 390,
+            &quot;energyWh&quot;: 107999.99999999997,
+            &quot;event&quot;: &quot;charge&quot;
+          },
+          {
+            &quot;minute&quot;: 390,
+            &quot;energyWh&quot;: 107999.99999999997,
+            &quot;event&quot;: &quot;charge&quot;
+          },
+          {
+            &quot;minute&quot;: 405,
+            &quot;energyWh&quot;: 134999.99999999997,
+            &quot;event&quot;: &quot;charge&quot;
+          },
+          {
+            &quot;minute&quot;: 410,
+            &quot;energyWh&quot;: 134999.99999999997,
+            &quot;event&quot;: &quot;charge&quot;
+          },
+          {
+            &quot;minute&quot;: 418.3333333333333,
+            &quot;energyWh&quot;: 149999.99999999994,
+            &quot;event&quot;: &quot;charge&quot;
+          },
+          {
+            &quot;minute&quot;: 480,
+            &quot;energyWh&quot;: 149999.99999999994,
+            &quot;event&quot;: &quot;final&quot;
+          }
+        ]
+      },
+      {
+        &quot;assetId&quot;: &quot;lhd-03&quot;,
+        &quot;initialWh&quot;: 160000,
+        &quot;finalWh&quot;: 150000.00000000006,
+        &quot;minimumWh&quot;: 65000,
+        &quot;trajectory&quot;: [
+          {
+            &quot;minute&quot;: 0,
+            &quot;energyWh&quot;: 160000,
+            &quot;event&quot;: &quot;initial&quot;
+          },
+          {
+            &quot;minute&quot;: 120,
+            &quot;energyWh&quot;: 110000,
+            &quot;event&quot;: &quot;task&quot;,
+            &quot;refId&quot;: &quot;t-07&quot;
+          },
+          {
+            &quot;minute&quot;: 240,
+            &quot;energyWh&quot;: 65000,
+            &quot;event&quot;: &quot;task&quot;,
+            &quot;refId&quot;: &quot;t-08&quot;
+          },
+          {
+            &quot;minute&quot;: 240,
+            &quot;energyWh&quot;: 65000,
+            &quot;event&quot;: &quot;charge&quot;
+          },
+          {
+            &quot;minute&quot;: 253.88888888888889,
+            &quot;energyWh&quot;: 90000,
+            &quot;event&quot;: &quot;charge&quot;
+          },
+          {
+            &quot;minute&quot;: 255,
+            &quot;energyWh&quot;: 90000,
+            &quot;event&quot;: &quot;charge&quot;
+          },
+          {
+            &quot;minute&quot;: 270,
+            &quot;energyWh&quot;: 117000,
+            &quot;event&quot;: &quot;charge&quot;
+          },
+          {
+            &quot;minute&quot;: 281.1111111111111,
+            &quot;energyWh&quot;: 117000,
+            &quot;event&quot;: &quot;charge&quot;
+          },
+          {
+            &quot;minute&quot;: 285,
+            &quot;energyWh&quot;: 124000.00000000004,
+            &quot;event&quot;: &quot;charge&quot;
+          },
+          {
+            &quot;minute&quot;: 292.22222222222223,
+            &quot;energyWh&quot;: 124000.00000000004,
+            &quot;event&quot;: &quot;charge&quot;
+          },
+          {
+            &quot;minute&quot;: 300,
+            &quot;energyWh&quot;: 138000.00000000003,
+            &quot;event&quot;: &quot;charge&quot;
+          },
+          {
+            &quot;minute&quot;: 315,
+            &quot;energyWh&quot;: 138000.00000000003,
+            &quot;event&quot;: &quot;charge&quot;
+          },
+          {
+            &quot;minute&quot;: 330,
+            &quot;energyWh&quot;: 165000.00000000003,
+            &quot;event&quot;: &quot;charge&quot;
+          },
+          {
+            &quot;minute&quot;: 330,
+            &quot;energyWh&quot;: 165000.00000000003,
+            &quot;event&quot;: &quot;charge&quot;
+          },
+          {
+            &quot;minute&quot;: 345,
+            &quot;energyWh&quot;: 192000.00000000003,
+            &quot;event&quot;: &quot;charge&quot;
+          },
+          {
+            &quot;minute&quot;: 360,
+            &quot;energyWh&quot;: 147000.00000000003,
+            &quot;event&quot;: &quot;task&quot;,
+            &quot;refId&quot;: &quot;t-09&quot;
+          },
+          {
+            &quot;minute&quot;: 418.3333333333333,
+            &quot;energyWh&quot;: 147000.00000000003,
+            &quot;event&quot;: &quot;charge&quot;
+          },
+          {
+            &quot;minute&quot;: 420,
+            &quot;energyWh&quot;: 150000.00000000006,
+            &quot;event&quot;: &quot;charge&quot;
+          },
+          {
+            &quot;minute&quot;: 480,
+            &quot;energyWh&quot;: 150000.00000000006,
+            &quot;event&quot;: &quot;final&quot;
+          }
+        ]
+      }
+    ],
+    &quot;diagnostics&quot;: [
+      &quot;Calendario factible bajo los supuestos declarados; verificación independiente aprobada.&quot;,
+      &quot;La carga se reparte secuencialmente dentro de cada intervalo: nunca hay dos equipos conectados a la vez.&quot;,
+      &quot;Se prueba factibilidad, sin afirmar mínimo costo, mínimo pico ni mejor productividad.&quot;
+    ],
+    &quot;validation&quot;: {
+      &quot;valid&quot;: true,
+      &quot;issues&quot;: [
+        {
+          &quot;severity&quot;: &quot;warning&quot;,
+          &quot;code&quot;: &quot;model-assumptions&quot;,
+          &quot;message&quot;: &quot;Modelo sintético: un cargador, equipos compatibles, eficiencia constante declarada 90%, sin traslados ni degradación. Las tareas consumen al final del intervalo y bloquean la carga del equipo durante ese intervalo.&quot;
+        }
+      ],
+      &quot;errors&quot;: [],
+      &quot;warnings&quot;: [
+        {
+          &quot;severity&quot;: &quot;warning&quot;,
+          &quot;code&quot;: &quot;model-assumptions&quot;,
+          &quot;message&quot;: &quot;Modelo sintético: un cargador, equipos compatibles, eficiencia constante declarada 90%, sin traslados ni degradación. Las tareas consumen al final del intervalo y bloquean la carga del equipo durante ese intervalo.&quot;
+        }
+      ]
+    },
+    &quot;metrics&quot;: {
+      &quot;initialEnergyWh&quot;: 450000,
+      &quot;taskEnergyWh&quot;: 430000,
+      &quot;requiredFinalWh&quot;: 450000,
+      &quot;minimumChargeWh&quot;: 430000,
+      &quot;availableChargeWh&quot;: 864000,
+      &quot;chargedEnergyWh&quot;: 430000,
+      &quot;gridEnergyWh&quot;: 477777.77777777775,
+      &quot;chargingLossWh&quot;: 47777.77777777775,
+      &quot;peakChargingPowerW&quot;: 120000,
+      &quot;totalChargingMinutes&quot;: 238.88888888888889,
+      &quot;energyCostUsd&quot;: 57.33333333333333,
+      &quot;chargingCo2Kg&quot;: null
+    },
+    &quot;certificate&quot;: {
+      &quot;requiredFlowWh&quot;: 1150000,
+      &quot;satisfiedFlowWh&quot;: 1150000,
+      &quot;missingFlowWh&quot;: 0
+    }
+  },
+  &quot;verified&quot;: true,
+  &quot;infrastructure&quot;: {
+    &quot;sizing&quot;: {
+      &quot;status&quot;: &quot;found&quot;,
+      &quot;minimumGridPowerW&quot;: 60000,
+      &quot;lowerCandidateW&quot;: 59000,
+      &quot;lowerCandidateStatus&quot;: &quot;infeasible&quot;,
+      &quot;stepW&quot;: 1000,
+      &quot;chargerLimitW&quot;: 120000,
+      &quot;trials&quot;: [
+        {
+          &quot;gridPowerW&quot;: 120000,
+          &quot;status&quot;: &quot;feasible&quot;,
+          &quot;verified&quot;: true,
+          &quot;gridEnergyWh&quot;: 477777.77777777775,
+          &quot;batteryEnergyWh&quot;: 430000
+        },
+        {
+          &quot;gridPowerW&quot;: 60000,
+          &quot;status&quot;: &quot;feasible&quot;,
+          &quot;verified&quot;: true,
+          &quot;gridEnergyWh&quot;: 477777.77777777775,
+          &quot;batteryEnergyWh&quot;: 430000
+        },
+        {
+          &quot;gridPowerW&quot;: 30000,
+          &quot;status&quot;: &quot;infeasible&quot;,
+          &quot;verified&quot;: false,
+          &quot;gridEnergyWh&quot;: null,
+          &quot;batteryEnergyWh&quot;: null
+        },
+        {
+          &quot;gridPowerW&quot;: 45000,
+          &quot;status&quot;: &quot;infeasible&quot;,
+          &quot;verified&quot;: false,
+          &quot;gridEnergyWh&quot;: null,
+          &quot;batteryEnergyWh&quot;: null
+        },
+        {
+          &quot;gridPowerW&quot;: 53000,
+          &quot;status&quot;: &quot;infeasible&quot;,
+          &quot;verified&quot;: false,
+          &quot;gridEnergyWh&quot;: null,
+          &quot;batteryEnergyWh&quot;: null
+        },
+        {
+          &quot;gridPowerW&quot;: 57000,
+          &quot;status&quot;: &quot;infeasible&quot;,
+          &quot;verified&quot;: false,
+          &quot;gridEnergyWh&quot;: null,
+          &quot;batteryEnergyWh&quot;: null
+        },
+        {
+          &quot;gridPowerW&quot;: 59000,
+          &quot;status&quot;: &quot;infeasible&quot;,
+          &quot;verified&quot;: false,
+          &quot;gridEnergyWh&quot;: null,
+          &quot;batteryEnergyWh&quot;: null
+        }
+      ],
+      &quot;diagnostics&quot;: [
+        &quot;El candidato 60 kW es factible y 59 kW no lo es. La factibilidad es monótona bajo estos supuestos.&quot;
+      ],
+      &quot;assumptions&quot;: [
+        &quot;Se sustituye el perfil de red por una potencia uniforme durante TODO el turno, incluso si el original tenía cortes.&quot;,
+        &quot;Se conservan cargador, tareas, baterías, eficiencia, reservas y objetivos. Un solo cargador compartido.&quot;,
+        &quot;Mínimo de los candidatos evaluados: 0 W, múltiplos del paso y límite exacto del cargador. No es un óptimo continuo.&quot;,
+        &quot;No dimensiona transformadores, alimentadores ni protecciones; faltan demanda existente, traslados y curvas de carga.&quot;
+      ]
+    },
+    &quot;sensitivity&quot;: [
+      {
+        &quot;consumptionPct&quot;: 100,
+        &quot;taskEnergyWh&quot;: 430000,
+        &quot;currentPowerStatus&quot;: &quot;feasible&quot;,
+        &quot;minimumGridPowerW&quot;: 60000,
+        &quot;searchStatus&quot;: &quot;found&quot;
+      },
+      {
+        &quot;consumptionPct&quot;: 110,
+        &quot;taskEnergyWh&quot;: 473000,
+        &quot;currentPowerStatus&quot;: &quot;feasible&quot;,
+        &quot;minimumGridPowerW&quot;: 66000,
+        &quot;searchStatus&quot;: &quot;found&quot;
+      },
+      {
+        &quot;consumptionPct&quot;: 120,
+        &quot;taskEnergyWh&quot;: 516000,
+        &quot;currentPowerStatus&quot;: &quot;feasible&quot;,
+        &quot;minimumGridPowerW&quot;: 72000,
+        &quot;searchStatus&quot;: &quot;found&quot;
+      }
+    ]
+  },
+  &quot;evidenceReviewedOn&quot;: &quot;2026-10-28&quot;,
+  &quot;evidence&quot;: [
+    {
+      &quot;id&quot;: &quot;gmg-v3&quot;,
+      &quot;title&quot;: &quot;Planificar una flota BEV subterránea&quot;,
+      &quot;organization&quot;: &quot;Global Mining Guidelines Group&quot;,
+      &quot;date&quot;: &quot;2022-06-23 · versión 3&quot;,
+      &quot;status&quot;: &quot;Guía marcada Current al consultar&quot;,
+      &quot;fact&quot;: &quot;La guía reúne consideraciones de operación, almacenamiento, métodos de carga, interfaces y caso de negocio para incorporar vehículos a batería.&quot;,
+      &quot;implication&quot;: &quot;Solicitar ciclos, ventanas reales y compatibilidad, además de capacidad de batería y potencia.&quot;,
+      &quot;limitation&quot;: &quot;Es orientación general. Este prototipo no certifica cumplimiento ni reproduce toda la guía.&quot;,
+      &quot;url&quot;: &quot;https://gmggroup.org/recommended-practices-for-battery-electric-vehicles-in-underground-mining-version-3/&quot;
+    },
+    {
+      &quot;id&quot;: &quot;abb-integration&quot;,
+      &quot;title&quot;: &quot;Integrar red, cargadores y operación&quot;,
+      &quot;organization&quot;: &quot;ABB&quot;,
+      &quot;date&quot;: &quot;Artículo técnico del proveedor&quot;,
+      &quot;status&quot;: &quot;Experiencia y criterios de integración&quot;,
+      &quot;fact&quot;: &quot;ABB destaca interoperabilidad, movilidad, gestión energética, interfaces de conexión, infraestructura y diseño del proceso al integrar BEV en minas.&quot;,
+      &quot;implication&quot;: &quot;La potencia del cargador no sustituye el perfil de demanda existente ni confirma la conexión eléctrica disponible.&quot;,
+      &quot;limitation&quot;: &quot;Las capacidades y beneficios de otros proyectos no se transfieren automáticamente a esta flota sintética.&quot;,
+      &quot;url&quot;: &quot;https://new.abb.com/mining/thought-leadership-topics/how-best-to-integrate-battery-electric-vehicles-in-mines&quot;
+    },
+    {
+      &quot;id&quot;: &quot;amtc-elmo-batmine&quot;,
+      &quot;title&quot;: &quot;ELMOMine y BATMINE&quot;,
+      &quot;organization&quot;: &quot;AMTC · Universidad de Chile&quot;,
+      &quot;date&quot;: &quot;2026-07-06&quot;,
+      &quot;status&quot;: &quot;Herramienta de simulación e investigación en baterías&quot;,
+      &quot;fact&quot;: &quot;AMTC describe ELMOMine para evaluar flotas e infraestructura antes de implementarlas y BATMINE para estudiar degradación con perfiles operacionales y ensayos.&quot;,
+      &quot;implication&quot;: &quot;El nicho propuesto aquí es una revisión preliminar pequeña, verificable y explicable. Un simulador minero genérico ya tiene antecedentes.&quot;,
+      &quot;limitation&quot;: &quot;La noticia no publica datos suficientes para calibrar nuestras baterías ni una validación de ElectroDecision.&quot;,
+      &quot;url&quot;: &quot;https://www.amtc.cl/noticia-general/amtc-impulsa-nuevas-tecnologias-para-acelerar-la-electrificacion-de-la-mineria-subterranea/&quot;
+    },
+    {
+      &quot;id&quot;: &quot;uchile-integrated&quot;,
+      &quot;title&quot;: &quot;Diseño, infraestructura, flota y energía&quot;,
+      &quot;organization&quot;: &quot;FCFM · Universidad de Chile&quot;,
+      &quot;date&quot;: &quot;Lanzamiento 2026-10-23&quot;,
+      &quot;status&quot;: &quot;Programa de investigación anunciado por tres años&quot;,
+      &quot;fact&quot;: &quot;CASE y AMTC anunciaron un proyecto de electrificación que aborda conjuntamente diseño minero, infraestructura eléctrica, flotas y gestión energética, con socios industriales.&quot;,
+      &quot;implication&quot;: &quot;Conservar una matriz de datos faltantes para pasar del calendario preliminar a un estudio conjunto de operación e infraestructura.&quot;,
+      &quot;limitation&quot;: &quot;El lanzamiento y sus objetivos no son resultados finales ni una herramienta disponible para integrar en este prototipo.&quot;,
+      &quot;url&quot;: &quot;https://ingenieria.uchile.cl/noticias/246258/u-de-chile-impulsa-la-electrificacion-y-descarbonizacion-de-la-mineria&quot;
+    }
+  ],
+  &quot;dataRequirements&quot;: [
+    {
+      &quot;id&quot;: &quot;cycles&quot;,
+      &quot;label&quot;: &quot;Ciclo de trabajo y consumo&quot;,
+      &quot;model&quot;: &quot;Tareas y consumos sintéticos&quot;,
+      &quot;needed&quot;: &quot;Medir kWh por tarea, carga, pendiente, ruta y variación entre turnos.&quot;,
+      &quot;reason&quot;: &quot;La sensibilidad +10%/+20% es una prueba de escenario; no una distribución estimada.&quot;
+    },
+    {
+      &quot;id&quot;: &quot;windows&quot;,
+      &quot;label&quot;: &quot;Ventanas, traslados y conexión&quot;,
+      &quot;model&quot;: &quot;Carga disponible fuera de las tareas&quot;,
+      &quot;needed&quot;: &quot;Validar ventanas, desvíos, tiempo de conexión, esperas y ubicación del cargador.&quot;,
+      &quot;reason&quot;: &quot;La carga fraccionable sin tiempos de conexión es una simplificación favorable.&quot;
+    },
+    {
+      &quot;id&quot;: &quot;battery&quot;,
+      &quot;label&quot;: &quot;Batería y cargador&quot;,
+      &quot;model&quot;: &quot;Capacidad utilizable y eficiencia constante asumidas&quot;,
+      &quot;needed&quot;: &quot;Confirmar curvas OEM, estado de salud, límites térmicos, compatibilidad y potencia aceptada por equipo.&quot;,
+      &quot;reason&quot;: &quot;El 90% de la demo es un supuesto editable, no un dato medido ni una especificación de fabricante.&quot;
+    },
+    {
+      &quot;id&quot;: &quot;network&quot;,
+      &quot;label&quot;: &quot;Red e infraestructura&quot;,
+      &quot;model&quot;: &quot;Potencia disponible para un cargador&quot;,
+      &quot;needed&quot;: &quot;Levantar demanda existente, suministro firme, transformadores, alimentadores, calidad de energía y contingencias.&quot;,
+      &quot;reason&quot;: &quot;El mínimo uniforme del modelo no es la potencia de diseño de una subestación.&quot;
+    },
+    {
+      &quot;id&quot;: &quot;economics&quot;,
+      &quot;label&quot;: &quot;Costo total y servicio equivalente&quot;,
+      &quot;model&quot;: &quot;Sólo costo variable de energía&quot;,
+      &quot;needed&quot;: &quot;Cotizaciones de obras y equipos, cargos de potencia, mantenimiento, baterías, horizonte y producción equivalente.&quot;,
+      &quot;reason&quot;: &quot;Reducir kW no implica por sí mismo ahorro de costo total; no se calcula VAN ni retorno de inversión.&quot;
+    },
+    {
+      &quot;id&quot;: &quot;emissions&quot;,
+      &quot;label&quot;: &quot;Emisiones y referencia diésel&quot;,
+      &quot;model&quot;: &quot;Factor eléctrico opcional, sin baseline&quot;,
+      &quot;needed&quot;: &quot;Documentar factor, año, método y frontera; medir combustible para un mismo servicio antes de comparar.&quot;,
+      &quot;reason&quot;: &quot;Emisiones de carga no equivalen a ciclo de vida ni a reducción frente a combustión.&quot;
+    }
+  ],
+  &quot;assistantMode&quot;: &quot;demo&quot;,
+  &quot;assistantConnection&quot;: &quot;demo&quot;
+}</pre></body></html>

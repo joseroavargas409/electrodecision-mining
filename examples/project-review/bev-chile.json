@@ -1,0 +1,667 @@
+{
+  "schemaVersion": 10,
+  "synthetic": true,
+  "context": {
+    "technology": "underground_bev",
+    "phase": "integration",
+    "jurisdiction": "CL",
+    "answers": {
+      "duty": {
+        "state": "documented",
+        "reference": "EJEMPLO SINTÉTICO · ciclo declarado, sin documento real validado."
+      },
+      "grid": {
+        "state": "pending",
+        "reference": "EJEMPLO SINTÉTICO · demanda y conexión por estudiar."
+      }
+    }
+  },
+  "review": {
+    "reviewedAt": "2026-10-29",
+    "technology": "underground_bev",
+    "phase": "integration",
+    "jurisdiction": "CL",
+    "total": 13,
+    "documented": 1,
+    "unresolved": 12,
+    "criticalOpen": 8,
+    "status": "critical_information_missing",
+    "statusLabel": "Faltan antecedentes críticos para evaluar",
+    "findings": [
+      {
+        "id": "RQ-grid",
+        "name": "Suministro y capacidad eléctrica",
+        "category": "electricidad",
+        "critical": true,
+        "state": "pending",
+        "reference": "EJEMPLO SINTÉTICO · demanda y conexión por estudiar.",
+        "unresolved": true,
+        "action": "Perfil de demanda, límite firme, unifilar, calidad de energía, protecciones y estudio de conexión.",
+        "sourceIds": [
+          "sec",
+          "abb"
+        ],
+        "verified": false
+      },
+      {
+        "id": "RQ-duty",
+        "name": "Tarea productiva y ciclo",
+        "category": "operación",
+        "critical": true,
+        "state": "documented",
+        "reference": "EJEMPLO SINTÉTICO · ciclo declarado, sin documento real validado.",
+        "unresolved": false,
+        "action": "Producción objetivo, ruta, pendiente, carga, tiempos, turnos y energía por ciclo.",
+        "sourceIds": [
+          "cochilco",
+          "gmg"
+        ],
+        "verified": false
+      },
+      {
+        "id": "RQ-compatibility",
+        "name": "Compatibilidad de equipos e interfaces",
+        "category": "equipos",
+        "critical": true,
+        "state": "missing",
+        "reference": "",
+        "unresolved": true,
+        "action": "Fichas OEM, potencia, tensión, conectores, comunicación y límites de uso.",
+        "sourceIds": [
+          "epiroc25",
+          "gmg"
+        ],
+        "verified": false
+      },
+      {
+        "id": "RQ-layout",
+        "name": "Ubicación y obras",
+        "category": "infraestructura",
+        "critical": false,
+        "state": "missing",
+        "reference": "",
+        "unresolved": true,
+        "action": "Ubicación, distancias, espacio, geotecnia, drenaje, accesos y plan de obras sin interrumpir producción.",
+        "sourceIds": [
+          "escondida",
+          "gmg"
+        ],
+        "verified": false
+      },
+      {
+        "id": "RQ-sec",
+        "name": "Revisión eléctrica y puesta en servicio Chile",
+        "category": "regulación",
+        "critical": true,
+        "state": "missing",
+        "reference": "",
+        "unresolved": true,
+        "action": "Identificar D.S. 8/RIC y trámites aplicables; revisar RIC 15 para la infraestructura concreta con especialista.",
+        "sourceIds": [
+          "sec",
+          "ric15"
+        ],
+        "verified": false
+      },
+      {
+        "id": "RQ-mining",
+        "name": "Revisión de proyecto y seguridad minera Chile",
+        "category": "regulación",
+        "critical": true,
+        "state": "missing",
+        "reference": "",
+        "unresolved": true,
+        "action": "Determinar con Sernageomin si hay modificación mayor y qué antecedentes o aprobaciones corresponden.",
+        "sourceIds": [
+          "mining"
+        ],
+        "verified": false
+      },
+      {
+        "id": "RQ-environment",
+        "name": "Revisión ambiental Chile",
+        "category": "regulación",
+        "critical": true,
+        "state": "missing",
+        "reference": "",
+        "unresolved": true,
+        "action": "Comparar obras y operación con RCA; evaluar tipologías y cambios de consideración bajo normativa vigente.",
+        "sourceIds": [
+          "environmentLaw",
+          "seia",
+          "sea26"
+        ],
+        "verified": false
+      },
+      {
+        "id": "RQ-waste",
+        "name": "Baterías usadas y residuos Chile",
+        "category": "regulación",
+        "critical": true,
+        "state": "missing",
+        "reference": "",
+        "unresolved": true,
+        "action": "Caracterizar baterías usadas, peligrosidad, almacenamiento, transporte y gestión autorizada según corresponda.",
+        "sourceIds": [
+          "waste"
+        ],
+        "verified": false
+      },
+      {
+        "id": "RQ-safety",
+        "name": "Riesgos, emergencia y formación",
+        "category": "seguridad",
+        "critical": true,
+        "state": "missing",
+        "reference": "",
+        "unresolved": true,
+        "action": "Análisis de riesgos, aislamiento de alta tensión, respuesta a incidentes, capacitación y rescate.",
+        "sourceIds": [
+          "ds44",
+          "ds594",
+          "gmg"
+        ],
+        "verified": false
+      },
+      {
+        "id": "RQ-thermal",
+        "name": "Batería y respuesta térmica",
+        "category": "baterías",
+        "critical": true,
+        "state": "missing",
+        "reference": "",
+        "unresolved": true,
+        "action": "Curvas OEM de potencia–SOC–temperatura, refrigeración, SOH, emergencia y almacenamiento.",
+        "sourceIds": [
+          "epiroc25",
+          "fraunhofer"
+        ],
+        "verified": false
+      },
+      {
+        "id": "RQ-economics",
+        "name": "Evaluación económica completa",
+        "category": "economía",
+        "critical": false,
+        "state": "missing",
+        "reference": "",
+        "unresolved": true,
+        "action": "Cotizaciones de vehículos, obras, conexión, energía, mantenimiento, recambios y vida de mina.",
+        "sourceIds": [
+          "jimblebar",
+          "abb"
+        ],
+        "verified": false
+      },
+      {
+        "id": "RQ-procurement",
+        "name": "Suministros y puesta en marcha",
+        "category": "implementación",
+        "critical": false,
+        "state": "missing",
+        "reference": "",
+        "unresolved": true,
+        "action": "Plazos de transformadores/equipos, responsables, ventanas de intervención y pruebas de aceptación.",
+        "sourceIds": [
+          "escondida",
+          "fortescue"
+        ],
+        "verified": false
+      },
+      {
+        "id": "RQ-metering",
+        "name": "Datos y seguimiento energético",
+        "category": "datos",
+        "critical": false,
+        "state": "missing",
+        "reference": "",
+        "unresolved": true,
+        "action": "Definir medidores, fronteras, calidad y frecuencia de datos; revisar obligaciones SGE en Chile.",
+        "sourceIds": [
+          "energyLaw",
+          "cochilco"
+        ],
+        "verified": false
+      }
+    ],
+    "priorityActions": [
+      {
+        "id": "RQ-grid",
+        "name": "Suministro y capacidad eléctrica",
+        "category": "electricidad",
+        "critical": true,
+        "state": "pending",
+        "reference": "EJEMPLO SINTÉTICO · demanda y conexión por estudiar.",
+        "unresolved": true,
+        "action": "Perfil de demanda, límite firme, unifilar, calidad de energía, protecciones y estudio de conexión.",
+        "sourceIds": [
+          "sec",
+          "abb"
+        ],
+        "verified": false
+      },
+      {
+        "id": "RQ-compatibility",
+        "name": "Compatibilidad de equipos e interfaces",
+        "category": "equipos",
+        "critical": true,
+        "state": "missing",
+        "reference": "",
+        "unresolved": true,
+        "action": "Fichas OEM, potencia, tensión, conectores, comunicación y límites de uso.",
+        "sourceIds": [
+          "epiroc25",
+          "gmg"
+        ],
+        "verified": false
+      },
+      {
+        "id": "RQ-sec",
+        "name": "Revisión eléctrica y puesta en servicio Chile",
+        "category": "regulación",
+        "critical": true,
+        "state": "missing",
+        "reference": "",
+        "unresolved": true,
+        "action": "Identificar D.S. 8/RIC y trámites aplicables; revisar RIC 15 para la infraestructura concreta con especialista.",
+        "sourceIds": [
+          "sec",
+          "ric15"
+        ],
+        "verified": false
+      },
+      {
+        "id": "RQ-mining",
+        "name": "Revisión de proyecto y seguridad minera Chile",
+        "category": "regulación",
+        "critical": true,
+        "state": "missing",
+        "reference": "",
+        "unresolved": true,
+        "action": "Determinar con Sernageomin si hay modificación mayor y qué antecedentes o aprobaciones corresponden.",
+        "sourceIds": [
+          "mining"
+        ],
+        "verified": false
+      },
+      {
+        "id": "RQ-environment",
+        "name": "Revisión ambiental Chile",
+        "category": "regulación",
+        "critical": true,
+        "state": "missing",
+        "reference": "",
+        "unresolved": true,
+        "action": "Comparar obras y operación con RCA; evaluar tipologías y cambios de consideración bajo normativa vigente.",
+        "sourceIds": [
+          "environmentLaw",
+          "seia",
+          "sea26"
+        ],
+        "verified": false
+      },
+      {
+        "id": "RQ-waste",
+        "name": "Baterías usadas y residuos Chile",
+        "category": "regulación",
+        "critical": true,
+        "state": "missing",
+        "reference": "",
+        "unresolved": true,
+        "action": "Caracterizar baterías usadas, peligrosidad, almacenamiento, transporte y gestión autorizada según corresponda.",
+        "sourceIds": [
+          "waste"
+        ],
+        "verified": false
+      }
+    ],
+    "complianceCertified": false,
+    "note": "Inventario de antecedentes declarados por el usuario. Una referencia no verifica su contenido, vigencia ni cumplimiento. No aplica o justificar no cierra automáticamente un requisito crítico. No se emite aprobación técnica, ambiental ni regulatoria."
+  },
+  "evidence": {
+    "reviewedAt": "2026-10-29",
+    "scope": "Referencias internacionales; normativa orientativa para Chile. Sin censo mundial ni ranking estadístico de frecuencia.",
+    "technology": {
+      "id": "underground_bev",
+      "name": "LHD y camiones BEV subterráneos",
+      "maturity": "Despliegues comerciales y expansión",
+      "description": "Equipos móviles con batería y recarga estacionaria genérica.",
+      "why": "Reducir emisiones locales, calor y uso de diésel; estudiar efectos en ventilación y productividad.",
+      "context": "Pendiente, distancia, autonomía, infraestructura y temperatura determinan desempeño.",
+      "sourceIds": [
+        "epiroc25",
+        "gmg"
+      ]
+    },
+    "cases": [],
+    "bottlenecks": [
+      {
+        "id": "supply",
+        "name": "Potencia y conexión insuficientes",
+        "phase": "integration",
+        "technologies": [],
+        "cause": "La flota se dimensiona antes de comprobar margen de red y cargas simultáneas.",
+        "measure": "Perfil medido, conexión, protecciones y alternativas de gestión antes de comprar.",
+        "sourceIds": [
+          "sec",
+          "abb"
+        ]
+      },
+      {
+        "id": "cycle",
+        "name": "Caso de negocio sin ciclo representativo",
+        "phase": "integration",
+        "technologies": [],
+        "cause": "Promedios de consumo no capturan pendientes, traslados ni detenciones de carga.",
+        "measure": "Ciclos y distribución de tiempos, igual producción y sensibilidad de precios.",
+        "sourceIds": [
+          "gmg",
+          "jimblebar"
+        ]
+      },
+      {
+        "id": "permits",
+        "name": "Obras y permisos fuera del cronograma",
+        "phase": "integration",
+        "technologies": [],
+        "cause": "Líneas, subestaciones, espacio y cambios ambientales/mineros deben evaluarse en conjunto.",
+        "measure": "Expediente de cambios, responsables y ruta de revisión por autoridad.",
+        "sourceIds": [
+          "escondida",
+          "sea26",
+          "mining"
+        ]
+      },
+      {
+        "id": "interface",
+        "name": "Interfaces y soporte de proveedores",
+        "phase": "integration",
+        "technologies": [
+          "light",
+          "underground_bev",
+          "surface_bev",
+          "swap",
+          "trolley"
+        ],
+        "cause": "La compatibilidad técnica o de packs se descubre tarde.",
+        "measure": "Ensayos OEM, contratos de servicio y lista de componentes compatibles.",
+        "sourceIds": [
+          "epiroc25",
+          "oyu"
+        ]
+      },
+      {
+        "id": "construction",
+        "name": "Intervenir una mina en marcha",
+        "phase": "integration",
+        "technologies": [],
+        "cause": "Obras, equipos de largo plazo y formación compiten con continuidad productiva.",
+        "measure": "Secuencia de obras y aceptación, contingencia y ventanas operacionales.",
+        "sourceIds": [
+          "fortescue",
+          "escondida"
+        ]
+      }
+    ],
+    "requirements": [
+      {
+        "id": "RQ-grid",
+        "name": "Suministro y capacidad eléctrica",
+        "action": "Perfil de demanda, límite firme, unifilar, calidad de energía, protecciones y estudio de conexión.",
+        "sourceIds": [
+          "sec",
+          "abb"
+        ]
+      },
+      {
+        "id": "RQ-duty",
+        "name": "Tarea productiva y ciclo",
+        "action": "Producción objetivo, ruta, pendiente, carga, tiempos, turnos y energía por ciclo.",
+        "sourceIds": [
+          "cochilco",
+          "gmg"
+        ]
+      },
+      {
+        "id": "RQ-compatibility",
+        "name": "Compatibilidad de equipos e interfaces",
+        "action": "Fichas OEM, potencia, tensión, conectores, comunicación y límites de uso.",
+        "sourceIds": [
+          "epiroc25",
+          "gmg"
+        ]
+      },
+      {
+        "id": "RQ-layout",
+        "name": "Ubicación y obras",
+        "action": "Ubicación, distancias, espacio, geotecnia, drenaje, accesos y plan de obras sin interrumpir producción.",
+        "sourceIds": [
+          "escondida",
+          "gmg"
+        ]
+      },
+      {
+        "id": "RQ-sec",
+        "name": "Revisión eléctrica y puesta en servicio Chile",
+        "action": "Identificar D.S. 8/RIC y trámites aplicables; revisar RIC 15 para la infraestructura concreta con especialista.",
+        "sourceIds": [
+          "sec",
+          "ric15"
+        ]
+      },
+      {
+        "id": "RQ-mining",
+        "name": "Revisión de proyecto y seguridad minera Chile",
+        "action": "Determinar con Sernageomin si hay modificación mayor y qué antecedentes o aprobaciones corresponden.",
+        "sourceIds": [
+          "mining"
+        ]
+      },
+      {
+        "id": "RQ-environment",
+        "name": "Revisión ambiental Chile",
+        "action": "Comparar obras y operación con RCA; evaluar tipologías y cambios de consideración bajo normativa vigente.",
+        "sourceIds": [
+          "environmentLaw",
+          "seia",
+          "sea26"
+        ]
+      },
+      {
+        "id": "RQ-waste",
+        "name": "Baterías usadas y residuos Chile",
+        "action": "Caracterizar baterías usadas, peligrosidad, almacenamiento, transporte y gestión autorizada según corresponda.",
+        "sourceIds": [
+          "waste"
+        ]
+      },
+      {
+        "id": "RQ-safety",
+        "name": "Riesgos, emergencia y formación",
+        "action": "Análisis de riesgos, aislamiento de alta tensión, respuesta a incidentes, capacitación y rescate.",
+        "sourceIds": [
+          "ds44",
+          "ds594",
+          "gmg"
+        ]
+      },
+      {
+        "id": "RQ-thermal",
+        "name": "Batería y respuesta térmica",
+        "action": "Curvas OEM de potencia–SOC–temperatura, refrigeración, SOH, emergencia y almacenamiento.",
+        "sourceIds": [
+          "epiroc25",
+          "fraunhofer"
+        ]
+      },
+      {
+        "id": "RQ-economics",
+        "name": "Evaluación económica completa",
+        "action": "Cotizaciones de vehículos, obras, conexión, energía, mantenimiento, recambios y vida de mina.",
+        "sourceIds": [
+          "jimblebar",
+          "abb"
+        ]
+      },
+      {
+        "id": "RQ-procurement",
+        "name": "Suministros y puesta en marcha",
+        "action": "Plazos de transformadores/equipos, responsables, ventanas de intervención y pruebas de aceptación.",
+        "sourceIds": [
+          "escondida",
+          "fortescue"
+        ]
+      },
+      {
+        "id": "RQ-metering",
+        "name": "Datos y seguimiento energético",
+        "action": "Definir medidores, fronteras, calidad y frecuencia de datos; revisar obligaciones SGE en Chile.",
+        "sourceIds": [
+          "energyLaw",
+          "cochilco"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "id": "epiroc25",
+        "title": "Epiroc · electrificación, informe anual 2025",
+        "url": "https://reports.epirocgroup.com/annual-and-sustainability-report-2025/the-business/value-creating-strategy/accelerate-the-productivity-and-sustainability-transformation-in-our-industry/electrification/",
+        "scope": "Portafolio y avances declarados por fabricante; no censo mundial.",
+        "date": "2025; publicado en 2026"
+      },
+      {
+        "id": "gmg",
+        "title": "GMG · prácticas BEV subterráneas, versión 3",
+        "url": "https://gmggroup.org/wp-content/uploads/2023/12/2022-06-23_Recommended-Practices-for-Battery-Electric-Vehicles-in-Underground-Mining.pdf",
+        "scope": "Guía técnica voluntaria, no permiso ni calibración del modelo.",
+        "date": "2022"
+      },
+      {
+        "id": "sec",
+        "title": "SEC · normas técnicas eléctricas",
+        "url": "https://www.sec.cl/normas-tecnicas-electricas/",
+        "scope": "D.S. 8/2019 y pliegos RIC según alcance de cada instalación.",
+        "date": "Página vigente consultada"
+      },
+      {
+        "id": "abb",
+        "title": "ABB · gestión de energía",
+        "url": "https://e-mobility.abb.com/en/site-operations/energy-management",
+        "scope": "Descripción del proveedor sobre reparto de potencia y almacenamiento.",
+        "date": "Sin fecha de publicación visible"
+      },
+      {
+        "id": "cochilco",
+        "title": "Cochilco · consumo de energía del cobre 2025",
+        "url": "https://www.cochilco.cl/web/mineria-del-cobre-aumento-su-consumo-de-energia-un-273-en-una-decada/",
+        "scope": "Datos sectoriales de Chile; no ranking de cantidad de proyectos.",
+        "date": "2025; publicado en 2026"
+      },
+      {
+        "id": "escondida",
+        "title": "BHP · presentación ambiental trolley Escondida Norte",
+        "url": "https://www.bhp.com/news/media-centre/releases/2024/07/escondida-starts-environmental-processing-to-have-transportation-system-based-on-an-electric-trolley",
+        "scope": "Presentación de DIA anunciada; no prueba RCA favorable ni operación actual.",
+        "date": "2024-07-04"
+      },
+      {
+        "id": "ric15",
+        "title": "SEC · electromovilidad y RIC 15 versión 2024",
+        "url": "https://www.sec.cl/electromovilidad/",
+        "scope": "Diseño, productos y puesta en servicio; confirmar alcance para maquinaria y tecnología concretas.",
+        "date": "RIC 15 versión 2024"
+      },
+      {
+        "id": "mining",
+        "title": "BCN · D.S. 132/2002, Seguridad Minera",
+        "url": "https://www.bcn.cl/leychile/navegar?idNorma=221064",
+        "scope": "Revisar modificaciones mayores y seguridad con Sernageomin; no toda sustitución exige idéntico trámite.",
+        "date": "Texto oficial consultado"
+      },
+      {
+        "id": "environmentLaw",
+        "title": "BCN · Ley 19.300, bases del medio ambiente",
+        "url": "https://www.bcn.cl/leychile/navegar?idNorma=30667",
+        "scope": "Tipologías y efectos ambientales; revisar versión vigente y situación de la RCA.",
+        "date": "Texto oficial consultado"
+      },
+      {
+        "id": "seia",
+        "title": "BCN · D.S. 40/2012, Reglamento del SEIA",
+        "url": "https://www.bcn.cl/leychile/navegar?idNorma=1053563",
+        "scope": "Evaluar tipologías y modificaciones según texto vigente.",
+        "date": "Texto oficial consultado"
+      },
+      {
+        "id": "sea26",
+        "title": "SEA · instructivos, actualización de pertinencia 2026",
+        "url": "https://www.sea.gob.cl/instructivos-para-la-evaluacion-del-impacto-ambiental",
+        "scope": "Of. Ord. 20269910259 de 20/01/2026 reemplaza instructivo de 2024.",
+        "date": "2026-01-20"
+      },
+      {
+        "id": "waste",
+        "title": "BCN · D.S. 148/2003, residuos peligrosos",
+        "url": "https://www.bcn.cl/leychile/navegar?idNorma=226458",
+        "scope": "Clasificación y manejo de residuos; determinar obligaciones según características y manejo de baterías usadas.",
+        "date": "Texto oficial consultado"
+      },
+      {
+        "id": "ds44",
+        "title": "BCN · D.S. 44, gestión preventiva",
+        "url": "https://www.bcn.cl/leychile/navegar?idNorma=1205298",
+        "scope": "Matriz de riesgos, programa preventivo y responsabilidades del empleador.",
+        "date": "D.S. 44/2023"
+      },
+      {
+        "id": "ds594",
+        "title": "BCN · D.S. 594, condiciones de trabajo",
+        "url": "https://www.bcn.cl/leychile/navegar?idNorma=167766",
+        "scope": "Ventilación y exposición deben evaluarse; electrificar no autoriza reducir caudal automáticamente.",
+        "date": "D.S. 594/1999"
+      },
+      {
+        "id": "fraunhofer",
+        "title": "Fraunhofer IVI · diagnóstico remoto de baterías",
+        "url": "https://www.ivi.fraunhofer.de/en/research-fields/electromobility/remote-battery-diagnosis.html",
+        "scope": "Diagnóstico basado en datos de viajes, carga y batería; no valida una predicción sin históricos.",
+        "date": "Página institucional consultada"
+      },
+      {
+        "id": "jimblebar",
+        "title": "Rio Tinto · prueba conjunta BHP/Caterpillar en Pilbara",
+        "url": "https://www.riotinto.com/en/news/releases/2026/battery-electric-haul-truck-trial-in-the-pilbara",
+        "scope": "Comunicado de operador: ensayo, no despliegue comercial completo.",
+        "date": "2026-06-23"
+      },
+      {
+        "id": "fortescue",
+        "title": "Epiroc · contrato de perforación eléctrica con Fortescue",
+        "url": "https://www.epirocgroup.com/en/media/corporate-press-releases/2025/20250416-epiroc-wins-its-largest-contract-ever--for-autonomous-and-electric-powered-mining-equipment",
+        "scope": "Contrato anunciado; no equivale a toda la flota entregada.",
+        "date": "2025-04-16"
+      },
+      {
+        "id": "energyLaw",
+        "title": "Ministerio de Energía · Ley 21.305 y gestión energética",
+        "url": "https://energia.gob.cl/ley-y-plan-de-eficiencia-energetica",
+        "scope": "Revisar obligaciones de reporte, calificación CCGE y SGE según consumo y actos aplicables.",
+        "date": "Página oficial consultada"
+      },
+      {
+        "id": "oyu",
+        "title": "Rio Tinto · intercambio de baterías en Oyu Tolgoi",
+        "url": "https://www.riotinto.com/en/news/releases/2025/rio-tinto-and-chinas-state-power-investment-corporation-launch-battery-swap-truck-trial-fleet-at-oyu-tolgoi-mine",
+        "scope": "Estado de ensayo según comunicado; se anunció evaluación hasta fines de 2026.",
+        "date": "2025-10-27"
+      }
+    ],
+    "limitations": [
+      "Clasificación cualitativa de familias; no ranking estadístico de proyectos más frecuentes.",
+      "Cada caso conserva la fecha y el estado de su fuente; anuncio, contrato, piloto y operación son estados distintos.",
+      "El laboratorio numérico actual representa LHD genéricos de carga directa. No simula trolley, intercambio ni estos casos reales.",
+      "La normativa de Chile se presenta como ruta de revisión; otros países requieren verificación local."
+    ]
+  }
+}
