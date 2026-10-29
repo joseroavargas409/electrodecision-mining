@@ -14,7 +14,7 @@ Reviewed against the [official rules](https://nebiusglobalaihackathon.devpost.co
 | README and running instructions | Root English `README.md`; `TESTING_EN.md` | Complete |
 | Explain model and Nebius workflow | `ARCHITECTURE_EN.md`, README, saved integration trace | Complete |
 | Product feedback | `NEBIUS_FEEDBACK_EN.md` | Complete; only services actually used |
-| Disclose significant updates to existing work | `RELEASE_NOTES_EN.md` | Written disclosure ready; entrant confirms original component dates |
+| Disclose significant updates to existing work | `RELEASE_NOTES_EN.md` | Entrant confirmed the project did not exist before August 26, 2026; New selected; earlier-work notes retained |
 | English or English translation | English primary `/demo`, README, submission materials, narration and captions | Complete for the primary evaluation path; Spanish historical workspace remains available |
 | Free judging/testing access | Deployment instructions in `DEPLOYMENT_EN.md` | Authorized public access and anonymous inference verified; maintain availability through judging |
 

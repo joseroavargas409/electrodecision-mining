@@ -4,7 +4,7 @@ An inspectable simulator and NVIDIA Nemotron assistant for preliminary mining el
 
 **English reviewer demo:** `/demo` · **Track:** Best Apps and Agents · **License:** MIT · **Release:** 0.11.0
 
-The [public source repository](https://github.com/joseroavargas409/electrodecision-mining) is available with its MIT license and English submission materials. The [recovered English hosted demo](https://electrodecision-mining-recovered.jlroav409.chatgpt.site/demo) is deployed and passed real NVIDIA/Nebius HTTP verification. The owner authorized public access, and anonymous page/API access plus real hosted inference were verified. The [English demo video](https://youtu.be/4UdWqLiKI8g) is public with English captions. See [submission status](docs/submission/LINKS.json); do not use localhost as the final Devpost demo link.
+The [public source repository](https://github.com/joseroavargas409/electrodecision-mining) is available with its MIT license and English submission materials. The [recovered English hosted demo](https://electrodecision-mining-recovered.jlroav409.chatgpt.site/demo) is deployed and passed real NVIDIA/Nebius HTTP verification. The owner authorized public access, and anonymous page/API access plus real hosted inference were verified. The [English demo video](https://youtu.be/4UdWqLiKI8g) is public with English captions. Devpost confirmed **Project submitted!** on 2026-10-29: [project submission](https://devpost.com/software/electrodecision-mining-electrification-copilot). See [submission status](docs/submission/LINKS.json); do not use localhost as the final Devpost demo link.
 
 ## What you can test
 
@@ -61,7 +61,7 @@ Synthetic inputs; no OEM/site calibration or measured industrial savings. The ge
 - [Video script](docs/submission/VIDEO_SCRIPT_EN.md) and [captions](docs/submission/CAPTIONS_EN.srt)
 - [Existing-work disclosure](docs/submission/RELEASE_NOTES_EN.md)
 - [Publication instructions](docs/submission/DEPLOYMENT_EN.md)
-- [Validation](docs/submission/VALIDATION_EN.md) and [remaining submission items](docs/submission/SUBMISSION_CHECKLIST_EN.md)
+- [Validation](docs/submission/VALIDATION_EN.md) and [submission checklist](docs/submission/SUBMISSION_CHECKLIST_EN.md)
 
 Original source is MIT-licensed; preserve dependency notices. [Source and asset notes](docs/submission/THIRD_PARTY_SOURCES_EN.md).
 

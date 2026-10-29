@@ -21,8 +21,8 @@
   "primaryLanguage": "English",
   "applicationRoute": "/demo",
   "operationData": "Synthetic; not calibrated to a mine or OEM",
-  "eligibilityAndTeam": "Entrant must complete and verify personal/team and eligibility fields.",
-  "submitted": false,
+  "eligibilityAndTeam": "Entrant confirmed individual participation, majority age and no organizer affiliation; form saved and submission authorized.",
+  "submitted": true,
   "publicationStatusFile": "LINKS.json",
   "demoAccess": "public",
   "judgeAccessReady": true,
@@ -32,5 +32,12 @@
   "youtubePublished": true,
   "youtubeVisibility": "public",
   "englishCaptionsPublished": true,
-  "technicalDeliverablesReady": true
+  "technicalDeliverablesReady": true,
+  "devpostUrl": "https://devpost.com/software/electrodecision-mining-electrification-copilot",
+  "devpostSubmissionId": "1271477",
+  "devpostVerifiedAt": "2026-10-29T21:44:56.963Z",
+  "submissionReady": true,
+  "submissionReceiptFile": "media/DEVPOST_SUBMISSION_EN.json",
+  "submitterType": "Individual",
+  "projectPriorToAugust262026": false
 }

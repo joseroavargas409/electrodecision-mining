@@ -16,10 +16,9 @@
 - Recovered current Sites deployment with authorized public access, anonymous English HTTP checks and real anonymous hosted NVIDIA/Nebius inference.
 - Targeted public browser checks for the English page and supply-upgrade selection.
 
-## Remaining
+## Submission complete
 
-- Copy the verified demo, repository and YouTube links into the Devpost submission form.
-- Confirm entrant/team, ownership, eligibility and reused-component history; submit Devpost yourself.
+Devpost confirmed **Project submitted!** on 2026-10-29: https://devpost.com/software/electrodecision-mining-electrification-copilot. The entrant confirmed individual participation and eligibility, stated that the project did not exist before August 26, 2026, approved the qualitative feedback scores and explicitly authorized the final rules/terms acceptance and submission. Keep the app, source and video freely accessible through judging.
 
 ## Access and recording limits
 

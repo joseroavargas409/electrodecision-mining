@@ -6,8 +6,8 @@
   "repositoryUrl": "https://github.com/joseroavargas409/electrodecision-mining",
   "youtubeUrl": "https://youtu.be/4UdWqLiKI8g",
   "localReviewerUrl": "http://127.0.0.1:5173/demo",
-  "submitted": false,
-  "status": "Public demo, public MIT source and public English YouTube demo verified; entrant/team fields and final Devpost submission remain",
+  "submitted": true,
+  "status": "Submitted to Nebius x NVIDIA Global AI Hackathon; Devpost displayed Project submitted!",
   "rulesUrl": "https://nebiusglobalaihackathon.devpost.com/rules",
   "submissionDeadlineUtc": "2026-10-30T17:00:00Z",
   "submissionDeadlineSantiago": "2026-10-30 14:00 America/Santiago",
@@ -18,7 +18,7 @@
   "localVideoFile": "media/ELECTRODECISION_SUBMISSION_EN.mp4",
   "localVideoDurationSeconds": 168,
   "videoFootageComplete": true,
-  "submissionReady": false,
+  "submissionReady": true,
   "demoAccess": "public",
   "demoHosted": true,
   "demoHttpVerified": true,
@@ -34,8 +34,9 @@
   "youtubeVisibility": "public",
   "englishCaptionsPublished": true,
   "technicalDeliverablesReady": true,
-  "remainingSteps": [
-    "Confirm entrant/team, eligibility and ownership fields",
-    "Submit Devpost with the verified links"
-  ]
+  "remainingSteps": [],
+  "devpostUrl": "https://devpost.com/software/electrodecision-mining-electrification-copilot",
+  "devpostSubmissionId": "1271477",
+  "devpostVerifiedAt": "2026-10-29T21:44:56.963Z",
+  "submissionReceiptFile": "media/DEVPOST_SUBMISSION_EN.json"
 }

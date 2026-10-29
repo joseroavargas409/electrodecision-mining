@@ -11,4 +11,4 @@ Substantial additions completed during the observed hackathon development period
 - Catalog-backed project reports after observing an overly broad generated regulatory statement.
 - An English reviewer interface, translated evidence, updated setup/judge instructions and final submission materials.
 
-Historical source snapshots are preserved in the author's vault. The participant should confirm the provenance and dates of any earlier reused components when completing Devpost's ownership/existing-work fields. The submitted source must be licensed and authorized for sharing.
+Historical source snapshots are preserved in the author's vault. At submission, the participant confirmed the project did not exist before August 26, 2026; Devpost therefore records it as New. Earlier local iterations described here do not imply a pre-period project. Public source is released under MIT. This is participant-declared provenance, not an independent authorship audit.
