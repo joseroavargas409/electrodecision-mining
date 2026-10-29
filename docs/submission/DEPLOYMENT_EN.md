@@ -18,4 +18,4 @@ The provider key is a Sites server secret. Neither it nor the Sites service cred
 
 Maintain free access and functioning inference through the end of judging. Monitor provider availability/credit using the owner's normal account controls. Do not expose the provider key or ask judges to purchase credit.
 
-No additional deployment was required for the Sites audience change. The application source and configured server environment remain the verified hosted release. The final submission still needs actual application footage in its video cut, a public YouTube upload and completion of the entrant's Devpost fields. No Devpost submission is claimed.
+No additional deployment was required for the Sites audience change. The application source and configured server environment remain the verified hosted release. The final 2:48 cut now includes actual public-application capture and a real query recorded during capture. The submission still needs a public YouTube upload and completion of the entrant's Devpost fields. No Devpost submission is claimed.

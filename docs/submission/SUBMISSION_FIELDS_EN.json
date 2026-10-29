@@ -25,5 +25,8 @@
   "submitted": false,
   "publicationStatusFile": "LINKS.json",
   "demoAccess": "public",
-  "judgeAccessReady": true
+  "judgeAccessReady": true,
+  "localVideoFile": "media/ELECTRODECISION_SUBMISSION_EN.mp4",
+  "videoFootageComplete": true,
+  "videoUploadReady": true
 }

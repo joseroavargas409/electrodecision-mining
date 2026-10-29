@@ -1,0 +1,438 @@
+{
+  "schemaVersion": 11,
+  "context": {
+    "technology": "trolley",
+    "phase": "integration",
+    "jurisdiction": "CL",
+    "answers": {
+      "grid": {
+        "state": "missing",
+        "reference": ""
+      }
+    }
+  },
+  "review": {
+    "reviewedAt": "2026-10-29",
+    "technology": "trolley",
+    "phase": "integration",
+    "jurisdiction": "CL",
+    "total": 12,
+    "documented": 0,
+    "unresolved": 12,
+    "criticalOpen": 8,
+    "status": "critical_information_missing",
+    "statusLabel": "Critical information is missing",
+    "findings": [
+      {
+        "id": "RQ-grid",
+        "name": "Electrical supply and capacity",
+        "category": "Electrical",
+        "critical": true,
+        "state": "missing",
+        "reference": "",
+        "unresolved": true,
+        "action": "Demand profile, firm capacity, single-line diagram, power quality, protection and connection study.",
+        "sourceIds": [
+          "sec",
+          "abb"
+        ],
+        "verified": false
+      },
+      {
+        "id": "RQ-duty",
+        "name": "Production task and duty cycle",
+        "category": "Operations",
+        "critical": true,
+        "state": "missing",
+        "reference": "",
+        "unresolved": true,
+        "action": "Production target, route, gradient, payload, state durations, shifts and energy per cycle.",
+        "sourceIds": [
+          "cochilco",
+          "gmg"
+        ],
+        "verified": false
+      },
+      {
+        "id": "RQ-compatibility",
+        "name": "Equipment and interface compatibility",
+        "category": "Equipment",
+        "critical": true,
+        "state": "missing",
+        "reference": "",
+        "unresolved": true,
+        "action": "OEM specifications, power, voltage, connectors, communication and operating limits.",
+        "sourceIds": [
+          "epiroc25",
+          "gmg"
+        ],
+        "verified": false
+      },
+      {
+        "id": "RQ-layout",
+        "name": "Location and civil works",
+        "category": "Infrastructure",
+        "critical": false,
+        "state": "missing",
+        "reference": "",
+        "unresolved": true,
+        "action": "Locations, travel distances, space, geotechnical conditions, drainage and construction sequencing.",
+        "sourceIds": [
+          "escondida",
+          "gmg"
+        ],
+        "verified": false
+      },
+      {
+        "id": "RQ-sec",
+        "name": "Chilean electrical and commissioning review",
+        "category": "Regulatory",
+        "critical": true,
+        "state": "missing",
+        "reference": "",
+        "unresolved": true,
+        "action": "Identify applicable D.S. 8/RIC requirements and procedures; have a specialist confirm RIC 15 applicability to the specific installation.",
+        "sourceIds": [
+          "sec",
+          "ric15"
+        ],
+        "verified": false
+      },
+      {
+        "id": "RQ-mining",
+        "name": "Chilean mining project and safety review",
+        "category": "Regulatory",
+        "critical": true,
+        "state": "missing",
+        "reference": "",
+        "unresolved": true,
+        "action": "Determine with Sernageomin whether major modifications and associated reviews or approvals apply.",
+        "sourceIds": [
+          "mining"
+        ],
+        "verified": false
+      },
+      {
+        "id": "RQ-environment",
+        "name": "Chilean environmental review",
+        "category": "Regulatory",
+        "critical": true,
+        "state": "missing",
+        "reference": "",
+        "unresolved": true,
+        "action": "Compare proposed works with the RCA; assess project categories and material changes under applicable rules.",
+        "sourceIds": [
+          "environmentLaw",
+          "seia",
+          "sea26"
+        ],
+        "verified": false
+      },
+      {
+        "id": "RQ-safety",
+        "name": "Risks, emergency response and training",
+        "category": "Safety",
+        "critical": true,
+        "state": "missing",
+        "reference": "",
+        "unresolved": true,
+        "action": "Risk assessment, high-voltage isolation, emergency response, training and rescue.",
+        "sourceIds": [
+          "ds44",
+          "ds594",
+          "gmg"
+        ],
+        "verified": false
+      },
+      {
+        "id": "RQ-trolleyRoad",
+        "name": "Trolley segment and mine plan",
+        "category": "Infrastructure",
+        "critical": true,
+        "state": "missing",
+        "reference": "",
+        "unresolved": true,
+        "action": "Traffic, gradient, segment life, interfaces, clearance, pantograph and line maintenance.",
+        "sourceIds": [
+          "escondida",
+          "anto26"
+        ],
+        "verified": false
+      },
+      {
+        "id": "RQ-economics",
+        "name": "Complete economic assessment",
+        "category": "Economics",
+        "critical": false,
+        "state": "missing",
+        "reference": "",
+        "unresolved": true,
+        "action": "Vehicle, works, connection, energy, maintenance and replacement quotations, plus mine life.",
+        "sourceIds": [
+          "jimblebar",
+          "abb"
+        ],
+        "verified": false
+      },
+      {
+        "id": "RQ-procurement",
+        "name": "Procurement and commissioning",
+        "category": "Implementation",
+        "critical": false,
+        "state": "missing",
+        "reference": "",
+        "unresolved": true,
+        "action": "Equipment and transformer lead times, ownership, intervention windows and acceptance tests.",
+        "sourceIds": [
+          "escondida",
+          "fortescue"
+        ],
+        "verified": false
+      },
+      {
+        "id": "RQ-metering",
+        "name": "Data and energy management",
+        "category": "Data",
+        "critical": false,
+        "state": "missing",
+        "reference": "",
+        "unresolved": true,
+        "action": "Define meters, boundaries, data quality and sampling; review Chilean energy-management obligations where applicable.",
+        "sourceIds": [
+          "energyLaw",
+          "cochilco"
+        ],
+        "verified": false
+      }
+    ],
+    "priorityActions": [
+      {
+        "id": "RQ-grid",
+        "name": "Electrical supply and capacity",
+        "category": "Electrical",
+        "critical": true,
+        "state": "missing",
+        "reference": "",
+        "unresolved": true,
+        "action": "Demand profile, firm capacity, single-line diagram, power quality, protection and connection study.",
+        "sourceIds": [
+          "sec",
+          "abb"
+        ],
+        "verified": false
+      },
+      {
+        "id": "RQ-duty",
+        "name": "Production task and duty cycle",
+        "category": "Operations",
+        "critical": true,
+        "state": "missing",
+        "reference": "",
+        "unresolved": true,
+        "action": "Production target, route, gradient, payload, state durations, shifts and energy per cycle.",
+        "sourceIds": [
+          "cochilco",
+          "gmg"
+        ],
+        "verified": false
+      },
+      {
+        "id": "RQ-compatibility",
+        "name": "Equipment and interface compatibility",
+        "category": "Equipment",
+        "critical": true,
+        "state": "missing",
+        "reference": "",
+        "unresolved": true,
+        "action": "OEM specifications, power, voltage, connectors, communication and operating limits.",
+        "sourceIds": [
+          "epiroc25",
+          "gmg"
+        ],
+        "verified": false
+      },
+      {
+        "id": "RQ-sec",
+        "name": "Chilean electrical and commissioning review",
+        "category": "Regulatory",
+        "critical": true,
+        "state": "missing",
+        "reference": "",
+        "unresolved": true,
+        "action": "Identify applicable D.S. 8/RIC requirements and procedures; have a specialist confirm RIC 15 applicability to the specific installation.",
+        "sourceIds": [
+          "sec",
+          "ric15"
+        ],
+        "verified": false
+      },
+      {
+        "id": "RQ-mining",
+        "name": "Chilean mining project and safety review",
+        "category": "Regulatory",
+        "critical": true,
+        "state": "missing",
+        "reference": "",
+        "unresolved": true,
+        "action": "Determine with Sernageomin whether major modifications and associated reviews or approvals apply.",
+        "sourceIds": [
+          "mining"
+        ],
+        "verified": false
+      },
+      {
+        "id": "RQ-environment",
+        "name": "Chilean environmental review",
+        "category": "Regulatory",
+        "critical": true,
+        "state": "missing",
+        "reference": "",
+        "unresolved": true,
+        "action": "Compare proposed works with the RCA; assess project categories and material changes under applicable rules.",
+        "sourceIds": [
+          "environmentLaw",
+          "seia",
+          "sea26"
+        ],
+        "verified": false
+      }
+    ],
+    "complianceCertified": false,
+    "note": "User-declared evidence inventory. A reference does not verify document contents, validity or compliance. Declaring non-applicability does not automatically close a critical item. No engineering, environmental or regulatory approval is issued."
+  },
+  "sources": [
+    {
+      "id": "escondida",
+      "title": "BHP — Escondida Norte trolley environmental filing",
+      "url": "https://www.bhp.com/news/media-centre/releases/2024/07/escondida-starts-environmental-processing-to-have-transportation-system-based-on-an-electric-trolley",
+      "scope": "Primary reference; applicability and publication status must be checked for the specific project. Some original documents are in Spanish.",
+      "date": "2024-07-04"
+    },
+    {
+      "id": "anto26",
+      "title": "Antofagasta — FY2025 results, February 2026",
+      "url": "https://www.antofagasta.co.uk/media/4892/20260217-anto-fy25-results-press-release.pdf",
+      "scope": "Primary reference; applicability and publication status must be checked for the specific project. Some original documents are in Spanish.",
+      "date": "2026-02-17"
+    },
+    {
+      "id": "epiroc25",
+      "title": "Epiroc — Electrification, Annual Report 2025",
+      "url": "https://reports.epirocgroup.com/annual-and-sustainability-report-2025/the-business/value-creating-strategy/accelerate-the-productivity-and-sustainability-transformation-in-our-industry/electrification/",
+      "scope": "Primary reference; applicability and publication status must be checked for the specific project. Some original documents are in Spanish.",
+      "date": "2025; published in 2026"
+    },
+    {
+      "id": "anto25",
+      "title": "Antofagasta — Sustainability Report 2025",
+      "url": "https://www.antofagasta.co.uk/media/4903/antofagasta-sustainability-report-2025.pdf",
+      "scope": "Primary reference; applicability and publication status must be checked for the specific project. Some original documents are in Spanish.",
+      "date": "2025; published in 2026"
+    },
+    {
+      "id": "sec",
+      "title": "SEC — Chilean electrical technical rules",
+      "url": "https://www.sec.cl/normas-tecnicas-electricas/",
+      "scope": "Primary reference; applicability and publication status must be checked for the specific project. Some original documents are in Spanish.",
+      "date": "Page reviewed"
+    },
+    {
+      "id": "abb",
+      "title": "ABB — Energy management",
+      "url": "https://e-mobility.abb.com/en/site-operations/energy-management",
+      "scope": "Primary reference; applicability and publication status must be checked for the specific project. Some original documents are in Spanish.",
+      "date": "No publication date visible"
+    },
+    {
+      "id": "cochilco",
+      "title": "Cochilco — Chilean copper mining energy use, 2025",
+      "url": "https://www.cochilco.cl/web/mineria-del-cobre-aumento-su-consumo-de-energia-un-273-en-una-decada/",
+      "scope": "Primary reference; applicability and publication status must be checked for the specific project. Some original documents are in Spanish.",
+      "date": "2025; published in 2026"
+    },
+    {
+      "id": "gmg",
+      "title": "GMG — Underground BEV recommended practices, v3",
+      "url": "https://gmggroup.org/wp-content/uploads/2023/12/2022-06-23_Recommended-Practices-for-Battery-Electric-Vehicles-in-Underground-Mining.pdf",
+      "scope": "Primary reference; applicability and publication status must be checked for the specific project. Some original documents are in Spanish.",
+      "date": "2022"
+    },
+    {
+      "id": "ric15",
+      "title": "SEC — Electromobility and RIC 15 (2024)",
+      "url": "https://www.sec.cl/electromovilidad/",
+      "scope": "Primary reference; applicability and publication status must be checked for the specific project. Some original documents are in Spanish.",
+      "date": "RIC 15 version 2024"
+    },
+    {
+      "id": "mining",
+      "title": "BCN — Chilean Mining Safety Regulation, D.S. 132",
+      "url": "https://www.bcn.cl/leychile/navegar?idNorma=221064",
+      "scope": "Primary reference; applicability and publication status must be checked for the specific project. Some original documents are in Spanish.",
+      "date": "Official text reviewed"
+    },
+    {
+      "id": "environmentLaw",
+      "title": "BCN — Environmental Framework Law 19.300",
+      "url": "https://www.bcn.cl/leychile/navegar?idNorma=30667",
+      "scope": "Primary reference; applicability and publication status must be checked for the specific project. Some original documents are in Spanish.",
+      "date": "Official text reviewed"
+    },
+    {
+      "id": "seia",
+      "title": "BCN — Environmental Assessment Regulation, D.S. 40",
+      "url": "https://www.bcn.cl/leychile/navegar?idNorma=1053563",
+      "scope": "Primary reference; applicability and publication status must be checked for the specific project. Some original documents are in Spanish.",
+      "date": "Official text reviewed"
+    },
+    {
+      "id": "sea26",
+      "title": "SEA — Environmental applicability instructions, 2026",
+      "url": "https://www.sea.gob.cl/instructivos-para-la-evaluacion-del-impacto-ambiental",
+      "scope": "Primary reference; applicability and publication status must be checked for the specific project. Some original documents are in Spanish.",
+      "date": "2026-01-20"
+    },
+    {
+      "id": "ds44",
+      "title": "BCN — Occupational Risk Management Regulation, D.S. 44",
+      "url": "https://www.bcn.cl/leychile/navegar?idNorma=1205298",
+      "scope": "Primary reference; applicability and publication status must be checked for the specific project. Some original documents are in Spanish.",
+      "date": "D.S. 44/2023"
+    },
+    {
+      "id": "ds594",
+      "title": "BCN — Workplace Conditions Regulation, D.S. 594",
+      "url": "https://www.bcn.cl/leychile/navegar?idNorma=167766",
+      "scope": "Primary reference; applicability and publication status must be checked for the specific project. Some original documents are in Spanish.",
+      "date": "D.S. 594/1999"
+    },
+    {
+      "id": "jimblebar",
+      "title": "Rio Tinto — Pilbara battery-electric truck trial",
+      "url": "https://www.riotinto.com/en/news/releases/2026/battery-electric-haul-truck-trial-in-the-pilbara",
+      "scope": "Primary reference; applicability and publication status must be checked for the specific project. Some original documents are in Spanish.",
+      "date": "2026-06-23"
+    },
+    {
+      "id": "fortescue",
+      "title": "Epiroc — Fortescue electric drilling contract",
+      "url": "https://www.epirocgroup.com/en/media/corporate-press-releases/2025/20250416-epiroc-wins-its-largest-contract-ever--for-autonomous-and-electric-powered-mining-equipment",
+      "scope": "Primary reference; applicability and publication status must be checked for the specific project. Some original documents are in Spanish.",
+      "date": "2025-04-16"
+    },
+    {
+      "id": "energyLaw",
+      "title": "Ministry of Energy — Energy Efficiency Law 21.305",
+      "url": "https://energia.gob.cl/ley-y-plan-de-eficiencia-energetica",
+      "scope": "Primary reference; applicability and publication status must be checked for the specific project. Some original documents are in Spanish.",
+      "date": "Official page reviewed"
+    },
+    {
+      "id": "oyu",
+      "title": "Rio Tinto — Oyu Tolgoi battery-swapping trial",
+      "url": "https://www.riotinto.com/en/news/releases/2025/rio-tinto-and-chinas-state-power-investment-corporation-launch-battery-swap-truck-trial-fleet-at-oyu-tolgoi-mine",
+      "scope": "Primary reference; applicability and publication status must be checked for the specific project. Some original documents are in Spanish.",
+      "date": "2025-10-27"
+    }
+  ]
+}

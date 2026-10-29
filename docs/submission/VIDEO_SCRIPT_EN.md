@@ -1,10 +1,10 @@
-# English technical walkthrough — 2 minutes 48 seconds
+# Final English video script — 2:48
 
-This script matches the rendered module replay, not a browser recording. Add actual application footage using `RECORDING_GUIDE_EN.md` before submission. NVIDIA/Nebius evidence shown is a saved real call; no new call is implied.
+Matches `ELECTRODECISION_SUBMISSION_EN.mp4`, which uses actual public-application capture and a real query recorded during that capture.
 
 ## 0:00–0:18 · Electrification is a production decision
 
-A mining fleet can have enough energy and still miss its production target. ElectroDecision compares charging choices and organizes the evidence needed before an electrification decision. This video replays outputs from the working calculation modules.
+A mining fleet can have enough energy and still miss its production target. ElectroDecision compares charging choices and organizes the evidence needed before an electrification decision. This demonstration shows the working public application.
 
 ## 0:18–0:40 · A declared synthetic operation
 
@@ -24,7 +24,7 @@ A separate evidence workflow filters requirements by technology, project stage, 
 
 ## 1:46–2:17 · NVIDIA Nemotron on Nebius Token Factory
 
-This is a saved record of a real NVIDIA Nemotron request through Nebius Token Factory. The application executed the readiness and project-context tools. The model selected evidence identifiers, which the server validated before building the report from catalog text. The record contains token usage and tool results, with no provider key. It is recorded inference evidence, not a new live request in this video.
+Here is a real NVIDIA Nemotron request through Nebius Token Factory, recorded in the public application. The application executes the readiness and project-context tools. The model selects evidence identifiers, which the server validates before building the report from catalog text. The executed tools and token usage remain visible for inspection. The provider key stays on the server.
 
 ## 2:17–2:34 · Reproduce and inspect
 

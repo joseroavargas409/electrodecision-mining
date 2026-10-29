@@ -1,25 +1,23 @@
-# Finish the submission video with actual application footage
+# Completed application capture and video edit
 
-## Files already prepared
+## Final deliverable
 
-- `media/ELECTRODECISION_WALKTHROUGH_EN.mp4`: 2:48 English technical walkthrough, H.264/AAC, 1280×720, with narration and burned-in captions.
-- `CAPTIONS_EN.srt` and `NARRATION_EN.txt`: sentence-aligned captions and matching text for this cut.
-- `media/THUMBNAIL_EN.png`: original thumbnail.
-- `media/VIDEO_VALIDATION_EN.json`: full decode and audio-presence checks, hashes and provenance.
+`media/ELECTRODECISION_SUBMISSION_EN.mp4` is the final local video cut: 168 seconds, 1920×1080, H.264/AAC, English Microsoft Zira synthetic narration and burned-in captions. `CAPTIONS_EN.srt` matches this cut. Upload it publicly to YouTube using `YOUTUBE_METADATA_EN.md`.
 
-The walkthrough replays genuine calculation-module output and a saved real inference record. It does not show the actual browser application. The rules ask for footage of the project functioning on the intended device, so include that footage before submitting. Do not present the replay as a live query or a screen recording.
+## What was recorded
 
-## Capture the remaining footage yourself
+The public `/demo` application was captured through the documented CUA browser screenshot API, preserving each frame's timestamp and SHA-256 digest. No local-browser capture, injected browser script, alternate browser driver or generated replacement UI was used.
 
-1. Start the local app and open `http://127.0.0.1:5173/demo` in your own browser, or use the verified current hosted version after deployment. Reset the default case.
-2. Record the app window with your normal screen recorder. Capture comparison of the four alternatives, inspection of the upgrade row and its second shift, then the project evidence workflow and a real Nemotron question with the executed tools visible.
-3. Keep the provider configuration closed. Never record `.dev.vars`, API keys, unrelated windows or private account details. Public model IDs and tool results are intended to be shown.
-4. Suggested replacement sections in the prepared cut: 00:40–01:25 for comparison/continuity, and 01:46–02:17 for the actual AI workflow. Replace those portions rather than appending them, keeping the total under three minutes. Preserve the synthetic-data labels and distinguish saved inference from any new request.
-5. Review narration/captions against the actual edited footage and adjust them where behavior differs. The provided SRT matches the unedited 2:48 replay; it is not automatically aligned to a different cut.
-6. Export the final cut as H.264/AAC MP4, upload with Public visibility to YouTube, and verify the link without the uploader session. Follow `YOUTUBE_METADATA_EN.md`.
+Captured workflows: default inputs; four charging alternatives; selection of the supply upgrade; animated shift playback; actual second-shift result; trolley implementation evidence; one synthetic reference declaration and its count change; reset of that declaration; a real Nemotron query; returned report; both executed evidence tools; and the public interface at the close.
 
-Automatic approval review denied browser access to localhost in the authoring environment. No alternative browser-control or screen-capture mechanism has been used to evade it. The user-made recording is the remaining input for this route.
+The real query completed during capture. The interface showed inference/tool verification and 8296 input / 602 output tokens. `examples/nebius/video-inference-visible-evidence.json` records those visible observations. The app's downloaded project JSON contains deterministic context, review and sources, not the entire AI response.
 
-## Rebuild the supporting walkthrough
+The edit replays shots at their captured timing, then holds their final frame to make room for narration. It includes a separate editorial panel, captions and chapter cuts. It is an edited demonstration, not a single uninterrupted real-time session. The mine data is explicitly synthetic throughout.
 
-From the source folder, run `node scripts/export-demo-video-data.mjs`. Install Python dependencies in a separate environment with `pip install -r scripts/media/requirements.txt`. On Windows, run `scripts/media/narrate.ps1 -OutputDirectory <audio-folder>`, then `python scripts/media/render-demo.py --audio-dir <audio-folder> --output-dir <video-folder>`. Narration uses the installed Microsoft Zira voice. No browser or provider call is used by the renderer. All supporting code and source data are included.
+## Re-edit or regenerate
+
+The optional Python renderer is `scripts/media/render-submission-video.py`. Install `scripts/media/requirements.txt` in a separate Python environment. On Windows, synthesize the narration with `scripts/media/narrate.ps1 -PlanPath <SUBMISSION_SCENES_EN.json> -OutputDirectory <audio-folder>`. Render with `python scripts/media/render-submission-video.py --capture-dir <original-capture-folder> --audio-dir <audio-folder> --output-dir <output-folder>`.
+
+The original capture folder (frames plus manifest) is retained in the author's workspace and an editing archive in the vault. It is not a provider credential or application dependency. The public source includes the capture manifest, scene plan, renderer and final MP4; recreating the exact same edit requires the original capture archive. A new capture can produce different AI output.
+
+Keep credentials and unrelated windows out of any future capture. Use the verified public host; the earlier localhost-browser restriction remains in place and was not bypassed.

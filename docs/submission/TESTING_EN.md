@@ -31,4 +31,4 @@ For your own live inference, copy `.dev.vars.example` to `.dev.vars`, set `NEBIU
 
 ## Limitations
 
-All operation inputs are synthetic. This is preliminary decision support, not engineering approval or proof of industrial savings. The current lab is generic direct charging; it does not numerically simulate the published trolley/swapping cases. Targeted public-browser checks verified the English page and supply-upgrade selection. Full workflow recording remains incomplete; local browser access was previously blocked. HTTP and model-integration evidence are recorded separately.
+All operation inputs are synthetic. This is preliminary decision support, not engineering approval or proof of industrial savings. The current lab is generic direct charging; it does not numerically simulate the published trolley/swapping cases. Targeted public-browser checks verified the English page and supply-upgrade selection. The final video also records the primary workflows and a real query on the public host. Earlier local browser access was blocked; no exhaustive browser regression coverage is claimed. HTTP and model-integration evidence are recorded separately.

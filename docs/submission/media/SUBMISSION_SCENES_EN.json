@@ -1,0 +1,185 @@
+[
+  {
+    "start": 0,
+    "end": 18,
+    "title": "Electrification is a production decision",
+    "sentences": [
+      "A mining fleet can have enough energy and still miss its production target.",
+      "ElectroDecision compares charging choices and organizes the evidence needed before an electrification decision.",
+      "This demonstration shows the working public application."
+    ],
+    "clips": [
+      {
+        "start": 0,
+        "end": 18,
+        "group": "intro"
+      }
+    ]
+  },
+  {
+    "start": 18,
+    "end": 40,
+    "title": "A declared synthetic operation",
+    "sentences": [
+      "The case uses four generic underground loaders, a twelve-hour shift, and a target of seventeen hundred tonnes.",
+      "Battery health is eighty-five percent.",
+      "The model includes charging losses, critical site demand, and a ninety-minute charger outage.",
+      "These are synthetic assumptions, not measurements from a real mine."
+    ],
+    "clips": [
+      {
+        "start": 18,
+        "end": 40,
+        "group": "parameters"
+      }
+    ]
+  },
+  {
+    "start": 40,
+    "end": 63,
+    "title": "Compare equal production targets",
+    "sentences": [
+      "One charger delivers eleven hundred eighty-eight tonnes.",
+      "A second charger on the same supply improves output but still misses the target.",
+      "Adding three hundred fifty kilowatts reaches seventeen hundred eighty-two tonnes without modeled overload.",
+      "Unmanaged charging reaches similar output but overloads supply for three hundred sixty-nine minutes."
+    ],
+    "clips": [
+      {
+        "start": 40,
+        "end": 49,
+        "group": "comparison-baseline"
+      },
+      {
+        "start": 49,
+        "end": 63,
+        "group": "comparison-upgrade"
+      }
+    ]
+  },
+  {
+    "start": 63,
+    "end": 85,
+    "title": "Carry battery energy into the next shift",
+    "sentences": [
+      "The next shift keeps each vehicle's actual battery energy.",
+      "In the upgraded case, a sixty-minute charging break restores the declared initial charge.",
+      "Shift two delivers eighteen hundred seventy-two tonnes.",
+      "Two shifts plus the break span twenty-five hours, not a single day."
+    ],
+    "clips": [
+      {
+        "start": 63,
+        "end": 78,
+        "group": "playback"
+      },
+      {
+        "start": 78,
+        "end": 85,
+        "group": "continuity"
+      }
+    ]
+  },
+  {
+    "start": 85,
+    "end": 106,
+    "title": "Turn missing evidence into review actions",
+    "sentences": [
+      "A separate evidence workflow filters requirements by technology, project stage, and jurisdiction.",
+      "This trolley implementation case starts with twelve open items, including eight critical items.",
+      "A document reference changes declared completeness.",
+      "It never verifies contents or certifies regulatory compliance."
+    ],
+    "clips": [
+      {
+        "start": 85,
+        "end": 96,
+        "group": "project-context"
+      },
+      {
+        "start": 96,
+        "end": 106,
+        "group": "project-declared"
+      }
+    ]
+  },
+  {
+    "start": 106,
+    "end": 137,
+    "title": "NVIDIA Nemotron on Nebius Token Factory",
+    "sentences": [
+      "Here is a real NVIDIA Nemotron request through Nebius Token Factory, recorded in the public application.",
+      "The application executes the readiness and project-context tools.",
+      "The model selects evidence identifiers, which the server validates before building the report from catalog text.",
+      "The executed tools and token usage remain visible for inspection.",
+      "The provider key stays on the server."
+    ],
+    "clips": [
+      {
+        "start": 106,
+        "end": 109,
+        "group": "ai-question"
+      },
+      {
+        "start": 109,
+        "end": 115,
+        "group": "ai-request"
+      },
+      {
+        "start": 115,
+        "end": 123,
+        "group": "ai-report"
+      },
+      {
+        "start": 123,
+        "end": 132,
+        "group": "ai-tools"
+      },
+      {
+        "start": 132,
+        "end": 137,
+        "group": "ai-context-tool"
+      }
+    ]
+  },
+  {
+    "start": 137,
+    "end": 154,
+    "title": "Reproduce and inspect",
+    "sentences": [
+      "The public repository includes source, an MIT license, setup instructions, tests, and integration evidence.",
+      "Operation data is synthetic.",
+      "Industrial savings, equipment control, and engineering approval are outside this prototype."
+    ],
+    "clips": [
+      {
+        "start": 137,
+        "end": 143,
+        "group": "ai-context-tool"
+      },
+      {
+        "start": 143,
+        "end": 154,
+        "group": "outro"
+      }
+    ]
+  },
+  {
+    "start": 154,
+    "end": 168,
+    "title": "Better inputs for the next engineering review",
+    "sentences": [
+      "Compare charging choices.",
+      "Expose production and supply constraints.",
+      "Prioritize missing evidence.",
+      "The next step is validation with site data and mining planners."
+    ],
+    "clips": [
+      {
+        "start": 154,
+        "end": 168,
+        "group": "outro"
+      }
+    ]
+  }
+]

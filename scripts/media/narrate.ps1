@@ -1,7 +1,8 @@
-param([Parameter(Mandatory=$true)][string]$OutputDirectory)
+param([Parameter(Mandatory=$true)][string]$OutputDirectory,[string]$PlanPath)
 $ErrorActionPreference = 'Stop'
 Add-Type -AssemblyName System.Speech
-$plan = Get-Content -Raw -LiteralPath (Join-Path $PSScriptRoot '../../docs/submission/media/SCENES_EN.json') | ConvertFrom-Json
+if (-not $PlanPath) { $PlanPath = Join-Path $PSScriptRoot '../../docs/submission/media/SCENES_EN.json' }
+$plan = Get-Content -Raw -LiteralPath $PlanPath | ConvertFrom-Json
 New-Item -ItemType Directory -Path $OutputDirectory -Force | Out-Null
 $speaker = New-Object System.Speech.Synthesis.SpeechSynthesizer
 try {

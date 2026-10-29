@@ -1,17 +1,28 @@
-# Final video upload metadata
+# Upload the final English demo
+
+**File:** `media/ELECTRODECISION_SUBMISSION_EN.mp4`
 
 **Title:** ElectroDecision | Mining Electrification Copilot — Nebius x NVIDIA Hackathon
 
-**Description to paste after completing the final footage:**
+**Description:**
 
 ElectroDecision helps mining planners compare electric fleet charging choices, identify production and power constraints, and prioritize missing project evidence.
 
-The prototype includes a synthetic two-shift LHD simulation and an evidence-review workflow organized by technology, project stage and jurisdiction. NVIDIA Nemotron is called at runtime through Nebius Token Factory, with read-only calculation and context tools. Evidence identifiers are validated before the application builds the project report from its catalog.
+This video shows the working public application: synthetic two-shift LHD simulation, charging alternatives, battery continuity, evidence declarations, and a real NVIDIA Nemotron request through Nebius Token Factory. The recorded query executes read-only evidence tools; the server validates selected identifiers before constructing the report from its catalog.
 
-The technical walkthrough includes calculation-trace replays and recorded real inference evidence. Actual application footage should be identified separately in the final edit. Operation data is synthetic; no industrial savings or regulatory approval is claimed.
+Public English demo: https://electrodecision-mining-recovered.jlroav409.chatgpt.site/demo
 
-Source code and MIT license: https://github.com/joseroavargas409/electrodecision-mining
+MIT source and setup: https://github.com/joseroavargas409/electrodecision-mining
 
-Public English demo: https://electrodecision-mining-recovered.jlroav409.chatgpt.site/demo. Use Public visibility, keep the final cut below three minutes, and verify it without the uploader session. `media/THUMBNAIL_EN.png` and the English SRT are included. Adjust the description and SRT to the final edit; do not claim footage that is absent.
+00:00 Problem and working app
+00:18 Synthetic operation assumptions
+00:40 Charging alternatives
+01:03 Battery continuity and next shift
+01:25 Missing project evidence
+01:46 NVIDIA Nemotron on Nebius Token Factory
+02:17 Reproducibility and boundaries
+02:34 Next engineering review
 
-**Current status:** local supporting MP4 prepared; actual application footage and public YouTube publication pending.
+Operation data is synthetic; no measured industrial savings or regulatory approval is claimed. This is an edited recording with holds for English synthetic narration and captions. No provider key is shown. No model training or dedicated GPU deployment was used.
+
+**Upload settings:** Public visibility; use `media/THUMBNAIL_FINAL_EN.jpg`. The duration is 2:48, below three minutes. The English SRT is included. Review the file, publish and verify the link without the uploader's session. `youtubeUrl` remains null until a real public link is verified.

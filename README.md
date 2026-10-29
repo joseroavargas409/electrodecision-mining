@@ -68,6 +68,6 @@ Original source is MIT-licensed; preserve dependency notices. [Source and asset 
 
 ## English submission assets
 
-The form-copy fields, requirements matrix and one-page pitch are in `docs/submission/`. A 2:48 English technical walkthrough, matching captions and thumbnail are in `docs/submission/media/`. It is explicitly a module replay using calculation traces and a saved real NVIDIA/Nebius request, not browser footage. Actual application footage and a public YouTube upload remain required for the final cut. See the recording guide and `LINKS.json` for the exact publication state.
+`docs/submission/` contains form-copy fields, the project story, requirements matrix, pitch, setup and feedback. The final local video is `docs/submission/media/ELECTRODECISION_SUBMISSION_EN.mp4`: 2:48, Full HD, English narration/captions, actual public-application capture and a real NVIDIA/Nebius query recorded during capture. Its provenance, final validation and original capture hashes are included. A public YouTube upload remains pending; see `LINKS.json`.
 
-Reproduce the video data with `node scripts/export-demo-video-data.mjs`. The optional renderer and Windows narration helper are in `scripts/media/`; they do not call the provider or access a browser.
+The earlier module replay remains separate supporting material. The optional final editor is `scripts/media/render-submission-video.py`; exact re-editing requires the author's original capture folder. Rendering does not call a provider or control a browser. The application itself is reproduced through the setup instructions above.

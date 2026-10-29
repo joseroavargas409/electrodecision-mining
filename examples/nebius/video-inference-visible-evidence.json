@@ -1,0 +1,55 @@
+{
+  "url": "https://electrodecision-mining-recovered.jlroav409.chatgpt.site/demo",
+  "question": "Prioritize three missing critical evidence items for this trolley project. Use only validated references.",
+  "statusVisible": "Inference and tool exchange verified for this response",
+  "toolsVisible": [
+    "assess_project_readiness",
+    "get_project_context"
+  ],
+  "usageVisible": {
+    "inputTokens": 8296,
+    "outputTokens": 602
+  },
+  "operationData": "synthetic",
+  "documentDeclarationsResetBeforeInference": true,
+  "complianceCertified": false,
+  "source": "Observed public application UI during CUA browser capture; no response fabricated or injected.",
+  "exportScope": "The downloaded JSON contains the project context, deterministic review and sources; it does not include the full AI response.",
+  "frameEvidence": [
+    {
+      "file": "frame-001592.jpg",
+      "group": "ai-report",
+      "capturedAt": "2026-10-29T20:17:55.224Z",
+      "elapsedMs": 43,
+      "sha256": "1cbefe202a6f41d0441bc8326175d69c2ba665ba0e0a513e087f4fda8d498518"
+    },
+    {
+      "file": "frame-001692.jpg",
+      "group": "ai-report",
+      "capturedAt": "2026-10-29T20:17:58.713Z",
+      "elapsedMs": 3532,
+      "sha256": "1cbefe202a6f41d0441bc8326175d69c2ba665ba0e0a513e087f4fda8d498518"
+    },
+    {
+      "file": "frame-001792.jpg",
+      "group": "ai-tools",
+      "capturedAt": "2026-10-29T20:18:02.560Z",
+      "elapsedMs": 771,
+      "sha256": "c5c4ed49ea0f4b0ee9846ef50214a9a23b1b3bf79fbe9c860c0f0fc08aaed1c0"
+    },
+    {
+      "file": "frame-001892.jpg",
+      "group": "ai-tools",
+      "capturedAt": "2026-10-29T20:18:05.837Z",
+      "elapsedMs": 4048,
+      "sha256": "c5c4ed49ea0f4b0ee9846ef50214a9a23b1b3bf79fbe9c860c0f0fc08aaed1c0"
+    },
+    {
+      "file": "frame-001992.jpg",
+      "group": "ai-context-tool",
+      "capturedAt": "2026-10-29T20:18:29.990Z",
+      "elapsedMs": 1827,
+      "sha256": "e68f0bbea4adc0061b3d3c5d3ca3f37b805b10d50c1488045dc0ca9d0e967e68"
+    }
+  ]
+}

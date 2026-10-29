@@ -1,0 +1,31 @@
+{
+  "file": "ELECTRODECISION_SUBMISSION_EN.mp4",
+  "durationSeconds": 168,
+  "width": 1920,
+  "height": 1080,
+  "fps": 24,
+  "videoCodec": "H.264",
+  "audioCodec": "AAC",
+  "englishNarration": true,
+  "narrationVoice": "Microsoft Zira Desktop; synthetic speech",
+  "captionCues": 31,
+  "burnedInCaptions": true,
+  "decodeVerified": true,
+  "browserFootage": true,
+  "publicApplicationUrl": "https://electrodecision-mining-recovered.jlroav409.chatgpt.site/demo",
+  "captureMethod": "Documented CUA browser screenshot sequence; no DOM rendering or synthetic UI",
+  "captureFrames": 2156,
+  "capturedSeconds": 73.216,
+  "editing": "Authentic screenshots assembled with their recorded timestamps at normal speed, then held for narration. Separate editorial panels and captions; no fabricated or injected UI. No local browser capture.",
+  "realInferenceRecordedDuringCapture": true,
+  "recordedInferenceUsage": {
+    "inputTokens": 8296,
+    "outputTokens": 602
+  },
+  "captureManifestSha256": "6b13bba5240433a8f6b9a6f9658dc83b87554613fb8741bad5bd28732f807a6b",
+  "videoSha256": "4a7c8fd31b68d2570e9959798362743a745084bc3289a39c7888729c63f5513f",
+  "bytes": 5214082,
+  "uploadReady": true,
+  "youtubeUrl": null,
+  "submitted": false
+}

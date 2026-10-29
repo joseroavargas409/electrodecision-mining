@@ -2,22 +2,22 @@
 
 Project: **ElectroDecision — Mining Electrification Copilot**. Track: **Best Apps and Agents**.
 
-The public code, MIT license, README, project description, judge instructions, architecture, actual-use feedback, source notes and existing-work disclosure are ready. The application has an English `/demo` route using the same calculation/evidence engines as the Spanish workspace.
+Public demo: https://electrodecision-mining-recovered.jlroav409.chatgpt.site/demo
 
-Start with `SUBMISSION_FIELDS_EN.json` for form content, `DEVPOST_DESCRIPTION_EN.md` for the full story and `REQUIREMENTS_MATRIX_EN.md` for evidence against the organizer's requirements. `LINKS.json` is the authoritative publication status.
+Public MIT source: https://github.com/joseroavargas409/electrodecision-mining
 
-Public source: https://github.com/joseroavargas409/electrodecision-mining
+The public application, source, README, description, setup/judge instructions, architecture, actual-use feedback, source notes and existing-work disclosure are ready in English. `SUBMISSION_FIELDS_EN.json` contains form-copy fields. `LINKS.json` records verified publication status.
 
-## Video assets provided
+## Final video file ready
 
-`media/ELECTRODECISION_WALKTHROUGH_EN.mp4` is a real 2:48 technical video with English synthetic narration, captions, animated calculation traces and a saved real NVIDIA/Nebius integration record. It is supporting material, **not a screen recording of the application**. Its provenance and decode checks are in `media/VIDEO_VALIDATION_EN.json`.
+Use **`media/ELECTRODECISION_SUBMISSION_EN.mp4`**: 2:48, Full HD 1920×1080, H.264/AAC, English synthetic narration and burned-in captions. It shows authentic captured operation of the public application: charging comparison, shift playback, next-shift inventory, project evidence declarations, a real NVIDIA Nemotron query, returned report and executed tools.
 
-The organizer asks for footage showing the project functioning on its intended device. Include actual application footage before treating the video as the final submission cut; follow `RECORDING_GUIDE_EN.md`. A public YouTube upload is still needed. No video URL is fabricated.
+The edit uses actual CUA browser screenshot sequences with recorded timestamps, then holds shots for narration. The separate explanation panel and subtitles are editorial additions; UI content was not fabricated or injected. Capture hashes and validation are included. `CAPTIONS_EN.srt` and `NARRATION_EN.txt` match this final cut.
+
+The older `ELECTRODECISION_WALKTHROUGH_EN.mp4` remains optional supporting material and is not the final cut. Its original standalone captions/text have `_WALKTHROUGH_` in their filenames.
 
 ## Remaining external steps
 
-The original Sites project remained inaccessible. A new recovered current release is deployed at https://electrodecision-mining-recovered.jlroav409.chatgpt.site/demo. Its English route and real NVIDIA/Nebius tool loop passed hosted HTTP checks. The owner authorized public access for the hackathon. Anonymous page/API checks and real hosted inference passed without sign-in; basic browser interaction also passed. The older hosted site is not used as the current release.
+Upload the final MP4 publicly to YouTube, verify the resulting link and fill `youtubeUrl` in `LINKS.json` and the Devpost form. Use `YOUTUBE_METADATA_EN.md` for title, description and chapters. Complete personal/team, eligibility and ownership fields and submit Devpost yourself. No upload, Devpost submission or acceptance of its binding rules has been performed on your behalf.
 
-Add final footage, upload the video publicly to YouTube, verify it and fill its URL. Complete personal/team and eligibility fields in Devpost yourself and submit. No Devpost submission or acceptance of its binding rules has been performed on your behalf.
-
-Use `TESTING_EN.md` to reproduce the project and `VALIDATION_EN.md` to distinguish completed checks from verification limits.
+Use `TESTING_EN.md` to reproduce the app and `VALIDATION_EN.md` for checks and limits. `RECORDING_GUIDE_EN.md` now documents the completed capture and how to re-edit it.

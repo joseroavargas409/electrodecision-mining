@@ -1,17 +1,16 @@
 1
-00:00:01,042 --> 00:00:05,136
+00:00:01,166 --> 00:00:05,260
 A mining fleet can have enough energy and still miss its
 production target.
 
 2
-00:00:06,179 --> 00:00:12,057
+00:00:06,426 --> 00:00:12,304
 ElectroDecision compares charging choices and organizes the
 evidence needed before an electrification decision.
 
 3
-00:00:13,099 --> 00:00:16,958
-This video replays outputs from the working calculation
-modules.
+00:00:13,470 --> 00:00:16,834
+This demonstration shows the working public application.
 
 4
 00:00:18,658 --> 00:00:25,251
@@ -24,8 +23,8 @@ Battery health is eighty-five percent.
 
 6
 00:00:28,932 --> 00:00:34,690
-The model includes charging losses, critical site demand, and
-a ninety-minute charger outage.
+The model includes charging losses, critical site demand, and a
+ninety-minute charger outage.
 
 7
 00:00:35,348 --> 00:00:39,342
@@ -48,8 +47,8 @@ eighty-two tonnes without modeled overload.
 
 11
 00:00:56,660 --> 00:01:02,038
-Unmanaged charging reaches similar output but overloads supply
-for three hundred sixty-nine minutes.
+Unmanaged charging reaches similar output but overloads supply for
+three hundred sixty-nine minutes.
 
 12
 00:01:04,158 --> 00:01:07,572
@@ -57,8 +56,8 @@ The next shift keeps each vehicle's actual battery energy.
 
 13
 00:01:08,730 --> 00:01:13,908
-In the upgraded case, a sixty-minute charging break restores
-the declared initial charge.
+In the upgraded case, a sixty-minute charging break restores the
+declared initial charge.
 
 14
 00:01:15,066 --> 00:01:18,405
@@ -71,13 +70,13 @@ day.
 
 16
 00:01:25,538 --> 00:01:31,221
-A separate evidence workflow filters requirements by
-technology, project stage, and jurisdiction.
+A separate evidence workflow filters requirements by technology,
+project stage, and jurisdiction.
 
 17
 00:01:31,760 --> 00:01:37,253
-This trolley implementation case starts with twelve open
-items, including eight critical items.
+This trolley implementation case starts with twelve open items,
+including eight critical items.
 
 18
 00:01:37,791 --> 00:01:40,970
@@ -88,29 +87,26 @@ A document reference changes declared completeness.
 It never verifies contents or certifies regulatory compliance.
 
 20
-00:01:47,160 --> 00:01:51,934
-This is a saved record of a real NVIDIA Nemotron request
-through Nebius Token Factory.
+00:01:47,379 --> 00:01:53,407
+Here is a real NVIDIA Nemotron request through Nebius Token
+Factory, recorded in the public application.
 
 21
-00:01:53,094 --> 00:01:57,088
-The application executed the readiness and project-context
-tools.
+00:01:54,786 --> 00:01:58,789
+The application executes the readiness and project-context tools.
 
 22
-00:01:58,249 --> 00:02:04,681
-The model selected evidence identifiers, which the server
-validated before building the report from catalog text.
+00:02:00,168 --> 00:02:06,541
+The model selects evidence identifiers, which the server validates
+before building the report from catalog text.
 
 23
-00:02:05,842 --> 00:02:10,406
-The record contains token usage and tool results, with no
-provider key.
+00:02:07,920 --> 00:02:11,864
+The executed tools and token usage remain visible for inspection.
 
 24
-00:02:11,566 --> 00:02:15,840
-It is recorded inference evidence, not a new live request in
-this video.
+00:02:13,242 --> 00:02:15,621
+The provider key stays on the server.
 
 25
 00:02:17,541 --> 00:02:24,839
@@ -123,8 +119,8 @@ Operation data is synthetic.
 
 27
 00:02:28,150 --> 00:02:33,459
-Industrial savings, equipment control, and engineering
-approval are outside this prototype.
+Industrial savings, equipment control, and engineering approval
+are outside this prototype.
 
 28
 00:02:34,609 --> 00:02:36,733
@@ -140,5 +136,4 @@ Prioritize missing evidence.
 
 31
 00:02:43,653 --> 00:02:47,391
-The next step is validation with site data and mining
-planners.
+The next step is validation with site data and mining planners.
