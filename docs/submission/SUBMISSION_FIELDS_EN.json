@@ -13,7 +13,7 @@
   ],
   "repositoryUrl": "https://github.com/joseroavargas409/electrodecision-mining",
   "demoUrl": "https://electrodecision-mining-recovered.jlroav409.chatgpt.site/demo",
-  "youtubeUrl": null,
+  "youtubeUrl": "https://youtu.be/4UdWqLiKI8g",
   "descriptionFile": "DEVPOST_DESCRIPTION_EN.md",
   "testingInstructionsFile": "TESTING_EN.md",
   "feedbackFile": "NEBIUS_FEEDBACK_EN.md",
@@ -28,5 +28,9 @@
   "judgeAccessReady": true,
   "localVideoFile": "media/ELECTRODECISION_SUBMISSION_EN.mp4",
   "videoFootageComplete": true,
-  "videoUploadReady": true
+  "videoUploadReady": true,
+  "youtubePublished": true,
+  "youtubeVisibility": "public",
+  "englishCaptionsPublished": true,
+  "technicalDeliverablesReady": true
 }

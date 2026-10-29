@@ -16,8 +16,10 @@ The edit uses actual CUA browser screenshot sequences with recorded timestamps, 
 
 The older `ELECTRODECISION_WALKTHROUGH_EN.mp4` remains optional supporting material and is not the final cut. Its original standalone captions/text have `_WALKTHROUGH_` in their filenames.
 
-## Remaining external steps
+## Public video and remaining submission steps
 
-Upload the final MP4 publicly to YouTube, verify the resulting link and fill `youtubeUrl` in `LINKS.json` and the Devpost form. Use `YOUTUBE_METADATA_EN.md` for title, description and chapters. Complete personal/team, eligibility and ownership fields and submit Devpost yourself. No upload, Devpost submission or acceptance of its binding rules has been performed on your behalf.
+The final video is public at https://youtu.be/4UdWqLiKI8g, with English captions published. YouTube Studio confirmed publication, and anonymous oEmbed access verified its title and channel without credentials. The video is marked as using AI; its description discloses the synthetic narration. The new channel requires telephone verification for a custom thumbnail, so the published video uses a frame from the video. The prepared custom thumbnail remains available.
+
+All technical delivery links are populated in `LINKS.json` and `SUBMISSION_FIELDS_EN.json`. Complete personal/team, eligibility and ownership fields and submit Devpost yourself. No Devpost submission or acceptance of its binding rules has been performed on your behalf.
 
 Use `TESTING_EN.md` to reproduce the app and `VALIDATION_EN.md` for checks and limits. `RECORDING_GUIDE_EN.md` now documents the completed capture and how to re-edit it.

@@ -26,6 +26,9 @@
   "videoSha256": "4a7c8fd31b68d2570e9959798362743a745084bc3289a39c7888729c63f5513f",
   "bytes": 5214082,
   "uploadReady": true,
-  "youtubeUrl": null,
-  "submitted": false
+  "youtubeUrl": "https://youtu.be/4UdWqLiKI8g",
+  "submitted": false,
+  "youtubePublished": true,
+  "englishCaptionsPublished": true,
+  "youtubePublicationEvidence": "YOUTUBE_PUBLICATION_EN.json"
 }

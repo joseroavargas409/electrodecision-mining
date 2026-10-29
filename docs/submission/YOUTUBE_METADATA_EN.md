@@ -1,4 +1,8 @@
-# Upload the final English demo
+# Published English demo
+
+Public video: https://youtu.be/4UdWqLiKI8g
+
+Publication and English captions verified. The uploaded title, description and chapter timings follow below.
 
 **File:** `media/ELECTRODECISION_SUBMISSION_EN.mp4`
 
@@ -25,4 +29,4 @@ MIT source and setup: https://github.com/joseroavargas409/electrodecision-mining
 
 Operation data is synthetic; no measured industrial savings or regulatory approval is claimed. This is an edited recording with holds for English synthetic narration and captions. No provider key is shown. No model training or dedicated GPU deployment was used.
 
-**Upload settings:** Public visibility; use `media/THUMBNAIL_FINAL_EN.jpg`. The duration is 2:48, below three minutes. The English SRT is included. Review the file, publish and verify the link without the uploader's session. `youtubeUrl` remains null until a real public link is verified.
+**Upload settings:** Public visibility; use `media/THUMBNAIL_FINAL_EN.jpg`. The duration is 2:48, below three minutes. The English SRT is included. The public link is verified in `LINKS.json`. English SRT captions were uploaded and published. The prepared custom thumbnail was not applied because the new channel requires phone verification; the published video uses an automatically generated frame. AI use is disclosed. No Devpost submission is claimed.

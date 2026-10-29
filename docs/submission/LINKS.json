@@ -4,10 +4,10 @@
   "track": "Best Apps and Agents",
   "demoUrl": "https://electrodecision-mining-recovered.jlroav409.chatgpt.site/demo",
   "repositoryUrl": "https://github.com/joseroavargas409/electrodecision-mining",
-  "youtubeUrl": null,
+  "youtubeUrl": "https://youtu.be/4UdWqLiKI8g",
   "localReviewerUrl": "http://127.0.0.1:5173/demo",
   "submitted": false,
-  "status": "Public English demo, public source and final English application video verified; public YouTube upload and Devpost submission pending",
+  "status": "Public demo, public MIT source and public English YouTube demo verified; entrant/team fields and final Devpost submission remain",
   "rulesUrl": "https://nebiusglobalaihackathon.devpost.com/rules",
   "submissionDeadlineUtc": "2026-10-30T17:00:00Z",
   "submissionDeadlineSantiago": "2026-10-30 14:00 America/Santiago",
@@ -29,5 +29,13 @@
   "publicHostedInferenceVerified": true,
   "browserChecksScope": "English page and supply-upgrade selection",
   "videoUploadReady": true,
-  "videoValidationFile": "media/FINAL_VIDEO_VALIDATION_EN.json"
+  "videoValidationFile": "media/FINAL_VIDEO_VALIDATION_EN.json",
+  "youtubePublished": true,
+  "youtubeVisibility": "public",
+  "englishCaptionsPublished": true,
+  "technicalDeliverablesReady": true,
+  "remainingSteps": [
+    "Confirm entrant/team, eligibility and ownership fields",
+    "Submit Devpost with the verified links"
+  ]
 }

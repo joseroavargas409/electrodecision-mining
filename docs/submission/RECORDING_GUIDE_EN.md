@@ -2,7 +2,7 @@
 
 ## Final deliverable
 
-`media/ELECTRODECISION_SUBMISSION_EN.mp4` is the final local video cut: 168 seconds, 1920×1080, H.264/AAC, English Microsoft Zira synthetic narration and burned-in captions. `CAPTIONS_EN.srt` matches this cut. Upload it publicly to YouTube using `YOUTUBE_METADATA_EN.md`.
+`media/ELECTRODECISION_SUBMISSION_EN.mp4` is the final local video cut: 168 seconds, 1920×1080, H.264/AAC, English Microsoft Zira synthetic narration and burned-in captions. `CAPTIONS_EN.srt` matches this cut. It is published publicly at https://youtu.be/4UdWqLiKI8g, with English captions. `YOUTUBE_METADATA_EN.md` preserves the uploaded title, description and chapters.
 
 ## What was recorded
 

@@ -16,7 +16,7 @@ A clean-source installation completed successfully (691 packages). The 87 tests,
 
 Earlier localhost browser access was denied by automatic approval review and was not used for the final capture. The final video uses the authorized public host and documented CUA screenshot sequences. The primary workflows were observed and recorded; this is not exhaustive browser regression coverage. The final MP4 is edited with cuts and holds for narration, not an uninterrupted session.
 
-The public repository and its MIT license were verified on GitHub. The recovered current hosted demo passed HTTP and real inference verification, with 8296 input / 519 output tokens in the hosted run. The owner authorized public access, and anonymous page/API checks plus real hosted inference passed (8296 input / 551 output tokens). The public YouTube URL remains unverified. No Devpost submission is claimed. Operation data is synthetic and there is no site/OEM calibration or industrial validation. The source catalog is indicative and does not certify regulatory compliance.
+The public repository and its MIT license were verified on GitHub. The recovered current hosted demo passed HTTP and real inference verification, with 8296 input / 519 output tokens in the hosted run. The owner authorized public access, and anonymous page/API checks plus real hosted inference passed (8296 input / 551 output tokens). The public YouTube URL was subsequently verified: https://youtu.be/4UdWqLiKI8g. No Devpost submission is claimed. Operation data is synthetic and there is no site/OEM calibration or industrial validation. The source catalog is indicative and does not certify regulatory compliance.
 
 
 ## Hosted recovery on 2026-10-29
@@ -26,4 +26,9 @@ A fresh Sites checkout passed the 87 tests, TypeScript checks and production bui
 
 ## Final English application video
 
-The final cut is 168 seconds at 1920×1080, 24 fps, H.264/AAC, with 31 sentence-aligned caption cues and English synthetic narration. It uses 2156 authentic captured frames spanning 73.216 seconds of captured shots, then holds for narration. Frames were checked against their capture hashes. A real query during capture visibly returned both evidence tools and 8296 input / 602 output tokens. Full-file audio/video decoding and audio presence passed; representative final frames were visually inspected. See `media/FINAL_VIDEO_VALIDATION_EN.json`, `CAPTURE_MANIFEST_EN.json` and `examples/nebius/video-inference-visible-evidence.json`. YouTube publication is still pending.
+The final cut is 168 seconds at 1920×1080, 24 fps, H.264/AAC, with 31 sentence-aligned caption cues and English synthetic narration. It uses 2156 authentic captured frames spanning 73.216 seconds of captured shots, then holds for narration. Frames were checked against their capture hashes. A real query during capture visibly returned both evidence tools and 8296 input / 602 output tokens. Full-file audio/video decoding and audio presence passed; representative final frames were visually inspected. See `media/FINAL_VIDEO_VALIDATION_EN.json`, `CAPTURE_MANIFEST_EN.json` and `examples/nebius/video-inference-visible-evidence.json`. The final video is now public on YouTube; English captions were published.
+
+
+## YouTube publication
+
+YouTube Studio confirmed public publication at https://youtu.be/4UdWqLiKI8g. The title and channel were verified through anonymous oEmbed retrieval without cookies or service credentials. English (United States) SRT captions were imported and published. AI use was disclosed and the video was categorized as Science & Technology. Copyright checks reported no issues at publication time. The custom thumbnail was not uploaded because the new channel requires phone verification; a video-generated frame was used. See `media/YOUTUBE_PUBLICATION_EN.json`. No Devpost submission is claimed.

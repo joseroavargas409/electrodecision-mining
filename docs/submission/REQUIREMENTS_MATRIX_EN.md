@@ -8,7 +8,7 @@ Reviewed against the [official rules](https://nebiusglobalaihackathon.devpost.co
 | Best-fit category | Best Apps and Agents | Selected |
 | Description of what, why and how | `DEVPOST_DESCRIPTION_EN.md`, `SUBMISSION_FIELDS_EN.json` | English text ready |
 | Working demo / hosted app / test-build URL | English `/demo`; `TESTING_EN.md` | Public recovered demo verified without authentication; real hosted inference passed |
-| Video below three minutes showing the project functioning | `media/ELECTRODECISION_SUBMISSION_EN.mp4`, 168 seconds; real public-app capture and live query recorded | Final local cut ready; public YouTube upload/link remains |
+| Video below three minutes showing the project functioning | `media/ELECTRODECISION_SUBMISSION_EN.mp4`, 168 seconds; real public-app capture and live query recorded | Published publicly on YouTube: https://youtu.be/4UdWqLiKI8g; English captions verified |
 | Public source on GitHub/GitLab/Bitbucket | https://github.com/joseroavargas409/electrodecision-mining | Published and verified |
 | Open-source license visible on repository | Root `LICENSE`, GitHub MIT detection | Complete |
 | README and running instructions | Root English `README.md`; `TESTING_EN.md` | Complete |

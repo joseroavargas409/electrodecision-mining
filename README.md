@@ -4,7 +4,7 @@ An inspectable simulator and NVIDIA Nemotron assistant for preliminary mining el
 
 **English reviewer demo:** `/demo` · **Track:** Best Apps and Agents · **License:** MIT · **Release:** 0.11.0
 
-The [public source repository](https://github.com/joseroavargas409/electrodecision-mining) is available with its MIT license and English submission materials. The [recovered English hosted demo](https://electrodecision-mining-recovered.jlroav409.chatgpt.site/demo) is deployed and passed real NVIDIA/Nebius HTTP verification. The owner authorized public access, and anonymous page/API access plus real hosted inference were verified. A public YouTube video is still pending. See [submission status](docs/submission/LINKS.json); do not use localhost as the final Devpost demo link.
+The [public source repository](https://github.com/joseroavargas409/electrodecision-mining) is available with its MIT license and English submission materials. The [recovered English hosted demo](https://electrodecision-mining-recovered.jlroav409.chatgpt.site/demo) is deployed and passed real NVIDIA/Nebius HTTP verification. The owner authorized public access, and anonymous page/API access plus real hosted inference were verified. The [English demo video](https://youtu.be/4UdWqLiKI8g) is public with English captions. See [submission status](docs/submission/LINKS.json); do not use localhost as the final Devpost demo link.
 
 ## What you can test
 
@@ -68,6 +68,6 @@ Original source is MIT-licensed; preserve dependency notices. [Source and asset 
 
 ## English submission assets
 
-`docs/submission/` contains form-copy fields, the project story, requirements matrix, pitch, setup and feedback. The final local video is `docs/submission/media/ELECTRODECISION_SUBMISSION_EN.mp4`: 2:48, Full HD, English narration/captions, actual public-application capture and a real NVIDIA/Nebius query recorded during capture. Its provenance, final validation and original capture hashes are included. A public YouTube upload remains pending; see `LINKS.json`.
+`docs/submission/` contains form-copy fields, the project story, requirements matrix, pitch, setup and feedback. The final local video is `docs/submission/media/ELECTRODECISION_SUBMISSION_EN.mp4`: 2:48, Full HD, English narration/captions, actual public-application capture and a real NVIDIA/Nebius query recorded during capture. Its provenance, final validation and original capture hashes are included. The [public YouTube demo](https://youtu.be/4UdWqLiKI8g) and English captions are verified; see `LINKS.json`.
 
 The earlier module replay remains separate supporting material. The optional final editor is `scripts/media/render-submission-video.py`; exact re-editing requires the author's original capture folder. Rendering does not call a provider or control a browser. The application itself is reproduced through the setup instructions above.
