@@ -12,7 +12,7 @@
     "Nebius Token Factory"
   ],
   "repositoryUrl": "https://github.com/joseroavargas409/electrodecision-mining",
-  "demoUrl": null,
+  "demoUrl": "https://electrodecision-mining-recovered.jlroav409.chatgpt.site/demo",
   "youtubeUrl": null,
   "descriptionFile": "DEVPOST_DESCRIPTION_EN.md",
   "testingInstructionsFile": "TESTING_EN.md",
@@ -23,5 +23,7 @@
   "operationData": "Synthetic; not calibrated to a mine or OEM",
   "eligibilityAndTeam": "Entrant must complete and verify personal/team and eligibility fields.",
   "submitted": false,
-  "publicationStatusFile": "LINKS.json"
+  "publicationStatusFile": "LINKS.json",
+  "demoAccess": "owner-private",
+  "judgeAccessReady": false
 }

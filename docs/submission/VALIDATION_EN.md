@@ -16,4 +16,9 @@ A clean-source installation completed successfully (691 packages). The 87 tests,
 
 Automated browser access to localhost was denied by automatic approval review. Visual interaction and screen recording are not verified. The user can inspect and record the running English `/demo` view. A supporting module-replay video now exists; it still needs actual application footage for the submission cut.
 
-The public repository and its MIT license were verified on GitHub. A current hosted demo and public YouTube URL remain unverified. No Devpost submission is claimed. Operation data is synthetic and there is no site/OEM calibration or industrial validation. The source catalog is indicative and does not certify regulatory compliance.
+The public repository and its MIT license were verified on GitHub. The recovered current hosted demo passed HTTP and real inference verification, with 8296 input / 519 output tokens in the hosted run. It is owner-private; public judge access and the public YouTube URL remain unverified. No Devpost submission is claimed. Operation data is synthetic and there is no site/OEM calibration or industrial validation. The source catalog is indicative and does not certify regulatory compliance.
+
+
+## Hosted recovery on 2026-10-29
+
+A fresh Sites checkout passed the 87 tests, TypeScript checks and production build. The exact pushed source was packaged and deployed through Sites. Hosted checks confirmed the English route, release, configured server secret and validated project report with both evidence tools. See `examples/nebius/recovered-host-verification.json` and `recovered-host-real-inference-en.json`. The private browser handoff reached ChatGPT sign-in; no visual application QA or screen recording is claimed.

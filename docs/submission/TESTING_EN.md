@@ -1,6 +1,6 @@
 # Judge testing instructions
 
-Use the final published demo URL supplied in Devpost and open **/demo**. A localhost URL is only for local development. The owner must provide free judge access to the current release throughout the judging period. The public source repository is https://github.com/joseroavargas409/electrodecision-mining. A hosted demo URL is not yet assigned; see `LINKS.json`.
+Use the final published demo URL supplied in Devpost and open **/demo**. A localhost URL is only for local development. The owner must provide free judge access to the current release throughout the judging period. The public source repository is https://github.com/joseroavargas409/electrodecision-mining. The recovered hosted demo is https://electrodecision-mining-recovered.jlroav409.chatgpt.site/demo; it is currently owner-private, so sign in as the recovery owner. Free judge access has not yet been enabled. See `LINKS.json`.
 
 ## Five-minute workflow
 
