@@ -4,7 +4,7 @@
 
 The latest app runs locally. The previously hosted Sites version is older and is not a substitute for the current English demo. The connected Sites account did not find the existing project; no replacement site was created and no deployment was claimed.
 
-The source is prepared for a public code repository. The GitHub creation draft is ready, but publication requires explicit authorization after automatic approval review rejected the creation action. No public repository URL is verified yet. `LINKS.json` deliberately uses null for unpublished URLs. Never paste localhost or an invented address into the final submission.
+The public source repository is https://github.com/joseroavargas409/electrodecision-mining. The owner approved publication and the code, MIT license and README were verified on GitHub. `LINKS.json` includes the verified repository URL and uses null for the unpublished demo/video URLs. Never paste localhost or an invented address into the final submission.
 
 ## Publish the code
 

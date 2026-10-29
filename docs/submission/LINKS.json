@@ -3,14 +3,16 @@
   "release": "0.11.0",
   "track": "Best Apps and Agents",
   "demoUrl": null,
-  "repositoryUrl": null,
+  "repositoryUrl": "https://github.com/joseroavargas409/electrodecision-mining",
   "youtubeUrl": null,
   "localReviewerUrl": "http://127.0.0.1:5173/demo",
   "submitted": false,
-  "status": "Local materials prepared; public links and actual video pending",
+  "status": "Public source published; hosted live demo and recorded public video pending",
   "rulesUrl": "https://nebiusglobalaihackathon.devpost.com/rules",
   "submissionDeadlineUtc": "2026-10-30T17:00:00Z",
   "submissionDeadlineSantiago": "2026-10-30 14:00 America/Santiago",
   "repositoryDraft": "joseroavargas409/electrodecision-mining",
-  "repositoryPublicationApproval": "pending"
+  "repositoryPublicationApproval": "approved",
+  "repositoryPublished": true,
+  "sourceDownloadUrl": "https://github.com/joseroavargas409/electrodecision-mining/archive/refs/heads/main.zip"
 }

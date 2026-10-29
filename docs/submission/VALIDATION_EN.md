@@ -10,7 +10,7 @@ Release: 0.11.0. Checked on 2026-10-29.
 - Source packaging excludes actual environment files, runtime state, original Git metadata and the private Sites project identity. An exact-match scan against the configured provider credential found no match in the prepared source.
 - English narration contains 306 words and is planned for a 160-second cut; SRT timing is a draft to align with actual recording.
 
-A clean-source installation completed successfully (691 packages). The 87 tests, TypeScript checks and full build also passed from that sanitized source copy without a provider key. The supplied CI workflow has not yet run on GitHub; its presence is not a CI success claim. A scan for common credential patterns also found no matches.
+A clean-source installation completed successfully (691 packages). The 87 tests, TypeScript checks and full build also passed from that sanitized source copy without a provider key. GitHub CI subsequently passed for the initial public source commit 6cb1c717e5f05cd5a342270a4a48061104b38b08: https://github.com/joseroavargas409/electrodecision-mining/actions/runs/40905805275. This records that verified run, rather than assuming every later documentation commit has already completed CI. A scan for common credential patterns also found no matches.
 
 ## Verification limits
 

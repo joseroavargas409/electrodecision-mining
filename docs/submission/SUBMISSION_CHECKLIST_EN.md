@@ -10,15 +10,17 @@ Prepared locally:
 - Timed English video script, narration and SRT subtitles.
 - Sanitized source package and recorded verification evidence.
 
-Still requires completion/verification:
+Published:
 
-- Public code repository URL and detectable license.
+- Public code repository and MIT license are verified: https://github.com/joseroavargas409/electrodecision-mining.
+
+Still requires completion/verification:
 - Accessible current demo or test-build URL, free for judges through the judging period.
 - Actual screen recording, final video below three minutes and public YouTube URL.
 - Final personal/team and eligibility fields in Devpost.
 - Paste the final links and submit before the official deadline.
 
-The authoring account currently lacks access to the existing Sites project. A GitHub web session and repository draft are available; creating the public repository was rejected by automatic approval review pending explicit publication authorization. Browser access to localhost was rejected by automatic approval review, so no browser recording or visual verification is claimed. Continue through the normal service connection/settings or a user-made recording; do not bypass that restriction.
+The authoring account currently lacks access to the existing Sites project. The owner authorized GitHub publication after the initial approval rejection, and the public repository is now available. Browser access to localhost was rejected by automatic approval review, so no browser recording or visual verification is claimed. Continue through the normal service connection/settings or a user-made recording; do not bypass that restriction.
 
 Official rules: https://nebiusglobalaihackathon.devpost.com/rules
 

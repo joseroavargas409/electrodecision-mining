@@ -10,4 +10,6 @@ NVIDIA Nemotron runs through Nebius Token Factory and calls validated applicatio
 
 This is a prototype with synthetic operation data, not a claim of industrial savings or regulatory approval.
 
-Add the final demo and public repository URLs after publication. Use Public visibility, keep the final video below three minutes, and verify the link without the uploader's session. Recording and upload are pending; a script or subtitle file is not a completed video.
+Source: https://github.com/joseroavargas409/electrodecision-mining
+
+Add the final demo URL after publication. Use Public visibility, keep the final video below three minutes, and verify the link without the uploader's session. Recording and upload are pending; a script or subtitle file is not a completed video.

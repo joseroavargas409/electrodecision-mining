@@ -4,7 +4,7 @@ An inspectable simulator and NVIDIA Nemotron assistant for preliminary mining el
 
 **English reviewer demo:** `/demo` · **Track:** Best Apps and Agents · **License:** MIT · **Release:** 0.11.0
 
-The current release runs locally. A public demo, public repository URL and public YouTube video are not yet verified. See [submission status](docs/submission/LINKS.json); do not use localhost as the final Devpost demo link.
+The [public source repository](https://github.com/joseroavargas409/electrodecision-mining) is available with its MIT license and English submission materials. The app currently runs locally; a hosted live demo and public YouTube video are not yet verified. See [submission status](docs/submission/LINKS.json); do not use localhost as the final Devpost demo link.
 
 ## What you can test
 
