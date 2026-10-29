@@ -24,6 +24,6 @@
   "eligibilityAndTeam": "Entrant must complete and verify personal/team and eligibility fields.",
   "submitted": false,
   "publicationStatusFile": "LINKS.json",
-  "demoAccess": "owner-private",
-  "judgeAccessReady": false
+  "demoAccess": "public",
+  "judgeAccessReady": true
 }

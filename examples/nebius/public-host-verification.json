@@ -1,0 +1,38 @@
+{
+  "checkedAt": "2026-10-29T19:22:02.528Z",
+  "demoUrl": "https://electrodecision-mining-recovered.jlroav409.chatgpt.site/demo",
+  "access": "public",
+  "authenticationUsed": false,
+  "release": "0.11.0",
+  "checks": [
+    {
+      "test": "Anonymous English demo: no credentials, cookies or redirects",
+      "passed": true
+    },
+    {
+      "test": "Anonymous API status",
+      "passed": true,
+      "version": "0.11.0",
+      "configured": true
+    },
+    {
+      "test": "Anonymous real NVIDIA Nemotron / Nebius inference",
+      "passed": true,
+      "model": "nvidia/Nemotron-3_5-Lightning",
+      "usage": {
+        "promptTokens": 8296,
+        "completionTokens": 551
+      },
+      "selectionValidated": true
+    }
+  ],
+  "browserVisualQA": {
+    "scope": "English public page and supply-upgrade selection only",
+    "passed": true,
+    "firstShiftTonnes": 1782,
+    "secondShiftTonnes": 1872,
+    "initialSocRecovered": true,
+    "fullWorkflowTested": false,
+    "screenRecording": false
+  }
+}

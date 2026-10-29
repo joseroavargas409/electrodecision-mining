@@ -7,7 +7,7 @@
   "youtubeUrl": null,
   "localReviewerUrl": "http://127.0.0.1:5173/demo",
   "submitted": false,
-  "status": "Recovered Sites demo deployed and real hosted inference verified; owner-private audience, final footage and public YouTube upload pending",
+  "status": "Public English demo and real anonymous hosted inference verified; final application footage and public YouTube upload pending",
   "rulesUrl": "https://nebiusglobalaihackathon.devpost.com/rules",
   "submissionDeadlineUtc": "2026-10-30T17:00:00Z",
   "submissionDeadlineSantiago": "2026-10-30 14:00 America/Santiago",
@@ -19,9 +19,13 @@
   "localVideoDurationSeconds": 168,
   "videoFootageComplete": false,
   "submissionReady": false,
-  "demoAccess": "owner-private",
+  "demoAccess": "public",
   "demoHosted": true,
   "demoHttpVerified": true,
   "hostedInferenceVerified": true,
-  "judgeAccessReady": false
+  "judgeAccessReady": true,
+  "publicAccessApproved": true,
+  "anonymousAccessVerified": true,
+  "publicHostedInferenceVerified": true,
+  "browserChecksScope": "English page and supply-upgrade selection"
 }

@@ -12,6 +12,6 @@ The technical walkthrough includes calculation-trace replays and recorded real i
 
 Source code and MIT license: https://github.com/joseroavargas409/electrodecision-mining
 
-Add the verified current demo URL before publishing. Use Public visibility, keep the final cut below three minutes, and verify it without the uploader session. `media/THUMBNAIL_EN.png` and the English SRT are included. Adjust the description and SRT to the final edit; do not claim footage that is absent.
+Public English demo: https://electrodecision-mining-recovered.jlroav409.chatgpt.site/demo. Use Public visibility, keep the final cut below three minutes, and verify it without the uploader session. `media/THUMBNAIL_EN.png` and the English SRT are included. Adjust the description and SRT to the final edit; do not claim footage that is absent.
 
 **Current status:** local supporting MP4 prepared; actual application footage and public YouTube publication pending.

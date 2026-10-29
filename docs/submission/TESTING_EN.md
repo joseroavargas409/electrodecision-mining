@@ -1,6 +1,6 @@
 # Judge testing instructions
 
-Use the final published demo URL supplied in Devpost and open **/demo**. A localhost URL is only for local development. The owner must provide free judge access to the current release throughout the judging period. The public source repository is https://github.com/joseroavargas409/electrodecision-mining. The recovered hosted demo is https://electrodecision-mining-recovered.jlroav409.chatgpt.site/demo; it is currently owner-private, so sign in as the recovery owner. Free judge access has not yet been enabled. See `LINKS.json`.
+Use the final published demo URL supplied in Devpost and open **/demo**. A localhost URL is only for local development. The owner must provide free judge access to the current release throughout the judging period. The public source repository is https://github.com/joseroavargas409/electrodecision-mining. The recovered hosted demo is https://electrodecision-mining-recovered.jlroav409.chatgpt.site/demo; it is public and does not require sign-in. Anonymous page/API access and a real hosted model query were verified. See `LINKS.json`.
 
 ## Five-minute workflow
 
@@ -31,4 +31,4 @@ For your own live inference, copy `.dev.vars.example` to `.dev.vars`, set `NEBIU
 
 ## Limitations
 
-All operation inputs are synthetic. This is preliminary decision support, not engineering approval or proof of industrial savings. The current lab is generic direct charging; it does not numerically simulate the published trolley/swapping cases. Formal browser interaction/visual recording remains unverified because local browser access was blocked in the authoring environment. HTTP and model-integration evidence are recorded separately.
+All operation inputs are synthetic. This is preliminary decision support, not engineering approval or proof of industrial savings. The current lab is generic direct charging; it does not numerically simulate the published trolley/swapping cases. Targeted public-browser checks verified the English page and supply-upgrade selection. Full workflow recording remains incomplete; local browser access was previously blocked. HTTP and model-integration evidence are recorded separately.

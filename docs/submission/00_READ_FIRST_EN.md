@@ -16,7 +16,7 @@ The organizer asks for footage showing the project functioning on its intended d
 
 ## Remaining external steps
 
-The original Sites project remained inaccessible. A new recovered current release is deployed at https://electrodecision-mining-recovered.jlroav409.chatgpt.site/demo. Its English route and real NVIDIA/Nebius tool loop passed hosted HTTP checks. It is owner-private; sign in with the recovery owner account to review it. Public/free judge access still needs to be authorized and verified. The older hosted site is not used as the current release.
+The original Sites project remained inaccessible. A new recovered current release is deployed at https://electrodecision-mining-recovered.jlroav409.chatgpt.site/demo. Its English route and real NVIDIA/Nebius tool loop passed hosted HTTP checks. The owner authorized public access for the hackathon. Anonymous page/API checks and real hosted inference passed without sign-in; basic browser interaction also passed. The older hosted site is not used as the current release.
 
 Add final footage, upload the video publicly to YouTube, verify it and fill its URL. Complete personal/team and eligibility fields in Devpost yourself and submit. No Devpost submission or acceptance of its binding rules has been performed on your behalf.
 
