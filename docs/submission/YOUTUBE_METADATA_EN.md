@@ -1,15 +1,17 @@
-# Video upload metadata
+# Final video upload metadata
 
 **Title:** ElectroDecision | Mining Electrification Copilot — Nebius x NVIDIA Hackathon
 
-**Description:**
+**Description to paste after completing the final footage:**
 
-ElectroDecision explores electric mining fleet production, shared charging and grid constraints using a synthetic two-shift simulation. Its project-review workflow organizes missing evidence by technology, stage and jurisdiction.
+ElectroDecision helps mining planners compare electric fleet charging choices, identify production and power constraints, and prioritize missing project evidence.
 
-NVIDIA Nemotron runs through Nebius Token Factory and calls validated application tools. For project reports, the model selects evidence IDs and the application fills the report from the catalog.
+The prototype includes a synthetic two-shift LHD simulation and an evidence-review workflow organized by technology, project stage and jurisdiction. NVIDIA Nemotron is called at runtime through Nebius Token Factory, with read-only calculation and context tools. Evidence identifiers are validated before the application builds the project report from its catalog.
 
-This is a prototype with synthetic operation data, not a claim of industrial savings or regulatory approval.
+The technical walkthrough includes calculation-trace replays and recorded real inference evidence. Actual application footage should be identified separately in the final edit. Operation data is synthetic; no industrial savings or regulatory approval is claimed.
 
-Source: https://github.com/joseroavargas409/electrodecision-mining
+Source code and MIT license: https://github.com/joseroavargas409/electrodecision-mining
 
-Add the final demo URL after publication. Use Public visibility, keep the final video below three minutes, and verify the link without the uploader's session. Recording and upload are pending; a script or subtitle file is not a completed video.
+Add the verified current demo URL before publishing. Use Public visibility, keep the final cut below three minutes, and verify it without the uploader session. `media/THUMBNAIL_EN.png` and the English SRT are included. Adjust the description and SRT to the final edit; do not claim footage that is absent.
+
+**Current status:** local supporting MP4 prepared; actual application footage and public YouTube publication pending.

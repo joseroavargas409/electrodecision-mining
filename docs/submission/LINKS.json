@@ -7,12 +7,16 @@
   "youtubeUrl": null,
   "localReviewerUrl": "http://127.0.0.1:5173/demo",
   "submitted": false,
-  "status": "Public source published; hosted live demo and recorded public video pending",
+  "status": "English source and supporting video prepared; current hosted demo, application footage and public YouTube upload pending",
   "rulesUrl": "https://nebiusglobalaihackathon.devpost.com/rules",
   "submissionDeadlineUtc": "2026-10-30T17:00:00Z",
   "submissionDeadlineSantiago": "2026-10-30 14:00 America/Santiago",
   "repositoryDraft": "joseroavargas409/electrodecision-mining",
   "repositoryPublicationApproval": "approved",
   "repositoryPublished": true,
-  "sourceDownloadUrl": "https://github.com/joseroavargas409/electrodecision-mining/archive/refs/heads/main.zip"
+  "sourceDownloadUrl": "https://github.com/joseroavargas409/electrodecision-mining/archive/refs/heads/main.zip",
+  "localVideoFile": "media/ELECTRODECISION_WALKTHROUGH_EN.mp4",
+  "localVideoDurationSeconds": 168,
+  "videoFootageComplete": false,
+  "submissionReady": false
 }

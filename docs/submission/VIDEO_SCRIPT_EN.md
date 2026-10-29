@@ -1,43 +1,35 @@
-# Demonstration script — target 2 minutes 40 seconds
+# English technical walkthrough — 2 minutes 48 seconds
 
-Record the actual English `/demo` interface. Do not substitute slides for all application footage. This file is a script, not a recorded video.
+This script matches the rendered module replay, not a browser recording. Add actual application footage using `RECORDING_GUIDE_EN.md` before submission. NVIDIA/Nebius evidence shown is a saved real call; no new call is implied.
 
-## 0:00–0:18 · Problem
-On screen: Reset the default lab. Show the heading and the production target.
+## 0:00–0:18 · Electrification is a production decision
 
-Mining electrification is a production decision as well as an energy decision. A fleet can have enough daily energy and still miss its target because chargers, grid capacity and shift timing do not line up.
+A mining fleet can have enough energy and still miss its production target. ElectroDecision compares charging choices and organizes the evidence needed before an electrification decision. This video replays outputs from the working calculation modules.
 
-## 0:18–0:40 · Define the case
-On screen: Show inputs and the alternative table. Keep the default assumptions.
+## 0:18–0:40 · A declared synthetic operation
 
-This is the English reviewer view. The synthetic case has four underground loaders, a twelve-hour shift and a seventeen-hundred-tonne target. We include degraded batteries, charging losses, critical site load and a charger outage. These are declared assumptions, not measurements from a real mine.
+The case uses four generic underground loaders, a twelve-hour shift, and a target of seventeen hundred tonnes. Battery health is eighty-five percent. The model includes charging losses, critical site demand, and a ninety-minute charger outage. These are synthetic assumptions, not measurements from a real mine.
 
-## 0:40–1:01 · Compare alternatives
-On screen: Point to each row; distinguish waiting from overload.
+## 0:40–1:03 · Compare equal production targets
 
-One charger delivers eleven hundred eighty-eight tonnes. Two chargers on the same supply improve output but still miss the target. Adding three hundred fifty kilowatts reaches seventeen hundred eighty-two tonnes. Unmanaged charging reaches similar output while overloading the supply.
+One charger delivers eleven hundred eighty-eight tonnes. A second charger on the same supply improves output but still misses the target. Adding three hundred fifty kilowatts reaches seventeen hundred eighty-two tonnes without modeled overload. Unmanaged charging reaches similar output but overloads supply for three hundred sixty-nine minutes.
 
-## 1:01–1:23 · Carry energy forward
-On screen: Inspect the third row. Show the break control, ready state and 25-hour horizon.
+## 1:03–1:25 · Carry battery energy into the next shift
 
-Now inspect the upgrade and the next shift. Each vehicle keeps its actual battery energy. A sixty-minute break restores the declared initial charge in this case. The complete observation is twenty-five hours, so we do not present it as a daily-production improvement.
+The next shift keeps each vehicle's actual battery energy. In the upgraded case, a sixty-minute charging break restores the declared initial charge. Shift two delivers eighteen hundred seventy-two tonnes. Two shifts plus the break span twenty-five hours, not a single day.
 
-## 1:23–1:44 · Review project evidence
-On screen: Open Project evidence review. Change technology/stage; show the filtered checklist.
+## 1:25–1:46 · Turn missing evidence into review actions
 
-The second workflow asks what evidence is missing. Choose the technology, project stage and jurisdiction. Battery swapping needs a pack-stock review. Trolley needs a route and line review. Declaring a document available changes the dossier, but never certifies a permit.
+A separate evidence workflow filters requirements by technology, project stage, and jurisdiction. This trolley implementation case starts with twelve open items, including eight critical items. A document reference changes declared completeness. It never verifies contents or certifies regulatory compliance.
 
-## 1:44–2:12 · Show the actual AI integration
-On screen: Run a live question. Show verified inference, tools and source-backed report. Never show configuration secrets.
+## 1:46–2:17 · NVIDIA Nemotron on Nebius Token Factory
 
-Here is a real NVIDIA Nemotron request through Nebius Token Factory. Inspect the executed tools. The model retrieves the dossier and sources, then selects evidence identifiers. The application validates that selection and fills the report with catalog text and computed counts. The provider key stays on the server.
+This is a saved record of a real NVIDIA Nemotron request through Nebius Token Factory. The application executed the readiness and project-context tools. The model selected evidence identifiers, which the server validated before building the report from catalog text. The record contains token usage and tool results, with no provider key. It is recorded inference evidence, not a new live request in this video.
 
-## 2:12–2:28 · Evidence and boundaries
-On screen: Export a report and show the tool evidence.
+## 2:17–2:34 · Reproduce and inspect
 
-Reports can be exported for inspection. The code, tests and integration records make results reproducible. The operation is synthetic, and the prototype does not control equipment, validate industrial savings or replace electrical and safety engineering.
+The public repository includes source, an MIT license, setup instructions, tests, and integration evidence. Operation data is synthetic. Industrial savings, equipment control, and engineering approval are outside this prototype.
 
-## 2:28–2:40 · Close
-On screen: Return to the main view. Keep the final render below three minutes.
+## 2:34–2:48 · Better inputs for the next engineering review
 
-ElectroDecision helps planners compare charging choices and organize the next engineering review. The next step is validation with site data and users. Thank you.
+Compare charging choices. Expose production and supply constraints. Prioritize missing evidence. The next step is validation with site data and mining planners.

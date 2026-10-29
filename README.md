@@ -64,3 +64,10 @@ Synthetic inputs; no OEM/site calibration or measured industrial savings. The ge
 - [Validation](docs/submission/VALIDATION_EN.md) and [remaining submission items](docs/submission/SUBMISSION_CHECKLIST_EN.md)
 
 Original source is MIT-licensed; preserve dependency notices. [Source and asset notes](docs/submission/THIRD_PARTY_SOURCES_EN.md).
+
+
+## English submission assets
+
+The form-copy fields, requirements matrix and one-page pitch are in `docs/submission/`. A 2:48 English technical walkthrough, matching captions and thumbnail are in `docs/submission/media/`. It is explicitly a module replay using calculation traces and a saved real NVIDIA/Nebius request, not browser footage. Actual application footage and a public YouTube upload remain required for the final cut. See the recording guide and `LINKS.json` for the exact publication state.
+
+Reproduce the video data with `node scripts/export-demo-video-data.mjs`. The optional renderer and Windows narration helper are in `scripts/media/`; they do not call the provider or access a browser.

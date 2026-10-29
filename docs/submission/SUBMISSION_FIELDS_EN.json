@@ -1,0 +1,27 @@
+{
+  "projectTitle": "ElectroDecision — Mining Electrification Copilot",
+  "tagline": "Compare mining fleet charging, production and grid constraints, then prioritize missing evidence with NVIDIA Nemotron on Nebius Token Factory.",
+  "track": "Best Apps and Agents",
+  "builtWith": [
+    "TypeScript",
+    "React",
+    "Vinext",
+    "Vite",
+    "Cloudflare Workers-compatible runtime",
+    "NVIDIA Nemotron-3_5-Lightning",
+    "Nebius Token Factory"
+  ],
+  "repositoryUrl": "https://github.com/joseroavargas409/electrodecision-mining",
+  "demoUrl": null,
+  "youtubeUrl": null,
+  "descriptionFile": "DEVPOST_DESCRIPTION_EN.md",
+  "testingInstructionsFile": "TESTING_EN.md",
+  "feedbackFile": "NEBIUS_FEEDBACK_EN.md",
+  "existingWorkDisclosureFile": "RELEASE_NOTES_EN.md",
+  "primaryLanguage": "English",
+  "applicationRoute": "/demo",
+  "operationData": "Synthetic; not calibrated to a mine or OEM",
+  "eligibilityAndTeam": "Entrant must complete and verify personal/team and eligibility fields.",
+  "submitted": false,
+  "publicationStatusFile": "LINKS.json"
+}

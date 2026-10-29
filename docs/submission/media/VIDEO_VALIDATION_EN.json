@@ -1,0 +1,29 @@
+{
+  "file": "ELECTRODECISION_WALKTHROUGH_EN.mp4",
+  "durationSeconds": 168,
+  "width": 1280,
+  "height": 720,
+  "videoCodec": "H.264",
+  "audioCodec": "AAC",
+  "fps": 24,
+  "captionCues": 31,
+  "englishNarration": true,
+  "narrationVoice": "Microsoft Zira Desktop; synthetic speech",
+  "burnedInCaptions": true,
+  "decodeVerified": true,
+  "browserFootage": false,
+  "newLiveInferenceDuringVideo": false,
+  "submissionReady": false,
+  "remainingVideoWork": "Include actual application footage and publish the final cut publicly on YouTube. This module replay is supporting material.",
+  "recordedInferenceVerifiedAt": "2026-10-29T15:37:37.818Z",
+  "recordedUsage": {
+    "promptTokens": 8296,
+    "completionTokens": 577
+  },
+  "sourceDataSha256": "572556036fe41a10454aa0c0c2f5e7964974d2b2f1c81765573e52583280eb4a",
+  "inferenceEvidenceSha256": "192c0824470988bc3886aa99ec9dba3ff46c3d366755cdd30d5abc40c5e02057",
+  "videoSha256": "f8704d739d350e9a1ea2d9f051f7bcc29c87463f9057486d42436a30e9f26178",
+  "bytes": 3339093,
+  "youtubeUrl": null,
+  "provenance": "Direct execution of the same TypeScript calculation and evidence modules used by /demo. No browser or screen capture."
+}

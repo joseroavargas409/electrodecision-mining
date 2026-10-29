@@ -6,9 +6,9 @@ The latest app runs locally. The previously hosted Sites version is older and is
 
 The public source repository is https://github.com/joseroavargas409/electrodecision-mining. The owner approved publication and the code, MIT license and README were verified on GitHub. `LINKS.json` includes the verified repository URL and uses null for the unpublished demo/video URLs. Never paste localhost or an invented address into the final submission.
 
-## Publish the code
+## Public code — already published
 
-Use the sanitized public-release folder, which contains the MIT license, English README, source, assets, tests, lockfile and CI configuration. The author's Sites project identity, Git history, runtime state and actual environment files are excluded. Create a public GitHub/GitLab/Bitbucket repository, push this source, and verify the license is detected and the setup works from a clean clone.
+Use the sanitized public-release folder, which contains the MIT license, English README, source, assets, tests, lockfile and CI configuration. The author's Sites project identity, Git history, runtime state and actual environment files are excluded. The public repository is already created and populated; do not create another one. Subsequent changes should be committed and pushed from the sanitized release copy. License detection and the initial clean-source checks were verified.
 
 ## Publish or provide the test build
 

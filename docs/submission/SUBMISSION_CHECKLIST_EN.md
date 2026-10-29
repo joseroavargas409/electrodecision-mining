@@ -1,27 +1,31 @@
 # Final submission checklist
 
-Prepared locally:
+## Complete
 
-- Current working source with MIT license.
-- English reviewer route `/demo` and translated project evidence.
-- English Devpost description, setup/judge instructions and architecture.
-- Feedback based on actual NVIDIA/Nebius calls.
-- Existing-work disclosure and source/asset notes.
-- Timed English video script, narration and SRT subtitles.
-- Sanitized source package and recorded verification evidence.
+- Public source repository: https://github.com/joseroavargas409/electrodecision-mining.
+- Detectable root MIT license and English README with setup instructions.
+- English reviewer application route `/demo`.
+- English project description, tagline, track choice and form-copy fields.
+- Judge workflow, architecture, source list and existing-work disclosure.
+- Feedback based on actual NVIDIA Nemotron / Nebius Token Factory use.
+- Reproducible synthetic outputs and sanitized real inference record.
+- English technical walkthrough MP4, narration, subtitles, thumbnail and provenance.
+- Sanitized source archive and complete handoff package.
 
-Published:
+## Remaining
 
-- Public code repository and MIT license are verified: https://github.com/joseroavargas409/electrodecision-mining.
+- Restore owner access to the original Sites project; publish and verify the current `/demo` with free judge access and a server-side provider key.
+- Include actual application footage in the final video cut. The rendered module replay alone is not claimed to satisfy the footage requirement.
+- Upload the final video publicly to YouTube and verify its URL; keep the cut below three minutes.
+- Fill the real demo/video URLs in `LINKS.json` and the submission form.
+- Confirm entrant/team, ownership, eligibility and reused-component history; submit Devpost yourself.
 
-Still requires completion/verification:
-- Accessible current demo or test-build URL, free for judges through the judging period.
-- Actual screen recording, final video below three minutes and public YouTube URL.
-- Final personal/team and eligibility fields in Devpost.
-- Paste the final links and submit before the official deadline.
+## Access and recording limits
 
-The authoring account currently lacks access to the existing Sites project. The owner authorized GitHub publication after the initial approval rejection, and the public repository is now available. Browser access to localhost was rejected by automatic approval review, so no browser recording or visual verification is claimed. Continue through the normal service connection/settings or a user-made recording; do not bypass that restriction.
+Sites is installed and enabled but returns project-not-found for the original site; an empty site listing does not establish the exact cause. Check the original ChatGPT account/workspace and site ownership. No replacement site was created.
+
+Automatic approval review denied browser access to localhost. No automatic browser recording, substitute screen-capture path or visual interaction check has been used. The technical video is rendered from directly executed calculation modules and previously verified inference data, and is explicitly labeled as a replay.
 
 Official rules: https://nebiusglobalaihackathon.devpost.com/rules
 
-Submission deadline checked on 2026-10-29: 2026-10-30 10:00 PDT, equivalent to 14:00 in America/Santiago. Judging ends on 2026-12-15. Rules and eligibility remain the organizer's decision.
+Deadline reviewed on 2026-10-29: October 30, 2026 at 10:00 PDT / 14:00 America/Santiago. Judging ends December 15, 2026; keep the judged project freely accessible through that period.
